@@ -17,7 +17,7 @@ struct ContentView: View {
     @State private var detent: PresentationDetent = Self.smallDetent
     @State private var routePolyline: MKPolyline?
 
-    private static let smallDetent: PresentationDetent = .height(80)
+    private static let smallDetent: PresentationDetent = .height(72)
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -53,7 +53,7 @@ struct ContentView: View {
                     )
                 }
                 .padding(.trailing, 16)
-                .padding(.bottom, 110) // above collapsed sheet
+                .padding(.bottom, 96) // above collapsed sheet
             }
         }
         .sheet(isPresented: .constant(true)) {
@@ -62,8 +62,11 @@ struct ContentView: View {
                 .presentationBackgroundInteraction(.enabled(upThrough: .medium))
                 .presentationContentInteraction(.scrolls)
                 .interactiveDismissDisabled()
-                .presentationCornerRadius(24)
-                .presentationBackground(.regularMaterial)
+                .presentationDragIndicator(.visible)
+                .presentationCornerRadius(34)
+                .presentationBackground {
+                    SheetGlassBackground(isFullyExpanded: detent == .large)
+                }
         }
     }
 
@@ -144,6 +147,8 @@ struct ContentView: View {
                 fireLocation: vm.fireLocation,
                 satellite: $vm.mapStyleIsSatellite,
                 isSaved: vm.isSaved(selected),
+                isSmall: detent == Self.smallDetent,
+                isFullyExpanded: detent == .large,
                 onToggleSave: { vm.toggleSaved(selected) },
                 onBack: closeDetail,
                 onRouteReady: { routePolyline = $0 }
@@ -153,6 +158,7 @@ struct ContentView: View {
                 groups: vm.rankedGroups,
                 locationTitle: vm.fireLocationTitle,
                 locationSubtitle: vm.fireLocationSubtitle,
+                isSmall: detent == Self.smallDetent,
                 isExpanded: detent == .large,
                 onSelect: openDetail,
                 onChangeLocation: resetToSearch
@@ -178,7 +184,8 @@ struct ContentView: View {
                         detent = Self.smallDetent
                     }
                 },
-                isExpanded: detent != Self.smallDetent
+                isExpanded: detent != Self.smallDetent,
+                isFullyExpanded: detent == .large
             )
         }
     }

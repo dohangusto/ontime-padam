@@ -13,17 +13,17 @@
 				<key>oneDegreeLatitude</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.011312961578369141</real>
+					<real>0.023217201232910156</real>
 				</dict>
 				<key>validation</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.013393878936767578</real>
+					<real>0.023206949234008789</real>
 				</dict>
 				<key>zeroDistance</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.0108489990234375</real>
+					<real>0.023231029510498047</real>
 				</dict>
 			</dict>
 			<key>MapClusteringTests</key>
@@ -31,27 +31,27 @@
 				<key>cellSizeScalesWithSpan</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.011162996292114258</real>
+					<real>0.024004936218261719</real>
 				</dict>
 				<key>clusterCoordinateIsAverage</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.011123895645141602</real>
+					<real>0.023267984390258789</real>
 				</dict>
 				<key>distantPointsSeparate</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.011410951614379883</real>
+					<real>0.023934841156005859</real>
 				</dict>
 				<key>nearbyPointsMerge</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.013445854187011719</real>
+					<real>0.02332615852355957</real>
 				</dict>
 				<key>zeroCellSizeAllSingles</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.013567209243774414</real>
+					<real>0.023224115371704102</real>
 				</dict>
 			</dict>
 			<key>RankingServiceTests</key>
@@ -59,42 +59,42 @@
 				<key>duplicateCoordinates</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.013228893280029297</real>
+					<real>0.023299932479858398</real>
 				</dict>
 				<key>farPointsReturnedAndMarked</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.013264179229736328</real>
+					<real>0.023272037506103516</real>
 				</dict>
 				<key>fewerThanThree</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.011020183563232422</real>
+					<real>0.023730039596557617</real>
 				</dict>
 				<key>fiveGroupsInReliabilityOrder</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.013203859329223633</real>
+					<real>0.023723125457763672</real>
 				</dict>
 				<key>hydrantsLowReliability</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.010469913482666016</real>
+					<real>0.02396702766418457</real>
 				</dict>
 				<key>threeNearestPerTypeSorted</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.011096000671386719</real>
+					<real>0.011139869689941406</real>
 				</dict>
 				<key>typeOrderBeatsDistance</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.013279199600219727</real>
+					<real>0.023691177368164062</real>
 				</dict>
 				<key>zeroPointsOfType</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.011078119277954102</real>
+					<real>0.011565208435058594</real>
 				</dict>
 			</dict>
 			<key>WaterSourceDecodingTests</key>
@@ -102,27 +102,27 @@
 				<key>decodeHidran</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.010935068130493164</real>
+					<real>0.024324893951416016</real>
 				</dict>
 				<key>decodePosDamkar</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.011075019836425781</real>
+					<real>0.011537790298461914</real>
 				</dict>
 				<key>invalidCoordinatesDropped</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.010936975479125977</real>
+					<real>0.0115509033203125</real>
 				</dict>
 				<key>malformedJSON</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.01105499267578125</real>
+					<real>0.011540889739990234</real>
 				</dict>
 				<key>missingNameFallsBack</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.010935068130493164</real>
+					<real>0.011572837829589844</real>
 				</dict>
 			</dict>
 			<key>padamTests</key>
@@ -130,27 +130,27 @@
 				<key>addAndRemoveRecentSearches</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.013666868209838867</real>
+					<real>0.023982048034667969</real>
 				</dict>
 				<key>findNearestByType</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.010783910751342773</real>
+					<real>0.011182785034179688</real>
 				</dict>
 				<key>recentSearchDefaults</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.010939121246337891</real>
+					<real>0.010720014572143555</real>
 				</dict>
 				<key>toggleSavedSources</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.013628005981445312</real>
+					<real>0.024094104766845703</real>
 				</dict>
 				<key>waterSourceTypeDisplayNames</key>
 				<dict>
 					<key>mrnet</key>
-					<real>0.011495113372802734</real>
+					<real>0.024039030075073242</real>
 				</dict>
 			</dict>
 		</dict>

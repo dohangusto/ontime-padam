@@ -23,6 +23,7 @@ struct SearchSheetView: View {
     var onActivate: () -> Void
     var onDeactivate: () -> Void
     var isExpanded: Bool = false
+    var isFullyExpanded: Bool = false
 
     @FocusState private var fieldFocused: Bool
 
@@ -30,8 +31,8 @@ struct SearchSheetView: View {
         VStack(spacing: 0) {
             searchBar
                 .padding(.horizontal, 16)
-                .padding(.top, 12)
-                .padding(.bottom, 10)
+                .padding(.top, isExpanded ? 12 : 10)
+                .padding(.bottom, isExpanded ? 8 : 10)
 
             if isExpanded || fieldFocused {
                 ScrollView(showsIndicators: false) {
@@ -49,10 +50,10 @@ struct SearchSheetView: View {
                     .padding(.horizontal, 16)
                     .padding(.top, 4)
                 }
-            } else {
-                Spacer(minLength: 0)
+                .scrollDisabled(!isFullyExpanded && !fieldFocused)
             }
         }
+        .frame(maxHeight: .infinity, alignment: isExpanded || fieldFocused ? .top : .center)
         .onChange(of: fieldFocused) { _, focused in
             if focused {
                 onActivate()
@@ -60,7 +61,7 @@ struct SearchSheetView: View {
         }
     }
 
-    // MARK: Search Bar (Capsule with Magnifying Glass, Mic, Avatar / Cancel)
+    // MARK: Search Bar (Capsule with Magnifying Glass, Mic, and optional Cancel)
 
     private var searchBar: some View {
         HStack(spacing: 10) {
@@ -96,9 +97,10 @@ struct SearchSheetView: View {
                     .foregroundStyle(.secondary)
                     .padding(.trailing, 2)
             }
-            .padding(.horizontal, 12)
-            .padding(.vertical, 10)
-            .background(.quaternary.opacity(0.85), in: Capsule())
+            .padding(.horizontal, 14)
+            .padding(.vertical, 11)
+            .background(Color.white.opacity(0.08), in: Capsule())
+            .overlay(Capsule().stroke(Color.white.opacity(0.14), lineWidth: 0.8))
 
             if fieldFocused {
                 Button {
@@ -108,24 +110,11 @@ struct SearchSheetView: View {
                         .font(.system(size: 14, weight: .bold))
                         .foregroundStyle(.secondary)
                         .frame(width: 36, height: 36)
-                        .background(.quaternary.opacity(0.85), in: Circle())
+                        .background(Color.white.opacity(0.08), in: Circle())
+                        .overlay(Circle().stroke(Color.white.opacity(0.14), lineWidth: 0.8))
                 }
                 .buttonStyle(.plain)
                 .transition(.scale.combined(with: .opacity))
-            } else {
-                // Profile Avatar icon matching Apple Maps top-right profile
-                Button {} label: {
-                    ZStack {
-                        Circle()
-                            .fill(.quaternary.opacity(0.85))
-                            .frame(width: 36, height: 36)
-
-                        Image(systemName: "person.crop.circle.fill")
-                            .font(.system(size: 24))
-                            .foregroundStyle(.secondary)
-                    }
-                }
-                .buttonStyle(.plain)
             }
         }
         .animation(.snappy(duration: 0.25), value: fieldFocused)
@@ -170,7 +159,8 @@ struct SearchSheetView: View {
                         }
                     }
                 }
-                .background(.quaternary.opacity(0.55), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+                .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
             }
         }
     }
@@ -214,7 +204,8 @@ struct SearchSheetView: View {
                 }
             }
             .padding(12)
-            .background(.quaternary.opacity(0.55), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
         } else {
             // Section 1: "Recents >" (IMG_4789)
             if !recentSearches.isEmpty {
@@ -235,7 +226,8 @@ struct SearchSheetView: View {
                             }
                         }
                     }
-                    .background(.quaternary.opacity(0.55), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                    .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
                 }
             }
 
@@ -257,7 +249,8 @@ struct SearchSheetView: View {
                         }
                     }
                 }
-                .background(.quaternary.opacity(0.55), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+                .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
             }
         }
     }

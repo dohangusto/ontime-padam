@@ -14,7 +14,8 @@ struct ResultsSheetView: View {
     let groups: [RankedGroup]
     var locationTitle: String = "Lokasi Kebakaran"
     var locationSubtitle: String = "Titik acuan rekomendasi sumber air"
-    let isExpanded: Bool
+    var isSmall: Bool = false
+    var isExpanded: Bool = false
     var onSelect: (WaterSource) -> Void
     var onChangeLocation: () -> Void
 
@@ -22,24 +23,28 @@ struct ResultsSheetView: View {
         VStack(spacing: 0) {
             header
                 .padding(.horizontal, 16)
-                .padding(.top, 14)
-                .padding(.bottom, 12)
+                .padding(.top, isSmall ? 10 : 12)
+                .padding(.bottom, isSmall ? 10 : 8)
 
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: 18) {
-                    if isExpanded {
-                        expandedResultsList
-                    } else {
-                        compactOverviewCard
+            if !isSmall {
+                ScrollView(showsIndicators: false) {
+                    VStack(alignment: .leading, spacing: 18) {
+                        if isExpanded {
+                            expandedResultsList
+                        } else {
+                            compactOverviewCard
+                        }
+
+                        DataAttributionFooter()
+                            .padding(.top, 8)
+                            .padding(.bottom, 24)
                     }
-
-                    DataAttributionFooter()
-                        .padding(.top, 8)
-                        .padding(.bottom, 24)
+                    .padding(.horizontal, 16)
                 }
-                .padding(.horizontal, 16)
+                .scrollDisabled(!isExpanded)
             }
         }
+        .frame(maxHeight: .infinity, alignment: isSmall ? .center : .top)
     }
 
     // MARK: Header (Share Button, Title & Subtitle, Exit Button)
@@ -57,7 +62,8 @@ struct ResultsSheetView: View {
                     .font(.system(size: 15, weight: .bold))
                     .foregroundStyle(.primary)
                     .frame(width: 36, height: 36)
-                    .background(.quaternary.opacity(0.85), in: Circle())
+                    .background(Color.white.opacity(0.1), in: Circle())
+                    .overlay(Circle().stroke(Color.white.opacity(0.12), lineWidth: 0.8))
             }
             .buttonStyle(.plain)
 
@@ -80,7 +86,8 @@ struct ResultsSheetView: View {
                     .font(.system(size: 14, weight: .bold))
                     .foregroundStyle(.secondary)
                     .frame(width: 36, height: 36)
-                    .background(.quaternary.opacity(0.85), in: Circle())
+                    .background(Color.white.opacity(0.1), in: Circle())
+                    .overlay(Circle().stroke(Color.white.opacity(0.12), lineWidth: 0.8))
             }
             .buttonStyle(.plain)
         }
@@ -114,7 +121,8 @@ struct ResultsSheetView: View {
                     }
                 }
             }
-            .background(.quaternary.opacity(0.55), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
         }
     }
 
@@ -229,7 +237,8 @@ struct ResultsSheetView: View {
                             }
                         }
                     }
-                    .background(.quaternary.opacity(0.55), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                    .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
                 }
             }
         }

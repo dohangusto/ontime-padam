@@ -6,7 +6,7 @@
 	<integer>12</integer>
 	<key>logs</key>
 	<dict>
-		<key>C171E40D-C1F3-44D3-8A23-C82DFF334577</key>
+		<key>6FB002E2-4B65-4B4D-AA8E-AED9C1402AC7</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>C171E40D-C1F3-44D3-8A23-C82DFF334577.xcactivitylog</string>
+			<string>6FB002E2-4B65-4B4D-AA8E-AED9C1402AC7.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -40,15 +40,15 @@
 			<key>signature</key>
 			<string>Testing project padam with scheme padam</string>
 			<key>timeStartedRecording</key>
-			<real>810527928.86573994</real>
+			<real>810532222.340518</real>
 			<key>timeStoppedRecording</key>
-			<real>810527933.06693697</real>
+			<real>810532227.29441094</real>
 			<key>title</key>
 			<string>Testing project padam with scheme padam</string>
 			<key>uniqueIdentifier</key>
-			<string>C171E40D-C1F3-44D3-8A23-C82DFF334577</string>
+			<string>6FB002E2-4B65-4B4D-AA8E-AED9C1402AC7</string>
 		</dict>
-		<key>F824C624-299F-4007-9AF9-531AADE35DEF</key>
+		<key>ECA3AFC6-2EE0-4D55-AFC6-69AA4D4E6161</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -57,7 +57,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>F824C624-299F-4007-9AF9-531AADE35DEF.xcactivitylog</string>
+			<string>ECA3AFC6-2EE0-4D55-AFC6-69AA4D4E6161.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -82,13 +82,13 @@
 			<key>signature</key>
 			<string>Testing project padam with scheme padam</string>
 			<key>timeStartedRecording</key>
-			<real>810528202.92917705</real>
+			<real>810531936.94009805</real>
 			<key>timeStoppedRecording</key>
-			<real>810528206.37807906</real>
+			<real>810531941.71812403</real>
 			<key>title</key>
 			<string>Testing project padam with scheme padam</string>
 			<key>uniqueIdentifier</key>
-			<string>F824C624-299F-4007-9AF9-531AADE35DEF</string>
+			<string>ECA3AFC6-2EE0-4D55-AFC6-69AA4D4E6161</string>
 		</dict>
 	</dict>
 </dict>

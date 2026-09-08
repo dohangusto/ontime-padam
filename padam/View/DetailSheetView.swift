@@ -18,6 +18,8 @@ struct DetailSheetView: View {
     let fireLocation: Coordinate?
     @Binding var satellite: Bool
     var isSaved: Bool = false
+    var isSmall: Bool = false
+    var isFullyExpanded: Bool = true
     var onToggleSave: () -> Void = {}
     var onBack: () -> Void
     var onRouteReady: (MKPolyline?) -> Void
@@ -29,30 +31,42 @@ struct DetailSheetView: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 20) {
-                    header
-                    actionRow
-                    summaryChipsRow
-                    addressAndAdministrativeSection
-                    conditionSection
-                    DataAttributionFooter()
-                        .padding(.top, 4)
-                        .padding(.bottom, 72) // space for floating bottom bar
-                }
-                .padding(.horizontal, 16)
-                .padding(.top, 16)
-            }
+            VStack(spacing: 0) {
+                header
+                    .padding(.horizontal, 16)
+                    .padding(.top, isSmall ? 10 : 12)
+                    .padding(.bottom, isSmall ? 10 : 8)
 
-            // Floating Bottom Bar pinned at the bottom overlay (IMG_4790)
-            FloatingBottomBar(
-                source: source,
-                isSaved: isSaved,
-                onToggleSave: onToggleSave,
-                onAddGuide: {},
-                onOpenInMaps: openInMaps
-            )
-            .padding(.bottom, 12)
+                if !isSmall {
+                    ScrollView(showsIndicators: false) {
+                        VStack(spacing: 20) {
+                            actionRow
+                            summaryChipsRow
+                            addressAndAdministrativeSection
+                            conditionSection
+                            DataAttributionFooter()
+                                .padding(.top, 4)
+                                .padding(.bottom, 72) // space for floating bottom bar
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.top, 8)
+                    }
+                    .scrollDisabled(!isFullyExpanded)
+                }
+            }
+            .frame(maxHeight: .infinity, alignment: isSmall ? .center : .top)
+
+            if !isSmall {
+                // Floating Bottom Bar pinned at the bottom overlay (IMG_4790)
+                FloatingBottomBar(
+                    source: source,
+                    isSaved: isSaved,
+                    onToggleSave: onToggleSave,
+                    onAddGuide: {},
+                    onOpenInMaps: openInMaps
+                )
+                .padding(.bottom, 12)
+            }
         }
         .task(id: source.id) { await loadRoute() }
     }
@@ -68,7 +82,8 @@ struct DetailSheetView: View {
                     .font(.system(size: 15, weight: .bold))
                     .foregroundStyle(.primary)
                     .frame(width: 36, height: 36)
-                    .background(.quaternary.opacity(0.8), in: Circle())
+                    .background(Color.white.opacity(0.1), in: Circle())
+                    .overlay(Circle().stroke(Color.white.opacity(0.12), lineWidth: 0.8))
             }
             .buttonStyle(.plain)
 
@@ -90,7 +105,8 @@ struct DetailSheetView: View {
                     .font(.system(size: 14, weight: .bold))
                     .foregroundStyle(.secondary)
                     .frame(width: 36, height: 36)
-                    .background(.quaternary.opacity(0.8), in: Circle())
+                    .background(Color.white.opacity(0.1), in: Circle())
+                    .overlay(Circle().stroke(Color.white.opacity(0.12), lineWidth: 0.8))
             }
             .buttonStyle(.plain)
         }
@@ -110,7 +126,7 @@ struct DetailSheetView: View {
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
                 .foregroundStyle(.white)
-                .background(Color.blue, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                .background(Color.blue, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
             }
             .buttonStyle(.plain)
 
@@ -126,7 +142,8 @@ struct DetailSheetView: View {
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
                 .foregroundStyle(.white)
-                .background(.quaternary.opacity(0.85), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                .background(Color.white.opacity(0.1), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).stroke(Color.white.opacity(0.14), lineWidth: 0.8))
             }
             .buttonStyle(.plain)
         }
@@ -190,7 +207,8 @@ struct DetailSheetView: View {
             .frame(maxWidth: .infinity)
         }
         .padding(.vertical, 12)
-        .background(.quaternary.opacity(0.4), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
     }
 
     private var statusText: String {
@@ -230,7 +248,8 @@ struct DetailSheetView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(14)
-        .background(.quaternary.opacity(0.4), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
     }
 
     // MARK: Condition / Raw Data Section
@@ -249,7 +268,8 @@ struct DetailSheetView: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(14)
-            .background(.quaternary.opacity(0.4), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
         }
     }
 

@@ -7,7 +7,7 @@
         "key": "Satelit On",
         "location": {
           "startingColumn": 38,
-          "startingLine": 123
+          "startingLine": 139
         }
       },
       {
@@ -15,7 +15,7 @@
         "key": "Hubungi",
         "location": {
           "startingColumn": 53,
-          "startingLine": 123
+          "startingLine": 139
         }
       },
       {
@@ -23,7 +23,7 @@
         "key": "Status",
         "location": {
           "startingColumn": 22,
-          "startingLine": 146
+          "startingLine": 163
         }
       },
       {
@@ -31,7 +31,7 @@
         "key": "Keandalan",
         "location": {
           "startingColumn": 22,
-          "startingLine": 160
+          "startingLine": 177
         }
       },
       {
@@ -39,7 +39,7 @@
         "key": "Rendah",
         "location": {
           "startingColumn": 52,
-          "startingLine": 166
+          "startingLine": 183
         }
       },
       {
@@ -47,7 +47,7 @@
         "key": "100%",
         "location": {
           "startingColumn": 63,
-          "startingLine": 166
+          "startingLine": 183
         }
       },
       {
@@ -55,7 +55,7 @@
         "key": "Distance",
         "location": {
           "startingColumn": 22,
-          "startingLine": 178
+          "startingLine": 195
         }
       },
       {
@@ -63,7 +63,7 @@
         "key": "Alamat",
         "location": {
           "startingColumn": 22,
-          "startingLine": 208
+          "startingLine": 226
         }
       },
       {
@@ -71,7 +71,7 @@
         "key": "Wilayah Administratif",
         "location": {
           "startingColumn": 26,
-          "startingLine": 222
+          "startingLine": 240
         }
       },
       {
@@ -79,7 +79,7 @@
         "key": "Kondisi Lapangan",
         "location": {
           "startingColumn": 22,
-          "startingLine": 242
+          "startingLine": 261
         }
       }
     ]
