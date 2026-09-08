@@ -1,0 +1,96 @@
+{
+  "source": "/Users/hano/Academy/Challenges/5/padam/padam/View/ResultsSheetView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Rekomendasi Terdekat",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 94
+        }
+      },
+      {
+        "comment": "",
+        "key": "5 Kategori",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 100
+        }
+      },
+      {
+        "comment": "",
+        "key": "Semua Sumber Air Terdekat",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 125
+        }
+      },
+      {
+        "comment": "",
+        "key": "keandalan rendah",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 142
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld titik",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 153
+        }
+      },
+      {
+        "comment": "",
+        "key": "Belum ada data tersedia di wilayah ini",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 164
+        }
+      },
+      {
+        "comment": "",
+        "key": "jauh",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 209
+        }
+      },
+      {
+        "comment": "",
+        "key": "--",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 309
+        }
+      },
+      {
+        "comment": "",
+        "key": "Belum ada data",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 284
+        }
+      },
+      {
+        "comment": "",
+        "key": "keandalan rendah",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 269
+        }
+      },
+      {
+        "comment": "",
+        "key": "jauh",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 299
+        }
+      }
+    ]
+  },
+  "version": 1
+}

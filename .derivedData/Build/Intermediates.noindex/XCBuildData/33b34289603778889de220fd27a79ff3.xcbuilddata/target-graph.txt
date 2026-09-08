@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'padamTests' in project 'padam'
+➜ Explicit dependency on target 'padam' in project 'padam'
+Target 'padam' in project 'padam' (no dependencies)

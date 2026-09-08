@@ -2,9 +2,8 @@
 //  ContentView.swift
 //  padam
 //
-//  The home screen IS the map. A bottom sheet is always present (never fully
-//  dismissed): it drives search → results → detail while the map behind stays
-//  interactive. Mimics Apple Maps' three-detent sheet.
+//  The home screen is an interactive native MapKit map with Apple Maps style floating
+//  overlays (Weather Pill, Map Controls) and a persistent 3-detent bottom sheet.
 //
 
 import SwiftUI
@@ -15,22 +14,57 @@ struct ContentView: View {
     @State private var search = LocationSearchService()
 
     @State private var query = ""
-    @State private var detent: PresentationDetent = .height(96)
+    @State private var detent: PresentationDetent = Self.smallDetent
     @State private var routePolyline: MKPolyline?
 
-    private static let smallDetent: PresentationDetent = .height(96)
+    private static let smallDetent: PresentationDetent = .height(80)
 
     var body: some View {
-        mapView
-            .ignoresSafeArea()
-            .sheet(isPresented: .constant(true)) {
-                sheetContent
-                    .presentationDetents([Self.smallDetent, .medium, .large], selection: $detent)
-                    .presentationBackgroundInteraction(.enabled(upThrough: .medium))
-                    .presentationContentInteraction(.scrolls)
-                    .interactiveDismissDisabled()
-                    .presentationBackground(.regularMaterial)
+        ZStack(alignment: .top) {
+            mapView
+                .ignoresSafeArea()
+
+            // Top Overlays: Weather Pill (top-left) matching IMG_4786 / IMG_4790
+            VStack {
+                HStack {
+                    WeatherPillView(
+                        temperature: vm.weatherTemperature,
+                        areaName: vm.weatherArea
+                    )
+                    Spacer()
+                }
+                .padding(.horizontal, 16)
+                .padding(.top, 54) // below notch / dynamic island
+
+                Spacer()
+
+                // Floating Map Controls (bottom-right)
+                HStack {
+                    Spacer()
+                    MapFloatingControlsView(
+                        isSatellite: $vm.mapStyleIsSatellite,
+                        onRecenter: {
+                            if let fire = vm.fireLocation {
+                                vm.zoomIn(on: fire)
+                            } else {
+                                vm.backToSearch()
+                            }
+                        }
+                    )
+                }
+                .padding(.trailing, 16)
+                .padding(.bottom, 110) // above collapsed sheet
             }
+        }
+        .sheet(isPresented: .constant(true)) {
+            sheetContent
+                .presentationDetents([Self.smallDetent, .medium, .large], selection: $detent)
+                .presentationBackgroundInteraction(.enabled(upThrough: .medium))
+                .presentationContentInteraction(.scrolls)
+                .interactiveDismissDisabled()
+                .presentationCornerRadius(24)
+                .presentationBackground(.regularMaterial)
+        }
     }
 
     // MARK: Map
@@ -50,9 +84,11 @@ struct ContentView: View {
                     // Results: focus the map on the recommended sources only.
                     ForEach(vm.allRankedSources) { ranked in
                         Annotation(ranked.source.name, coordinate: ranked.source.coordinate.clLocationCoordinate) {
-                            SourcePinView(type: ranked.source.type,
-                                          isSelected: vm.selectedSource?.id == ranked.source.id)
-                                .onTapGesture { openDetail(ranked.source) }
+                            SourcePinView(
+                                type: ranked.source.type,
+                                isSelected: vm.selectedSource?.id == ranked.source.id
+                            )
+                            .onTapGesture { openDetail(ranked.source) }
                         }
                         .annotationTitles(.hidden)
                     }
@@ -77,8 +113,8 @@ struct ContentView: View {
                 vm.onCameraChanged(region: context.region)
             }
             .onTapGesture(coordinateSpace: .local) { point in
-                guard vm.phase == .search, let coordinate = proxy.convert(point, from: .local) else { return }
-                dropFire(at: Coordinate(coordinate))
+                guard let coordinate = proxy.convert(point, from: .local) else { return }
+                dropFire(at: Coordinate(coordinate), title: "Titik Peta Dipilih", subtitle: "Koordinat Kustom")
             }
         }
     }
@@ -107,12 +143,16 @@ struct ContentView: View {
                 ranked: ranked,
                 fireLocation: vm.fireLocation,
                 satellite: $vm.mapStyleIsSatellite,
+                isSaved: vm.isSaved(selected),
+                onToggleSave: { vm.toggleSaved(selected) },
                 onBack: closeDetail,
                 onRouteReady: { routePolyline = $0 }
             )
         } else if vm.phase == .results {
             ResultsSheetView(
                 groups: vm.rankedGroups,
+                locationTitle: vm.fireLocationTitle,
+                locationSubtitle: vm.fireLocationSubtitle,
                 isExpanded: detent == .large,
                 onSelect: openDetail,
                 onChangeLocation: resetToSearch
@@ -121,38 +161,65 @@ struct ContentView: View {
             SearchSheetView(
                 search: search,
                 query: $query,
-                onResolve: dropFire,
-                onActivate: { detent = .large },
-                onDeactivate: { detent = Self.smallDetent }
+                recentSearches: vm.recentSearches,
+                onSelectRecent: handleSelectRecent,
+                onDeleteRecent: { vm.removeRecentSearch($0) },
+                onSelectCategory: handleSelectCategory,
+                onResolve: { coord, title, subtitle in
+                    dropFire(at: coord, title: title, subtitle: subtitle)
+                },
+                onActivate: {
+                    withAnimation(.snappy) {
+                        detent = .large
+                    }
+                },
+                onDeactivate: {
+                    withAnimation(.snappy) {
+                        detent = Self.smallDetent
+                    }
+                },
+                isExpanded: detent != Self.smallDetent
             )
         }
     }
 
     // MARK: Actions
 
-    private func dropFire(at coordinate: Coordinate) {
-        vm.setFireLocation(coordinate)
-        detent = .medium
+    private func handleSelectRecent(_ item: RecentSearch) {
+        dropFire(at: item.coordinate, title: item.title, subtitle: item.subtitle)
+    }
+
+    private func handleSelectCategory(_ type: WaterSourceType) {
+        if let nearest = vm.findNearest(type: type) {
+            openDetail(nearest)
+        }
+    }
+
+    private func dropFire(at coordinate: Coordinate, title: String? = nil, subtitle: String? = nil) {
+        vm.setFireLocation(coordinate, title: title, subtitle: subtitle)
+        withAnimation(.snappy) {
+            detent = .medium
+        }
     }
 
     private func handleSingleTap(_ source: WaterSource) {
-        if vm.phase == .results {
-            openDetail(source)
-        } else {
-            vm.zoomIn(on: source.coordinate)
-        }
+        openDetail(source)
     }
 
     private func openDetail(_ source: WaterSource) {
         routePolyline = nil
         vm.select(source)
-        detent = .large
+        withAnimation(.snappy) {
+            detent = .large
+        }
     }
 
     private func closeDetail() {
         vm.selectedSource = nil
         routePolyline = nil
-        detent = .medium
+        withAnimation(.snappy) {
+            detent = vm.phase == .results ? .medium : Self.smallDetent
+        }
     }
 
     private func resetToSearch() {
@@ -160,21 +227,21 @@ struct ContentView: View {
         query = ""
         search.updateQuery("")
         routePolyline = nil
-        detent = Self.smallDetent
+        withAnimation(.snappy) {
+            detent = Self.smallDetent
+        }
     }
 
     // MARK: Helpers
 
     /// Finds the ranked wrapper for a source; falls back to computing distance
-    /// from the fire location for points outside the top-3 (e.g. tapped on map).
+    /// from the fire location or current map center for points outside the top-3.
     private func rankedFor(_ source: WaterSource) -> RankedWaterSource? {
         if let existing = vm.allRankedSources.first(where: { $0.source.id == source.id }) {
             return existing
         }
-        if let fire = vm.fireLocation {
-            return RankedWaterSource(source: source, distanceMeters: fire.distance(to: source.coordinate))
-        }
-        return nil
+        let refCoord = vm.fireLocation ?? Coordinate(vm.visibleRegion.center)
+        return RankedWaterSource(source: source, distanceMeters: refCoord.distance(to: source.coordinate))
     }
 }
 

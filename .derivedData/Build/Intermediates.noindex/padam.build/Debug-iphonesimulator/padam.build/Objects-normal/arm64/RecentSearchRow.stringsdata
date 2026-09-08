@@ -1,0 +1,24 @@
+{
+  "source": "/Users/hano/Academy/Challenges/5/padam/padam/View/Components/RecentSearchRow.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Hapus dari Recents",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 48
+        }
+      },
+      {
+        "comment": "",
+        "key": "Salin Alamat",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 53
+        }
+      }
+    ]
+  },
+  "version": 1
+}

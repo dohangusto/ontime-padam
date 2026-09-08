@@ -2,11 +2,12 @@
 //  DetailSheetView.swift
 //  padam
 //
-//  Detail state (large detent). Everything the operator needs to speak an
-//  actionable instruction over the radio: type, distance, full address, the
-//  raw condition, and a route. Includes the satellite toggle so the operator can
-//  judge road width / truck access themselves — we provide evidence, not
-//  conclusions.
+//  Single location detail bottom sheet matching IMG_4790:
+//  - Top header with ShareLink, Title & Subtitle, and Close (xmark) button.
+//  - Prominent Action buttons (Primary Route button with ETA + Secondary Call / Satellite button).
+//  - 3-column Summary Chips (Status/Hours, Keandalan/Rating, Distance).
+//  - Info cards (Alamat, Wilayah, Kondisi).
+//  - Floating bottom capsule bar overlay with Plus, Star, and Ellipsis actions.
 //
 
 import SwiftUI
@@ -16,6 +17,8 @@ struct DetailSheetView: View {
     let ranked: RankedWaterSource
     let fireLocation: Coordinate?
     @Binding var satellite: Bool
+    var isSaved: Bool = false
+    var onToggleSave: () -> Void = {}
     var onBack: () -> Void
     var onRouteReady: (MKPolyline?) -> Void
 
@@ -25,144 +28,229 @@ struct DetailSheetView: View {
     private var source: WaterSource { ranked.source }
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
-                header
-                actionRow
-                markers
-                distanceSection
-                Divider()
-                addressSection
-                if let kondisi = source.kondisi, !kondisi.isEmpty {
-                    infoRow(title: "Kondisi (data mentah)", value: kondisi)
+        ZStack(alignment: .bottom) {
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 20) {
+                    header
+                    actionRow
+                    summaryChipsRow
+                    addressAndAdministrativeSection
+                    conditionSection
+                    DataAttributionFooter()
+                        .padding(.top, 4)
+                        .padding(.bottom, 72) // space for floating bottom bar
                 }
-                administrativeSection
-                DataAttributionFooter()
+                .padding(.horizontal, 16)
+                .padding(.top, 16)
             }
-            .padding(.horizontal, 20)
-            .padding(.top, 20)
-            .padding(.bottom, 16)
+
+            // Floating Bottom Bar pinned at the bottom overlay (IMG_4790)
+            FloatingBottomBar(
+                source: source,
+                isSaved: isSaved,
+                onToggleSave: onToggleSave,
+                onAddGuide: {},
+                onOpenInMaps: openInMaps
+            )
+            .padding(.bottom, 12)
         }
         .task(id: source.id) { await loadRoute() }
     }
 
+    // MARK: Header (Share, Title + Subtitle, Close)
+
     private var header: some View {
-        HStack(alignment: .top, spacing: 12) {
-            SourcePinView(type: source.type)
-            VStack(alignment: .leading, spacing: 2) {
+        HStack(alignment: .center, spacing: 12) {
+            ShareLink(
+                item: "\(source.name)\n\(source.address)\nKoordinat: \(source.coordinate.latitude), \(source.coordinate.longitude)"
+            ) {
+                Image(systemName: "square.and.arrow.up")
+                    .font(.system(size: 15, weight: .bold))
+                    .foregroundStyle(.primary)
+                    .frame(width: 36, height: 36)
+                    .background(.quaternary.opacity(0.8), in: Circle())
+            }
+            .buttonStyle(.plain)
+
+            VStack(spacing: 2) {
                 Text(source.name)
-                    .font(.title2.bold())
-                    .lineLimit(2)
+                    .font(.title3.weight(.bold))
+                    .foregroundStyle(.primary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.85)
+
                 Text(source.type.displayName)
                     .font(.subheadline)
-                    .foregroundStyle(source.type.tint)
+                    .foregroundStyle(.secondary)
             }
-            Spacer()
+            .frame(maxWidth: .infinity)
+
             Button(action: onBack) {
                 Image(systemName: "xmark")
-                    .font(.subheadline.weight(.bold))
+                    .font(.system(size: 14, weight: .bold))
                     .foregroundStyle(.secondary)
-                    .padding(8)
-                    .background(.quaternary, in: Circle())
+                    .frame(width: 36, height: 36)
+                    .background(.quaternary.opacity(0.8), in: Circle())
             }
             .buttonStyle(.plain)
         }
     }
 
-    /// Apple-Maps-style prominent action row: primary route button (with ETA when
-    /// known) plus a satellite toggle so the operator can judge road access.
-    private var actionRow: some View {
-        HStack(spacing: 10) {
-            Button(action: openInMaps) {
-                Label(routeButtonTitle, systemImage: "car.fill")
-                    .frame(maxWidth: .infinity)
-            }
-            .buttonStyle(.borderedProminent)
+    // MARK: Action Buttons Row (IMG_4790)
 
-            Button { satellite.toggle() } label: {
-                Label("Satelit", systemImage: "globe.americas.fill")
-                    .frame(maxWidth: .infinity)
+    private var actionRow: some View {
+        HStack(spacing: 12) {
+            Button(action: openInMaps) {
+                HStack(spacing: 8) {
+                    Image(systemName: "car.fill")
+                        .font(.system(size: 18, weight: .bold))
+                    Text(routeButtonTitle)
+                        .font(.headline.weight(.semibold))
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 50)
+                .foregroundStyle(.white)
+                .background(Color.blue, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
             }
-            .buttonStyle(.bordered)
-            .tint(satellite ? .blue : .gray)
+            .buttonStyle(.plain)
+
+            Button {
+                satellite.toggle()
+            } label: {
+                HStack(spacing: 8) {
+                    Image(systemName: satellite ? "globe.americas.fill" : "phone.fill")
+                        .font(.system(size: 18, weight: .semibold))
+                    Text(satellite ? "Satelit On" : "Hubungi")
+                        .font(.headline.weight(.semibold))
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 50)
+                .foregroundStyle(.white)
+                .background(.quaternary.opacity(0.85), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+            }
+            .buttonStyle(.plain)
         }
-        .controlSize(.large)
     }
 
     private var routeButtonTitle: String {
-        if let estimate { return "Rute · \(formatDuration(estimate.travelTime))" }
+        if let estimate { return formatDuration(estimate.travelTime) }
         return "Rute"
     }
 
-    @ViewBuilder private var markers: some View {
-        HStack(spacing: 8) {
-            if ranked.isLowReliability {
-                calloutBadge("Keandalan rendah — banyak hidran rusak / debit kecil",
-                             systemImage: "exclamationmark.triangle.fill", tint: .orange)
+    // MARK: Summary Chips Row (3 Columns: Status, Keandalan, Distance)
+
+    private var summaryChipsRow: some View {
+        HStack(spacing: 0) {
+            // Status / Hours
+            VStack(spacing: 4) {
+                Text("Status")
+                    .font(.caption.weight(.medium))
+                    .foregroundStyle(.secondary)
+                Text(statusText)
+                    .font(.headline.weight(.bold))
+                    .foregroundStyle(.green)
             }
-            if ranked.isFar {
-                calloutBadge("Jauh (>3 km) dari lokasi",
-                             systemImage: "location.slash", tint: .secondary)
+            .frame(maxWidth: .infinity)
+
+            Divider()
+                .frame(height: 32)
+
+            // Ratings / Keandalan
+            VStack(spacing: 4) {
+                Text("Keandalan")
+                    .font(.caption.weight(.medium))
+                    .foregroundStyle(.secondary)
+                HStack(spacing: 4) {
+                    Image(systemName: ranked.isLowReliability ? "exclamationmark.triangle.fill" : "hand.thumbsup.fill")
+                        .font(.caption.weight(.bold))
+                    Text(ranked.isLowReliability ? "Rendah" : "100%")
+                        .font(.headline.weight(.bold))
+                }
+                .foregroundStyle(ranked.isLowReliability ? .orange : .primary)
             }
-        }
-    }
+            .frame(maxWidth: .infinity)
 
-    private var distanceSection: some View {
-        HStack(spacing: 20) {
-            metric(title: "Garis lurus", value: DistanceFormat.string(ranked.distanceMeters))
-            if let estimate {
-                metric(title: "Jarak rute", value: DistanceFormat.string(estimate.distanceMeters))
-                metric(title: "Estimasi waktu", value: formatDuration(estimate.travelTime))
-            } else if isLoadingRoute {
-                metric(title: "Rute", value: "…")
+            Divider()
+                .frame(height: 32)
+
+            // Distance
+            VStack(spacing: 4) {
+                Text("Distance")
+                    .font(.caption.weight(.medium))
+                    .foregroundStyle(.secondary)
+                HStack(spacing: 4) {
+                    Image(systemName: "arrow.triangle.turn.up.right.diamond.fill")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                    Text(DistanceFormat.string(ranked.distanceMeters))
+                        .font(.headline.monospacedDigit().weight(.bold))
+                        .foregroundStyle(.primary)
+                }
             }
+            .frame(maxWidth: .infinity)
         }
+        .padding(.vertical, 12)
+        .background(.quaternary.opacity(0.4), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
-    private var addressSection: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text("Alamat lengkap")
-                .font(.caption)
-                .foregroundStyle(.secondary)
-            Text(source.address.isEmpty ? "Alamat tidak tersedia" : source.address)
-                .font(.body)
-                .textSelection(.enabled)
+    private var statusText: String {
+        if let kondisi = source.kondisi, !kondisi.isEmpty {
+            return kondisi.capitalized
         }
+        return "Siap Pakai"
     }
 
-    @ViewBuilder private var administrativeSection: some View {
-        let parts = [source.kelurahan, source.kecamatan, source.wilayah].compactMap { $0 }
-        if !parts.isEmpty {
-            infoRow(title: "Wilayah", value: parts.joined(separator: ", "))
-        }
-    }
+    // MARK: Address & Administrative Section
 
+    private var addressAndAdministrativeSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Alamat")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.secondary)
 
-    // MARK: Pieces
+                Text(source.address.isEmpty ? "Alamat tidak tercantum" : source.address)
+                    .font(.subheadline)
+                    .foregroundStyle(.primary)
+                    .textSelection(.enabled)
+            }
 
-    private func metric(title: String, value: String) -> some View {
-        VStack(alignment: .leading, spacing: 2) {
-            Text(title).font(.caption).foregroundStyle(.secondary)
-            Text(value).font(.headline.monospacedDigit())
-        }
-    }
-
-    private func infoRow(title: String, value: String) -> some View {
-        VStack(alignment: .leading, spacing: 2) {
-            Text(title).font(.caption).foregroundStyle(.secondary)
-            Text(value).font(.subheadline)
+            let parts = [source.kelurahan, source.kecamatan, source.wilayah].compactMap { $0 }
+            if !parts.isEmpty {
+                Divider()
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Wilayah Administratif")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                    Text(parts.joined(separator: ", "))
+                        .font(.subheadline)
+                        .foregroundStyle(.primary)
+                }
+            }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(14)
+        .background(.quaternary.opacity(0.4), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
-    private func calloutBadge(_ text: String, systemImage: String, tint: Color) -> some View {
-        Label(text, systemImage: systemImage)
-            .font(.caption.weight(.semibold))
-            .foregroundStyle(tint)
-            .padding(.horizontal, 8)
-            .padding(.vertical, 5)
+    // MARK: Condition / Raw Data Section
+
+    @ViewBuilder
+    private var conditionSection: some View {
+        if let kondisi = source.kondisi, !kondisi.isEmpty {
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Kondisi Lapangan")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.secondary)
+
+                Text(kondisi)
+                    .font(.subheadline)
+                    .foregroundStyle(.primary)
+            }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(tint.opacity(0.15), in: RoundedRectangle(cornerRadius: 8))
+            .padding(14)
+            .background(.quaternary.opacity(0.4), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        }
     }
 
     // MARK: Actions
@@ -176,8 +264,10 @@ struct DetailSheetView: View {
     }
 
     private func openInMaps() {
-        let location = CLLocation(latitude: source.coordinate.latitude,
-                                  longitude: source.coordinate.longitude)
+        let location = CLLocation(
+            latitude: source.coordinate.latitude,
+            longitude: source.coordinate.longitude
+        )
         let item = MKMapItem(location: location, address: nil)
         item.name = source.name
         item.openInMaps(launchOptions: [
@@ -187,15 +277,21 @@ struct DetailSheetView: View {
 
     private func formatDuration(_ interval: TimeInterval) -> String {
         let minutes = Int((interval / 60).rounded())
-        return "\(minutes) mnt"
+        return "\(minutes) min"
     }
 }
 
 #if DEBUG
 #Preview("Detail") {
-    DetailSheetView(ranked: PreviewSamples.sampleRanked,
-                    fireLocation: PreviewSamples.fire,
-                    satellite: .constant(false),
-                    onBack: {}, onRouteReady: { _ in })
+    DetailSheetView(
+        ranked: PreviewSamples.sampleRanked,
+        fireLocation: PreviewSamples.fire,
+        satellite: .constant(false),
+        isSaved: false,
+        onToggleSave: {},
+        onBack: {},
+        onRouteReady: { _ in }
+    )
+    .background(.black)
 }
 #endif

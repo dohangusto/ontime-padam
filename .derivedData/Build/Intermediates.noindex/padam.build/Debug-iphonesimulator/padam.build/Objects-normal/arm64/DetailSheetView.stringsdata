@@ -1,0 +1,88 @@
+{
+  "source": "/Users/hano/Academy/Challenges/5/padam/padam/View/DetailSheetView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Satelit On",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 123
+        }
+      },
+      {
+        "comment": "",
+        "key": "Hubungi",
+        "location": {
+          "startingColumn": 53,
+          "startingLine": 123
+        }
+      },
+      {
+        "comment": "",
+        "key": "Status",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 146
+        }
+      },
+      {
+        "comment": "",
+        "key": "Keandalan",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 160
+        }
+      },
+      {
+        "comment": "",
+        "key": "Rendah",
+        "location": {
+          "startingColumn": 52,
+          "startingLine": 166
+        }
+      },
+      {
+        "comment": "",
+        "key": "100%",
+        "location": {
+          "startingColumn": 63,
+          "startingLine": 166
+        }
+      },
+      {
+        "comment": "",
+        "key": "Distance",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 178
+        }
+      },
+      {
+        "comment": "",
+        "key": "Alamat",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 208
+        }
+      },
+      {
+        "comment": "",
+        "key": "Wilayah Administratif",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 222
+        }
+      },
+      {
+        "comment": "",
+        "key": "Kondisi Lapangan",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 242
+        }
+      }
+    ]
+  },
+  "version": 1
+}

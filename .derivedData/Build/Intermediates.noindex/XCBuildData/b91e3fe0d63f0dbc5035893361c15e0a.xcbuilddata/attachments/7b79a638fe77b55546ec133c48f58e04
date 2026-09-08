@@ -1,0 +1,59 @@
+{
+  "" : {
+    "diagnostics" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/padamTests-primary.dia",
+    "emit-module-dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/padamTests-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/padamTests-primary-emit-module.dia",
+    "pch" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/padamTests-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/padamTests-primary.swiftdeps"
+  },
+  "/Users/hano/Academy/Challenges/5/padam/padamTests/CoordinateTests.swift" : {
+    "const-values" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/CoordinateTests.swiftconstvalues",
+    "dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/CoordinateTests.d",
+    "diagnostics" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/CoordinateTests.dia",
+    "index-unit-output-path" : "/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/CoordinateTests.o",
+    "llvm-bc" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/CoordinateTests.bc",
+    "object" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/CoordinateTests.o",
+    "swift-dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/CoordinateTests.swiftdeps",
+    "swiftmodule" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/CoordinateTests~partial.swiftmodule"
+  },
+  "/Users/hano/Academy/Challenges/5/padam/padamTests/MapClusteringTests.swift" : {
+    "const-values" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/MapClusteringTests.swiftconstvalues",
+    "dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/MapClusteringTests.d",
+    "diagnostics" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/MapClusteringTests.dia",
+    "index-unit-output-path" : "/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/MapClusteringTests.o",
+    "llvm-bc" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/MapClusteringTests.bc",
+    "object" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/MapClusteringTests.o",
+    "swift-dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/MapClusteringTests.swiftdeps",
+    "swiftmodule" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/MapClusteringTests~partial.swiftmodule"
+  },
+  "/Users/hano/Academy/Challenges/5/padam/padamTests/RankingServiceTests.swift" : {
+    "const-values" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/RankingServiceTests.swiftconstvalues",
+    "dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/RankingServiceTests.d",
+    "diagnostics" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/RankingServiceTests.dia",
+    "index-unit-output-path" : "/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/RankingServiceTests.o",
+    "llvm-bc" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/RankingServiceTests.bc",
+    "object" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/RankingServiceTests.o",
+    "swift-dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/RankingServiceTests.swiftdeps",
+    "swiftmodule" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/RankingServiceTests~partial.swiftmodule"
+  },
+  "/Users/hano/Academy/Challenges/5/padam/padamTests/WaterSourceDecodingTests.swift" : {
+    "const-values" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/WaterSourceDecodingTests.swiftconstvalues",
+    "dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/WaterSourceDecodingTests.d",
+    "diagnostics" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/WaterSourceDecodingTests.dia",
+    "index-unit-output-path" : "/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/WaterSourceDecodingTests.o",
+    "llvm-bc" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/WaterSourceDecodingTests.bc",
+    "object" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/WaterSourceDecodingTests.o",
+    "swift-dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/WaterSourceDecodingTests.swiftdeps",
+    "swiftmodule" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/WaterSourceDecodingTests~partial.swiftmodule"
+  },
+  "/Users/hano/Academy/Challenges/5/padam/padamTests/padamTests.swift" : {
+    "const-values" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/padamTests.swiftconstvalues",
+    "dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/padamTests.d",
+    "diagnostics" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/padamTests.dia",
+    "index-unit-output-path" : "/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/padamTests.o",
+    "llvm-bc" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/padamTests.bc",
+    "object" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/padamTests.o",
+    "swift-dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/padamTests.swiftdeps",
+    "swiftmodule" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padamTests.build/Objects-normal/arm64/padamTests~partial.swiftmodule"
+  }
+}

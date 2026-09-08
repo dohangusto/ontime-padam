@@ -37,10 +37,22 @@ final class MapViewModel {
 
     /// The fire location the operator is refilling for. `nil` means initial/search.
     private(set) var fireLocation: Coordinate?
+    var fireLocationTitle: String = "Lokasi Kebakaran"
+    var fireLocationSubtitle: String = "Titik acuan rekomendasi sumber air"
     private(set) var rankedGroups: [RankedGroup] = []
 
     /// The point the operator has tapped/opened for detail.
     var selectedSource: WaterSource?
+
+    /// Saved / favorited water sources
+    var savedSourceIDs: Set<UUID> = []
+
+    /// Recent search history
+    var recentSearches: [RecentSearch] = RecentSearch.defaults
+
+    /// Weather info displayed on the map overlay (matching IMG_4786)
+    var weatherTemperature: String = "29°"
+    var weatherArea: String = "KEBON KACANG"
 
     /// Visible region, updated as the camera moves; drives clustering and keeps
     /// the number of on-screen annotations bounded regardless of dataset size.
@@ -81,11 +93,65 @@ final class MapViewModel {
     // MARK: Actions
 
     /// Sets the fire location, re-ranks, and frames the map on it.
-    func setFireLocation(_ coordinate: Coordinate) {
+    func setFireLocation(_ coordinate: Coordinate, title: String? = nil, subtitle: String? = nil) {
         fireLocation = coordinate
         rankedGroups = RankingService.rank(sources: allSources, from: coordinate)
         selectedSource = nil
         frame(on: coordinate, spanDegrees: 0.05)
+
+        if let title {
+            fireLocationTitle = title
+            fireLocationSubtitle = subtitle ?? "Lokasi Kebakaran"
+            addRecentSearch(title: title, subtitle: subtitle ?? "Lokasi Kebakaran", coordinate: coordinate)
+        } else {
+            fireLocationTitle = "Lokasi Kebakaran"
+            fireLocationSubtitle = "\(String(format: "%.4f", coordinate.latitude)), \(String(format: "%.4f", coordinate.longitude))"
+        }
+    }
+
+    /// Finds and selects the nearest water source of a given type.
+    @discardableResult
+    func findNearest(type: WaterSourceType) -> WaterSource? {
+        let referenceCoord = fireLocation ?? Coordinate(visibleRegion.center)
+        let matchingSources = allSources.filter { $0.type == type }
+        guard let nearest = matchingSources.min(by: {
+            referenceCoord.distance(to: $0.coordinate) < referenceCoord.distance(to: $1.coordinate)
+        }) else {
+            return nil
+        }
+        select(nearest)
+        return nearest
+    }
+
+    func addRecentSearch(title: String, subtitle: String, coordinate: Coordinate) {
+        recentSearches.removeAll { $0.title == title || ($0.coordinate.latitude == coordinate.latitude && $0.coordinate.longitude == coordinate.longitude) }
+        let newRecent = RecentSearch(
+            title: title,
+            subtitle: subtitle,
+            coordinate: coordinate,
+            iconSystemName: "mappin.circle.fill",
+            iconTintName: "red"
+        )
+        recentSearches.insert(newRecent, at: 0)
+        if recentSearches.count > 10 {
+            recentSearches.removeLast()
+        }
+    }
+
+    func removeRecentSearch(_ item: RecentSearch) {
+        recentSearches.removeAll { $0.id == item.id }
+    }
+
+    func toggleSaved(_ source: WaterSource) {
+        if savedSourceIDs.contains(source.id) {
+            savedSourceIDs.remove(source.id)
+        } else {
+            savedSourceIDs.insert(source.id)
+        }
+    }
+
+    func isSaved(_ source: WaterSource) -> Bool {
+        savedSourceIDs.contains(source.id)
     }
 
     /// Returns to the initial search state to correct a wrong fire location.

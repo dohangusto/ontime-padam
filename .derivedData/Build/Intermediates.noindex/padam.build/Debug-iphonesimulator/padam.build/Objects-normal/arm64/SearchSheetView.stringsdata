@@ -1,0 +1,24 @@
+{
+  "source": "/Users/hano/Academy/Challenges/5/padam/padam/View/SearchSheetView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Cari titik kebakaran",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 72
+        }
+      },
+      {
+        "comment": "",
+        "key": "Find Nearby",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 244
+        }
+      }
+    ]
+  },
+  "version": 1
+}

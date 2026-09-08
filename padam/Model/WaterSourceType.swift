@@ -42,10 +42,10 @@ enum WaterSourceType: String, CaseIterable, Identifiable, Codable, Sendable {
 
     var displayName: String {
         switch self {
-        case .kali: return "Kali / Sungai"
+        case .kali: return "Sungai"
         case .got: return "Got"
         case .kolamRenang: return "Kolam Renang"
-        case .posDamkar: return "Pos Damkar"
+        case .posDamkar: return "Pos DAMKAR"
         case .hidran: return "Hidran"
         }
     }
@@ -57,8 +57,8 @@ enum WaterSourceType: String, CaseIterable, Identifiable, Codable, Sendable {
         case .kali: return "water.waves"
         case .got: return "drop.degreesign"
         case .kolamRenang: return "figure.pool.swim"
-        case .posDamkar: return "flame"
-        case .hidran: return "fire.extinguisher"
+        case .posDamkar: return "flame.fill"
+        case .hidran: return "fire.extinguisher.fill"
         }
     }
 }

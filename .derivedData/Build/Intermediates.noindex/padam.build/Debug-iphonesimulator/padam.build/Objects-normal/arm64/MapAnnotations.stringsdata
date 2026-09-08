@@ -1,0 +1,16 @@
+{
+  "source": "/Users/hano/Academy/Challenges/5/padam/padam/View/MapAnnotations.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 14,
+          "startingLine": 16
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,23 @@
+{
+  "/Users/hano/Academy/Challenges/5/padam/padam/App/padamApp.swift" : {
+    "const-values" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/padamApp.swiftconstvalues",
+    "dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/padamApp.d",
+    "diagnostics" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/padamApp.dia",
+    "object" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/padamApp.o",
+    "swift-dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/padamApp.swiftdeps"
+  },
+  "/Users/hano/Academy/Challenges/5/padam/padam/Infrastructure/Service/DirectionsService.swift" : {
+    "const-values" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/DirectionsService.swiftconstvalues",
+    "dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/DirectionsService.d",
+    "diagnostics" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/DirectionsService.dia",
+    "object" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/DirectionsService.o",
+    "swift-dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/DirectionsService.swiftdeps"
+  },
+  "/Users/hano/Academy/Challenges/5/padam/padam/Infrastructure/Service/LocationSearchService.swift" : {
+    "const-values" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/LocationSearchService.swiftconstvalues",
+    "dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/LocationSearchService.d",
+    "diagnostics" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/LocationSearchService.dia",
+    "object" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/LocationSearchService.o",
+    "swift-dependencies" : "/Users/hano/Academy/Challenges/5/padam/.derivedData/Build/Intermediates.noindex/padam.build/Debug-iphonesimulator/padam.build/Objects-normal/arm64/LocationSearchService.swiftdeps"
+  }
+}

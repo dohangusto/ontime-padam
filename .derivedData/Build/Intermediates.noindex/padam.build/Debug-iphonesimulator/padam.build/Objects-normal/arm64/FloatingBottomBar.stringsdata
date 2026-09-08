@@ -1,0 +1,40 @@
+{
+  "source": "/Users/hano/Academy/Challenges/5/padam/padam/View/Components/FloatingBottomBar.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Buka di Apple Maps",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 39
+        }
+      },
+      {
+        "comment": "",
+        "key": "Salin Koordinat",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 45
+        }
+      },
+      {
+        "comment": "",
+        "key": "Salin Alamat Lengkap",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 50
+        }
+      },
+      {
+        "comment": "",
+        "key": "Bagikan Lokasi",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 55
+        }
+      }
+    ]
+  },
+  "version": 1
+}

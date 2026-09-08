@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>12</integer>
+	<key>logs</key>
+	<dict>
+		<key>C171E40D-C1F3-44D3-8A23-C82DFF334577</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C171E40D-C1F3-44D3-8A23-C82DFF334577.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>14</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>padam project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>padam</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Testing project padam with scheme padam</string>
+			<key>timeStartedRecording</key>
+			<real>810527928.86573994</real>
+			<key>timeStoppedRecording</key>
+			<real>810527933.06693697</real>
+			<key>title</key>
+			<string>Testing project padam with scheme padam</string>
+			<key>uniqueIdentifier</key>
+			<string>C171E40D-C1F3-44D3-8A23-C82DFF334577</string>
+		</dict>
+		<key>F824C624-299F-4007-9AF9-531AADE35DEF</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F824C624-299F-4007-9AF9-531AADE35DEF.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>14</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>padam project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>padam</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Testing project padam with scheme padam</string>
+			<key>timeStartedRecording</key>
+			<real>810528202.92917705</real>
+			<key>timeStoppedRecording</key>
+			<real>810528206.37807906</real>
+			<key>title</key>
+			<string>Testing project padam with scheme padam</string>
+			<key>uniqueIdentifier</key>
+			<string>F824C624-299F-4007-9AF9-531AADE35DEF</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
