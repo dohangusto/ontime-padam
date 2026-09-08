@@ -100,9 +100,21 @@ struct DetailSheetView: View {
                     .lineLimit(2)
                     .minimumScaleFactor(0.85)
 
-                Text(source.type.displayName)
+                if source.type.isLowReliability {
+                    HStack(spacing: 4) {
+                        Text(source.type.displayName)
+                            .foregroundStyle(.secondary)
+                        Text("·")
+                            .foregroundStyle(.secondary.opacity(0.6))
+                        Text("keandalan rendah")
+                            .foregroundStyle(.orange)
+                    }
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                } else {
+                    Text(source.type.displayName)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
             }
             .frame(maxWidth: .infinity)
 
@@ -133,7 +145,7 @@ struct DetailSheetView: View {
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
                 .foregroundStyle(.white)
-                .background(Color.blue, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                .background(Color.indigo, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
             }
             .buttonStyle(.plain)
 
@@ -166,44 +178,24 @@ struct DetailSheetView: View {
         return "Rute"
     }
 
-    // MARK: Summary Chips Row (3 Columns: Status, Keandalan, Distance)
+    // MARK: Summary Chips Row (2 Columns: Status, Jarak lurus)
 
     private var summaryChipsRow: some View {
         HStack(spacing: 0) {
             // Status — color, icon and word all bound to the point's condition.
-            // Green can only ever mean usable; an unusable point reads red.
+            // Single word/phrase: Aktif (green), Rusak (red), Tak diketahui (gray).
             VStack(spacing: 4) {
                 Text("Status")
                     .font(.caption.weight(.medium))
                     .foregroundStyle(.secondary)
-                HStack(spacing: 4) {
+                HStack(spacing: 5) {
                     Image(systemName: ranked.condition.symbolName)
-                        .font(.caption.weight(.bold))
-                    Text(statusText)
                         .font(.subheadline.weight(.bold))
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.7)
-                        .multilineTextAlignment(.center)
+                    Text(ranked.condition.label)
+                        .font(.headline.weight(.bold))
+                        .lineLimit(1)
                 }
                 .foregroundStyle(ranked.condition.tint)
-            }
-            .frame(maxWidth: .infinity)
-
-            Divider()
-                .frame(height: 32)
-
-            // Ratings / Keandalan
-            VStack(spacing: 4) {
-                Text("Keandalan")
-                    .font(.caption.weight(.medium))
-                    .foregroundStyle(.secondary)
-                HStack(spacing: 4) {
-                    Image(systemName: ranked.isLowReliability ? "exclamationmark.triangle.fill" : "hand.thumbsup.fill")
-                        .font(.caption.weight(.bold))
-                    Text(ranked.isLowReliability ? "Rendah" : "100%")
-                        .font(.headline.weight(.bold))
-                }
-                .foregroundStyle(ranked.isLowReliability ? .orange : .primary)
             }
             .frame(maxWidth: .infinity)
 
@@ -216,7 +208,7 @@ struct DetailSheetView: View {
                 Text("Jarak lurus")
                     .font(.caption.weight(.medium))
                     .foregroundStyle(.secondary)
-                HStack(spacing: 4) {
+                HStack(spacing: 5) {
                     Image(systemName: "ruler")
                         .font(.caption2)
                         .foregroundStyle(.secondary)
@@ -230,15 +222,6 @@ struct DetailSheetView: View {
         .padding(.vertical, 12)
         .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
-    }
-
-    private var statusText: String {
-        // Show the recorded condition verbatim (capitalized) when present. When
-        // there is none, say so honestly — never fabricate "ready".
-        if let kondisi = source.kondisi?.trimmingCharacters(in: .whitespacesAndNewlines), !kondisi.isEmpty {
-            return kondisi.capitalized
-        }
-        return ranked.condition.label
     }
 
     // MARK: Address & Administrative Section

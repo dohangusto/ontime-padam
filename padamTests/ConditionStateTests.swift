@@ -49,4 +49,11 @@ struct ConditionStateTests {
         #expect(ConditionState.usable.isCandidate == true)
         #expect(ConditionState.unknown.isCandidate == true)
     }
+
+    @Test("Normalized labels return concise infrastructure terms")
+    func normalizedLabels() {
+        #expect(ConditionState.usable.label == "Aktif")
+        #expect(ConditionState.unknown.label == "Tak diketahui")
+        #expect(ConditionState.unusable.label == "Rusak")
+    }
 }

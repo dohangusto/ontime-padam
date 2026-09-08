@@ -2,47 +2,96 @@
 //  MapClustering.swift
 //  padam
 //
-//  Zoom-based aggregation so zoomed-out views aren't flooded with pins. Pure
-//  logic (no MapKit) kept out of the ViewModel so it can be unit-tested.
-//
-//  Approach: snap each point to a square grid whose cell size scales with the
-//  visible longitude span (i.e. the zoom level). Cells with one point render as
-//  a single pin; cells with more render as a count bubble.
+//  Option 2A: Clean map at coarse zoom. Above the zoom threshold, points are
+//  hidden to keep the map clean for orientation, and a hint pill is shown.
+//  When zoomed in below the threshold, individual water-source pins are shown.
 //
 
 import Foundation
 
 struct MapCluster: Identifiable, Hashable {
-    /// Stable identity derived from the grid cell, so pins don't churn while panning.
     let id: String
     let coordinate: Coordinate
+    let title: String?
     let sources: [WaterSource]
+    let dominantType: WaterSourceType
 
     var count: Int { sources.count }
     var isCluster: Bool { sources.count > 1 }
-    /// The single source when this isn't a cluster.
     var singleSource: WaterSource? { sources.count == 1 ? sources.first : nil }
+
+    init(
+        id: String,
+        coordinate: Coordinate,
+        title: String? = nil,
+        sources: [WaterSource]
+    ) {
+        self.id = id
+        self.coordinate = coordinate
+        self.title = title
+        self.sources = sources
+        self.dominantType = Self.calculateDominantType(in: sources)
+    }
+
+    static func calculateDominantType(in sources: [WaterSource]) -> WaterSourceType {
+        guard let first = sources.first else { return .hidran }
+        var counts: [WaterSourceType: Int] = [:]
+        for s in sources {
+            counts[s.type, default: 0] += 1
+        }
+        return counts.max { a, b in
+            if a.value != b.value {
+                return a.value < b.value
+            }
+            return a.key.reliabilityPriority > b.key.reliabilityPriority
+        }?.key ?? first.type
+    }
 }
 
 enum MapClustering {
-    /// Target number of grid cells across the visible span. Higher = finer clusters.
-    /// Kept deliberately low so dense datasets (e.g. hundreds of hydrants) resolve
-    /// into count bubbles at mid-zoom instead of a wall of overlapping pins.
+    /// Zoom threshold (in longitude span delta).
+    /// Above this threshold: hide all points and display "Perbesar untuk melihat titik" hint.
+    /// Below or equal to this threshold: reveal individual water-source pins.
+    static let zoomThreshold: Double = 0.08
+
+    /// Determines if the visible span is too far zoomed out to display individual points.
+    static func isZoomedOut(longitudeSpan: Double) -> Bool {
+        longitudeSpan > zoomThreshold
+    }
+
+    /// Legacy cell size helper for backwards compatibility.
     static let cellsAcrossSpan = 6.0
 
-    /// Cell size (in degrees) for a given visible longitude span. Larger span
-    /// (zoomed out) → larger cells → more aggregation.
     static func cellSize(forLongitudeSpan span: Double) -> Double {
         guard span.isFinite, span > 0 else { return 0 }
         return span / cellsAcrossSpan
     }
 
-    /// Groups sources into clusters for the given cell size. A cell size of 0 (or
-    /// invalid) means "fully zoomed in": every source is its own pin.
+    /// Primary clustering method implementing zoom-based tiered visibility:
+    /// - Filters sources based on type priority for the current longitude span.
+    ///   (Pos DAMKAR > Sungai > Kolam Renang/Got > Hidran)
+    /// - Renders each visible source as an individual pin.
+    static func cluster(_ sources: [WaterSource], longitudeDelta: Double) -> [MapCluster] {
+        guard !sources.isEmpty else { return [] }
+
+        // Filter sources based on tiered visibility priority for the given zoom span
+        let visibleSources = sources.filter { $0.type.isVisible(atLongitudeSpan: longitudeDelta) }
+
+        return visibleSources.map {
+            MapCluster(
+                id: "single-\($0.id.uuidString)",
+                coordinate: $0.coordinate,
+                title: $0.name,
+                sources: [$0]
+            )
+        }
+    }
+
+    /// Fallback grid-based clustering for testing or custom cell sizes.
     static func cluster(_ sources: [WaterSource], cellSizeDegrees: Double) -> [MapCluster] {
         guard cellSizeDegrees > 0 else {
             return sources.map {
-                MapCluster(id: $0.id.uuidString, coordinate: $0.coordinate, sources: [$0])
+                MapCluster(id: "single-\($0.id.uuidString)", coordinate: $0.coordinate, title: $0.name, sources: [$0])
             }
         }
 
@@ -54,11 +103,12 @@ enum MapClustering {
         }
 
         return buckets.map { key, group in
-            let avgLat = group.reduce(0) { $0 + $1.coordinate.latitude } / Double(group.count)
-            let avgLon = group.reduce(0) { $0 + $1.coordinate.longitude } / Double(group.count)
+            let avgLat = group.reduce(0.0) { $0 + $1.coordinate.latitude } / Double(group.count)
+            let avgLon = group.reduce(0.0) { $0 + $1.coordinate.longitude } / Double(group.count)
             return MapCluster(
-                id: key,
+                id: "grid-\(key)",
                 coordinate: Coordinate(latitude: avgLat, longitude: avgLon),
+                title: group.first?.name,
                 sources: group
             )
         }

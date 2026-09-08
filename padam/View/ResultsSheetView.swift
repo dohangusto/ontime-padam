@@ -33,11 +33,11 @@ struct ResultsSheetView: View {
             header
                 .padding(.horizontal, 16)
                 .padding(.top, isSmall ? 10 : 12)
-                .padding(.bottom, isSmall ? 10 : 8)
+                .padding(.bottom, isSmall ? 8 : 12)
 
             if !isSmall {
                 ScrollView(showsIndicators: false) {
-                    VStack(alignment: .leading, spacing: 18) {
+                    VStack(alignment: .leading, spacing: 20) {
                         if isExpanded {
                             expandedResultsList
                         } else {
@@ -49,6 +49,7 @@ struct ResultsSheetView: View {
                             .padding(.bottom, 24)
                     }
                     .padding(.horizontal, 16)
+                    .padding(.top, 10)
                 }
                 .scrollDisabled(!isExpanded)
             }
@@ -115,10 +116,6 @@ struct ResultsSheetView: View {
                     .foregroundStyle(.primary)
 
                 Spacer()
-
-                Text("\(populated.count)/\(groups.count) Kategori")
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
             }
 
             VStack(spacing: 0) {
@@ -196,10 +193,6 @@ private struct ExpandedGroupCard: View {
 
     private var sectionHeader: some View {
         HStack(spacing: 8) {
-            Image(systemName: group.type.symbolName)
-                .font(.system(size: 14, weight: .bold))
-                .foregroundStyle(group.type.tint)
-
             Text(group.type.displayName)
                 .font(.subheadline.weight(.bold))
                 .foregroundStyle(.primary)
@@ -214,12 +207,6 @@ private struct ExpandedGroupCard: View {
             }
 
             Spacer()
-
-            if !group.isEmpty {
-                Text("\(group.sources.count) titik")
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
-            }
         }
         .padding(.horizontal, 4)
     }
@@ -452,87 +439,146 @@ private struct CollapsedEmptyCategoriesRow: View {
     }
 }
 
-// MARK: Compact Group Row Component
+// MARK: Compact Group Row Component (Dropdown per Category)
 
 private struct CompactGroupRow: View {
     let group: RankedGroup
     var onSelect: (WaterSource) -> Void
 
+    @State private var isExpanded = false
+
     var body: some View {
-        Button {
-            if let top = group.sources.first {
-                onSelect(top.source)
-            }
-        } label: {
-            HStack(spacing: 12) {
-                ZStack {
-                    Circle()
-                        .fill(group.type.tint.opacity(0.18))
-                        .frame(width: 36, height: 36)
-
-                    Image(systemName: group.type.symbolName)
-                        .font(.system(size: 15, weight: .bold))
-                        .foregroundStyle(group.type.tint)
+        VStack(spacing: 0) {
+            // Category Header Button (toggles dropdown)
+            Button {
+                withAnimation(.snappy) {
+                    isExpanded.toggle()
                 }
+            } label: {
+                HStack(spacing: 12) {
+                    ZStack {
+                        Circle()
+                            .fill(group.type.tint.opacity(0.18))
+                            .frame(width: 36, height: 36)
 
-                VStack(alignment: .leading, spacing: 2) {
-                    HStack(spacing: 6) {
-                        Text(group.type.displayName)
-                            .font(.subheadline.weight(.semibold))
-                            .foregroundStyle(.primary)
+                        Image(systemName: group.type.symbolName)
+                            .font(.system(size: 15, weight: .bold))
+                            .foregroundStyle(group.type.tint)
+                    }
 
-                        if group.type.isLowReliability {
-                            Text("keandalan rendah")
-                                .font(.caption2.weight(.semibold))
-                                .foregroundStyle(.orange)
-                                .padding(.horizontal, 5)
-                                .padding(.vertical, 1)
-                                .background(Color.orange.opacity(0.15), in: Capsule())
+                    VStack(alignment: .leading, spacing: 2) {
+                        HStack(spacing: 6) {
+                            Text(group.type.displayName)
+                                .font(.subheadline.weight(.semibold))
+                                .foregroundStyle(.primary)
+
+                            if group.type.isLowReliability {
+                                Text("keandalan rendah")
+                                    .font(.caption2.weight(.semibold))
+                                    .foregroundStyle(.orange)
+                                    .padding(.horizontal, 5)
+                                    .padding(.vertical, 1)
+                                    .background(Color.orange.opacity(0.15), in: Capsule())
+                            }
+                        }
+
+                        if let top = group.sources.first {
+                            Text("\(group.sources.count) pilihan · Terdekat: \(top.source.name)")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                                .lineLimit(1)
+                        } else {
+                            Text("Belum ada data")
+                                .font(.caption)
+                                .foregroundStyle(.tertiary)
                         }
                     }
 
+                    Spacer(minLength: 8)
+
                     if let top = group.sources.first {
-                        Text(top.source.name)
-                            .font(.caption)
+                        VStack(alignment: .trailing, spacing: 2) {
+                            Text(DistanceFormat.string(top.distanceMeters))
+                                .font(.subheadline.monospacedDigit().weight(.semibold))
+                                .foregroundStyle(.primary)
+
+                            if top.isFar {
+                                Text("jauh")
+                                    .font(.caption2.weight(.semibold))
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+
+                        Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
+                            .font(.caption.weight(.bold))
                             .foregroundStyle(.secondary)
-                            .lineLimit(1)
+                            .frame(width: 16)
                     } else {
-                        Text("Belum ada data")
-                            .font(.caption)
+                        Text("--")
+                            .font(.caption.monospacedDigit())
                             .foregroundStyle(.tertiary)
                     }
                 }
-
-                Spacer(minLength: 8)
-
-                if let top = group.sources.first {
-                    VStack(alignment: .trailing, spacing: 2) {
-                        Text(DistanceFormat.string(top.distanceMeters))
-                            .font(.subheadline.monospacedDigit().weight(.semibold))
-                            .foregroundStyle(.primary)
-
-                        if top.isFar {
-                            Text("jauh")
-                                .font(.caption2.weight(.semibold))
-                                .foregroundStyle(.secondary)
-                        }
-                    }
-
-                    Image(systemName: "chevron.right")
-                        .font(.caption.weight(.bold))
-                        .foregroundStyle(.tertiary)
-                } else {
-                    Text("--")
-                        .font(.caption.monospacedDigit())
-                        .foregroundStyle(.tertiary)
-                }
+                .padding(.vertical, 10)
+                .padding(.horizontal, 12)
+                .contentShape(Rectangle())
             }
-            .padding(.vertical, 10)
-            .padding(.horizontal, 12)
-            .contentShape(Rectangle())
+            .buttonStyle(.plain)
+            .disabled(group.isEmpty)
+
+            // Dropdown items (Candidate water sources within this category)
+            if isExpanded && !group.isEmpty {
+                VStack(spacing: 0) {
+                    ForEach(Array(group.sources.enumerated()), id: \.element.id) { index, ranked in
+                        Divider()
+                            .padding(.leading, 48)
+
+                        Button {
+                            onSelect(ranked.source)
+                        } label: {
+                            HStack(spacing: 10) {
+                                // Priority / Rank badge
+                                Text("\(index + 1)")
+                                    .font(.caption2.bold())
+                                    .foregroundStyle(group.type.tint)
+                                    .frame(width: 20, height: 20)
+                                    .background(group.type.tint.opacity(0.15), in: Circle())
+
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(ranked.source.name)
+                                        .font(.subheadline.weight(.medium))
+                                        .foregroundStyle(.primary)
+                                        .lineLimit(1)
+
+                                    if !ranked.source.address.isEmpty {
+                                        Text(ranked.source.address)
+                                            .font(.caption2)
+                                            .foregroundStyle(.secondary)
+                                            .lineLimit(1)
+                                    }
+                                }
+
+                                Spacer(minLength: 8)
+
+                                Text(DistanceFormat.string(ranked.distanceMeters))
+                                    .font(.caption.monospacedDigit().weight(.semibold))
+                                    .foregroundStyle(.secondary)
+
+                                Image(systemName: "chevron.right")
+                                    .font(.caption2.weight(.bold))
+                                    .foregroundStyle(.tertiary)
+                            }
+                            .padding(.vertical, 8)
+                            .padding(.leading, 18)
+                            .padding(.trailing, 12)
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .background(Color.white.opacity(0.03))
+            }
         }
-        .buttonStyle(.plain)
-        .disabled(group.isEmpty)
     }
 }
 

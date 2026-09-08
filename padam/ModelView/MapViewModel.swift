@@ -93,8 +93,12 @@ final class MapViewModel {
         let visible = allSources.filter {
             !hiddenTypes.contains($0.type) && isInPaddedVisibleRegion($0.coordinate)
         }
-        let cellSize = MapClustering.cellSize(forLongitudeSpan: visibleRegion.span.longitudeDelta)
-        return MapClustering.cluster(visible, cellSizeDegrees: cellSize)
+        return MapClustering.cluster(visible, longitudeDelta: visibleRegion.span.longitudeDelta)
+    }
+
+    /// True when the user is zoomed out too far to see point annotations (Option 2A).
+    var isZoomedOut: Bool {
+        MapClustering.isZoomedOut(longitudeSpan: visibleRegion.span.longitudeDelta)
     }
 
     private func isInPaddedVisibleRegion(_ coordinate: Coordinate) -> Bool {

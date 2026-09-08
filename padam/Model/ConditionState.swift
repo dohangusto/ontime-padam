@@ -25,6 +25,10 @@ enum ConditionState: Sendable, Hashable {
     /// Recorded as not working (e.g. "TIDAK BISA DIGUNAKAN", "RUSAK").
     case unusable
 
+    init(kondisi: String? = nil) {
+        self = Self.classify(kondisi)
+    }
+
     /// Classifies a raw `kondisi` string. Missing, blank or unrecognised values
     /// resolve to `.unknown` — never to `.usable`.
     static func classify(_ raw: String?) -> ConditionState {
@@ -63,13 +67,13 @@ enum ConditionState: Sendable, Hashable {
     /// excluded from recommendations and ranking candidates.
     var isCandidate: Bool { self != .unusable }
 
-    /// Short Indonesian label for the state. Callers may still show the raw
-    /// `kondisi` verbatim; this is for when a normalized label is needed.
+    /// Short Indonesian label for the state. Single-word / concise standard
+    /// terms for Indonesian infrastructure that fit narrow column displays.
     var label: String {
         switch self {
-        case .usable: return "Bisa digunakan"
-        case .unknown: return "Belum diverifikasi"
-        case .unusable: return "Tidak bisa digunakan"
+        case .usable: return "Aktif"
+        case .unknown: return "Tak diketahui"
+        case .unusable: return "Rusak"
         }
     }
 }

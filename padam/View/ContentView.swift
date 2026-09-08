@@ -16,6 +16,7 @@ struct ContentView: View {
     @State private var query = ""
     @State private var detent: PresentationDetent = Self.smallDetent
     @State private var routePolyline: MKPolyline?
+    @State private var selectedCategory: WaterSourceType?
 
     private static let smallDetent: PresentationDetent = .height(72)
 
@@ -87,12 +88,13 @@ struct ContentView: View {
                     }
                 } else {
                     // Results: focus the map on the recommended sources only,
-                    // honoring the hydrant layer toggle.
+                    // with name label overlays so the operator can read them directly on the map.
                     ForEach(vm.allRankedSources.filter { !vm.hiddenTypes.contains($0.type) }) { ranked in
                         Annotation(ranked.source.name, coordinate: ranked.source.coordinate.clLocationCoordinate) {
                             SourcePinView(
                                 type: ranked.source.type,
-                                isSelected: vm.selectedSource?.id == ranked.source.id
+                                isSelected: vm.selectedSource?.id == ranked.source.id,
+                                label: ranked.source.name
                             )
                             .onTapGesture { openDetail(ranked.source) }
                         }
@@ -107,7 +109,7 @@ struct ContentView: View {
                 }
 
                 if let routePolyline {
-                    MapPolyline(routePolyline).stroke(.blue, lineWidth: 5)
+                    MapPolyline(routePolyline).stroke(.indigo, lineWidth: 6)
                 }
             }
             .mapStyle(vm.mapStyleIsSatellite ? .hybrid : .standard)
@@ -128,8 +130,12 @@ struct ContentView: View {
     @ViewBuilder
     private func annotationContent(for cluster: MapCluster) -> some View {
         if cluster.isCluster {
-            ClusterBubbleView(count: cluster.count)
-                .onTapGesture { vm.zoomIn(on: cluster.coordinate) }
+            AdminClusterPillView(
+                title: cluster.title ?? "",
+                count: cluster.count,
+                dominantType: cluster.dominantType
+            )
+            .onTapGesture { vm.zoomIn(on: cluster.coordinate) }
         } else if let source = cluster.singleSource {
             SourcePinView(type: source.type, isSelected: vm.selectedSource?.id == source.id)
                 .onTapGesture { handleSingleTap(source) }
@@ -137,7 +143,13 @@ struct ContentView: View {
     }
 
     private func annotationTitle(_ cluster: MapCluster) -> String {
-        cluster.singleSource?.name ?? "\(cluster.count)"
+        if let name = cluster.singleSource?.name {
+            return name
+        }
+        if let title = cluster.title {
+            return "\(title) · \(cluster.count)"
+        }
+        return "\(cluster.count)"
     }
 
     // MARK: Sheet content (search → results → detail)
@@ -154,6 +166,21 @@ struct ContentView: View {
                 onToggleSave: { vm.toggleSaved(selected) },
                 onBack: closeDetail,
                 onRouteReady: { routePolyline = $0 }
+            )
+        } else if let category = selectedCategory {
+            CategoryBrowseSheetView(
+                type: category,
+                sources: vm.allSources.filter { $0.type == category },
+                isAvailable: vm.availableTypes.contains(category),
+                referenceCoordinate: vm.fireLocation ?? Coordinate(vm.visibleRegion.center),
+                isSmall: detent == Self.smallDetent,
+                isFullyExpanded: detent == .large,
+                onSelect: openDetail,
+                onBack: {
+                    withAnimation(.snappy) {
+                        selectedCategory = nil
+                    }
+                }
             )
         } else if vm.phase == .results {
             ResultsSheetView(
@@ -196,16 +223,21 @@ struct ContentView: View {
     // MARK: Actions
 
     private func handleSelectRecent(_ item: RecentSearch) {
+        selectedCategory = nil
         dropFire(at: item.coordinate, title: item.title, subtitle: item.subtitle)
     }
 
     private func handleSelectCategory(_ type: WaterSourceType) {
-        if let nearest = vm.findNearest(type: type) {
-            openDetail(nearest)
+        selectedCategory = type
+        withAnimation(.snappy) {
+            if detent == Self.smallDetent {
+                detent = .medium
+            }
         }
     }
 
     private func dropFire(at coordinate: Coordinate, title: String? = nil, subtitle: String? = nil) {
+        selectedCategory = nil
         vm.setFireLocation(coordinate, title: title, subtitle: subtitle)
         withAnimation(.snappy) {
             detent = .medium
@@ -220,7 +252,9 @@ struct ContentView: View {
         routePolyline = nil
         vm.select(source)
         withAnimation(.snappy) {
-            detent = .large
+            if detent == Self.smallDetent {
+                detent = .medium
+            }
         }
     }
 
@@ -228,11 +262,16 @@ struct ContentView: View {
         vm.selectedSource = nil
         routePolyline = nil
         withAnimation(.snappy) {
-            detent = vm.phase == .results ? .medium : Self.smallDetent
+            if selectedCategory != nil {
+                detent = .medium
+            } else {
+                detent = vm.phase == .results ? .medium : Self.smallDetent
+            }
         }
     }
 
     private func resetToSearch() {
+        selectedCategory = nil
         vm.backToSearch()
         query = ""
         search.updateQuery("")

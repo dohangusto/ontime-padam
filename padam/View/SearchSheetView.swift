@@ -163,6 +163,26 @@ struct SearchSheetView: View {
                 .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
             }
         }
+
+        // Section: "Sumber Air >" Vertical List
+        VStack(alignment: .leading, spacing: 10) {
+            sectionHeader(title: "Sumber Air")
+
+            VStack(spacing: 0) {
+                ForEach(Array(WaterSourceType.allCases.enumerated()), id: \.element.id) { index, type in
+                    FindNearbyRow(type: type) {
+                        onSelectCategory(type)
+                    }
+
+                    if index < WaterSourceType.allCases.count - 1 {
+                        Divider()
+                            .padding(.leading, 56)
+                    }
+                }
+            }
+            .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
+        }
     }
 
     // MARK: Active Search Content (IMG_4789)
@@ -231,11 +251,9 @@ struct SearchSheetView: View {
                 }
             }
 
-            // Section 2: "Find Nearby" (IMG_4789)
+            // Section 2: "Sumber Air >" (formerly "Find Nearby")
             VStack(alignment: .leading, spacing: 10) {
-                Text("Find Nearby")
-                    .font(.title3.weight(.bold))
-                    .foregroundStyle(.primary)
+                sectionHeader(title: "Sumber Air")
 
                 VStack(spacing: 0) {
                     ForEach(Array(WaterSourceType.allCases.enumerated()), id: \.element.id) { index, type in

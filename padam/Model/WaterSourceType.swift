@@ -57,8 +57,25 @@ enum WaterSourceType: String, CaseIterable, Identifiable, Codable, Sendable {
         case .kali: return "water.waves"
         case .got: return "drop.degreesign"
         case .kolamRenang: return "figure.pool.swim"
-        case .posDamkar: return "flame.fill"
+        case .posDamkar: return "building.2.fill"
         case .hidran: return "fire.extinguisher.fill"
         }
+    }
+
+    /// Maximum longitude span delta at which this type becomes visible during map browsing.
+    /// Priority order from most zoomed out to closest: Pos DAMKAR (any) > Sungai (0.16) > Kolam/Got (0.08) > Hidran (0.04).
+    var maxVisibleLongitudeSpan: Double {
+        switch self {
+        case .posDamkar: return .infinity
+        case .kali: return 0.16
+        case .got: return 0.08
+        case .kolamRenang: return 0.08
+        case .hidran: return 0.04
+        }
+    }
+
+    /// True if this water source type should be visible for the given map longitude span.
+    func isVisible(atLongitudeSpan span: Double) -> Bool {
+        span <= maxVisibleLongitudeSpan
     }
 }

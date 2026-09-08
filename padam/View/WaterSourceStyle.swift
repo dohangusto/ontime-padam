@@ -29,7 +29,7 @@ extension ConditionState {
     var tint: Color {
         switch self {
         case .usable: return .green
-        case .unknown: return .orange
+        case .unknown: return .secondary
         case .unusable: return .red
         }
     }
