@@ -96,6 +96,14 @@ final class MapViewModel {
         return MapClustering.cluster(visible, longitudeDelta: visibleRegion.span.longitudeDelta)
     }
 
+    /// Category-specific clusters when browsing a single category.
+    func clusters(for category: WaterSourceType) -> [MapCluster] {
+        let visible = allSources.filter {
+            $0.type == category && isInPaddedVisibleRegion($0.coordinate)
+        }
+        return MapClustering.clusterCategory(visible, longitudeDelta: visibleRegion.span.longitudeDelta)
+    }
+
     /// True when the user is zoomed out too far to see point annotations (Option 2A).
     var isZoomedOut: Bool {
         MapClustering.isZoomedOut(longitudeSpan: visibleRegion.span.longitudeDelta)

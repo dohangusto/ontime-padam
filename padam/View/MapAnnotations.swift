@@ -168,14 +168,57 @@ struct SourcePinView: View {
 }
 
 /// The fire location the operator is refilling for.
+/// Rendered as a prominent large squircle pin (56x56) with anchor dot and title label.
 struct FireMarkerView: View {
+    var title: String? = nil
+
     var body: some View {
-        Image(systemName: "flame.fill")
-            .font(.system(size: 16, weight: .bold))
-            .foregroundStyle(.white)
-            .padding(8)
-            .background(.red, in: Circle())
-            .overlay(Circle().stroke(.white, lineWidth: 2))
-            .shadow(radius: 3)
+        VStack(spacing: 4) {
+            ZStack {
+                RoundedRectangle(cornerRadius: 18, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [Color.red, Color(red: 0.85, green: 0.12, blue: 0.12)],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    )
+                    .frame(width: 56, height: 56)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 18, style: .continuous)
+                            .stroke(.white.opacity(0.35), lineWidth: 1.5)
+                    )
+                    .shadow(color: Color.red.opacity(0.45), radius: 10, x: 0, y: 4)
+                    .shadow(color: Color.black.opacity(0.35), radius: 6, x: 0, y: 2)
+
+                Image(systemName: "flame.fill")
+                    .font(.system(size: 28, weight: .bold))
+                    .foregroundStyle(.white)
+            }
+
+            // Anchor dot
+            Circle()
+                .fill(Color.red)
+                .frame(width: 7, height: 7)
+                .overlay(Circle().stroke(.white, lineWidth: 1.2))
+                .shadow(color: Color.black.opacity(0.35), radius: 2)
+
+            // Location title label
+            if let title = title, !title.isEmpty {
+                Text(title)
+                    .font(.system(size: 13, weight: .bold))
+                    .foregroundStyle(.white)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 4)
+                    .background(Color.black.opacity(0.85), in: Capsule())
+                    .overlay(Capsule().stroke(Color.red.opacity(0.85), lineWidth: 1.2))
+                    .shadow(color: Color.black.opacity(0.5), radius: 4, x: 0, y: 2)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: 160)
+            }
+        }
+        .zIndex(150)
     }
 }

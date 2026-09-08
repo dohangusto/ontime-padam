@@ -70,9 +70,9 @@ struct CategoryBrowseSheetView: View {
         }
         .frame(maxHeight: .infinity, alignment: isSmall ? .center : .top)
         .onAppear {
-            // Expand all populated regions by default for quick browsing
-            if expandedRegions.isEmpty {
-                expandedRegions = Set(groupedSources.keys)
+            // Only open the top-most dropdown list by default; leave the rest collapsed
+            if expandedRegions.isEmpty, let topRegion = orderedRegions.first {
+                expandedRegions = [topRegion]
             }
         }
     }

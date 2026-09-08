@@ -17,7 +17,7 @@ extension WaterSourceType {
         case .kali: return .blue
         case .got: return .teal
         case .kolamRenang: return .cyan
-        case .posDamkar: return .red
+        case .posDamkar: return .gray
         case .hidran: return .orange
         }
     }

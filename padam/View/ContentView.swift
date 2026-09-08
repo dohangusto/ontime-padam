@@ -17,6 +17,7 @@ struct ContentView: View {
     @State private var detent: PresentationDetent = Self.smallDetent
     @State private var routePolyline: MKPolyline?
     @State private var selectedCategory: WaterSourceType?
+    @Namespace private var mapScope
 
     private static let smallDetent: PresentationDetent = .height(72)
 
@@ -39,26 +40,37 @@ struct ContentView: View {
 
                 Spacer()
 
-                // Floating Map Controls (bottom-right)
+                // Floating Map Controls (bottom-right): Separate Compass above Map Actions Card
                 HStack {
                     Spacer()
-                    MapFloatingControlsView(
-                        isSatellite: $vm.mapStyleIsSatellite,
-                        hydrantsHidden: vm.hiddenTypes.contains(.hidran),
-                        onToggleHydrants: { vm.toggleLayer(.hidran) },
-                        onRecenter: {
-                            if let fire = vm.fireLocation {
-                                vm.zoomIn(on: fire)
-                            } else {
-                                vm.backToSearch()
+                    VStack(spacing: 12) {
+                        // Separate Compass floating button
+                        MapCompass(scope: mapScope)
+                            .mapControlVisibility(.visible)
+                            .frame(width: 44, height: 44)
+                            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                            .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(.white.opacity(0.12), lineWidth: 0.8))
+                            .shadow(color: .black.opacity(0.35), radius: 8, y: 4)
+
+                        MapFloatingControlsView(
+                            isSatellite: $vm.mapStyleIsSatellite,
+                            hydrantsHidden: vm.hiddenTypes.contains(.hidran),
+                            onToggleHydrants: { vm.toggleLayer(.hidran) },
+                            onRecenter: {
+                                if let fire = vm.fireLocation {
+                                    vm.zoomIn(on: fire)
+                                } else {
+                                    vm.backToSearch()
+                                }
                             }
-                        }
-                    )
+                        )
+                    }
                 }
                 .padding(.trailing, 16)
                 .padding(.bottom, 96) // above collapsed sheet
             }
         }
+        .mapScope(mapScope)
         .sheet(isPresented: .constant(true)) {
             sheetContent
                 .presentationDetents([Self.smallDetent, .medium, .large], selection: $detent)
@@ -77,9 +89,17 @@ struct ContentView: View {
 
     private var mapView: some View {
         MapReader { proxy in
-            Map(position: $vm.cameraPosition) {
-                if vm.phase == .search {
-                    // Browsing: show every source, aggregated by zoom level.
+            Map(position: $vm.cameraPosition, scope: mapScope) {
+                if let category = selectedCategory {
+                    // Category browsing: cluster pins of the selected category to ensure smooth 60fps performance
+                    ForEach(vm.clusters(for: category)) { cluster in
+                        Annotation(annotationTitle(cluster), coordinate: cluster.coordinate.clLocationCoordinate) {
+                            annotationContent(for: cluster)
+                        }
+                        .annotationTitles(.hidden)
+                    }
+                } else if vm.phase == .search {
+                    // General browsing: show every source, aggregated by zoom level.
                     ForEach(vm.clusters) { cluster in
                         Annotation(annotationTitle(cluster), coordinate: cluster.coordinate.clLocationCoordinate) {
                             annotationContent(for: cluster)
@@ -104,8 +124,9 @@ struct ContentView: View {
 
                 if let fire = vm.fireLocation {
                     Annotation("Lokasi Kebakaran", coordinate: fire.clLocationCoordinate) {
-                        FireMarkerView()
+                        FireMarkerView(title: vm.fireLocationTitle)
                     }
+                    .annotationTitles(.hidden)
                 }
 
                 if let routePolyline {
@@ -113,10 +134,7 @@ struct ContentView: View {
                 }
             }
             .mapStyle(vm.mapStyleIsSatellite ? .hybrid : .standard)
-            .mapControls {
-                MapCompass()
-                MapScaleView()
-            }
+            .mapControlVisibility(.hidden)
             .onMapCameraChange(frequency: .onEnd) { context in
                 vm.onCameraChanged(region: context.region)
             }
@@ -137,8 +155,12 @@ struct ContentView: View {
             )
             .onTapGesture { vm.zoomIn(on: cluster.coordinate) }
         } else if let source = cluster.singleSource {
-            SourcePinView(type: source.type, isSelected: vm.selectedSource?.id == source.id)
-                .onTapGesture { handleSingleTap(source) }
+            SourcePinView(
+                type: source.type,
+                isSelected: vm.selectedSource?.id == source.id,
+                label: vm.selectedSource?.id == source.id ? source.name : nil
+            )
+            .onTapGesture { handleSingleTap(source) }
         }
     }
 

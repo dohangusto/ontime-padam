@@ -98,4 +98,62 @@ struct WaterSource: Identifiable, Hashable, Sendable {
 
         return "Jakarta Pusat"
     }
+
+    /// Normalized administrative district (Kecamatan).
+    var administrativeKecamatan: String {
+        if let kecamatan, !kecamatan.isEmpty {
+            let clean = kecamatan
+                .replacingOccurrences(of: "KEC. ", with: "")
+                .replacingOccurrences(of: "KECAMATAN ", with: "")
+                .trimmingCharacters(in: .whitespacesAndNewlines)
+            return clean.capitalized
+        }
+
+        let combined = [address, kelurahan].compactMap { $0 }.joined(separator: " ").uppercased()
+        let kecList = [
+            "PENJARINGAN", "KELAPA GADING", "TANJUNG PRIOK", "CILINCING", "KOJA", "PADEMANGAN",
+            "CENGKARENG", "GROGOL PETAMBURAN", "GROGOL", "KALIDERES", "KEBON JERUK", "KEMBANGAN", "PALMERAH", "TAMAN SARI", "TAMBORA",
+            "CILANDAK", "JAGAKARSA", "KEBAYORAN BARU", "KEBAYORAN LAMA", "MAMPANG PRAPATAN", "PANCORAN", "PASAR MINGGU", "PESANGGRAHAN", "SETIABUDI", "TEBET",
+            "CAKUNG", "CIPINANG", "CIRACAS", "DUREN SAWIT", "JATINEGARA", "KRAMAT JATI", "MAKASAR", "MATRAMAN", "PASAR REBO", "PULOGADUNG",
+            "GAMBIR", "TANAH ABANG", "MENTENG", "SENEN", "CEMPAKA PUTIH", "JOHAR BARU", "KEMAYORAN", "SAWAH BESAR"
+        ]
+        for kec in kecList {
+            if combined.contains(kec) {
+                return kec.capitalized
+            }
+        }
+        return administrativeRegion
+    }
+
+    /// Normalized administrative subdistrict (Kelurahan).
+    var administrativeKelurahan: String {
+        if let kelurahan, !kelurahan.isEmpty {
+            let clean = kelurahan
+                .replacingOccurrences(of: "KEL. ", with: "")
+                .replacingOccurrences(of: "KELURAHAN ", with: "")
+                .trimmingCharacters(in: .whitespacesAndNewlines)
+            return clean.capitalized
+        }
+
+        let combined = [address, name].compactMap { $0 }.joined(separator: " ").uppercased()
+        let kelList = [
+            "KAPUK MUARA", "PLUIT", "PEJAGALAN", "PENJARINGAN", "KAMAL MUARA",
+            "KEBON KACANG", "KAMPUNG BALI", "PETOJO SELATAN", "PETOJO UTARA", "GAMBIR", "KEBON KELAPA", "DURI PULO", "CIDENG",
+            "GONDANGDIA", "CIKINI", "MENTENG", "PEGANGSAAN", "KWITANG", "PASAR SENEN", "BUNGUR", "KENARI", "KRAMAT",
+            "RAWASARI", "CEMPAKA PUTIH TIMUR", "CEMPAKA PUTIH BARAT", "GALUR", "TANAH TINGGI", "KAMPUNG RAWA", "JOHAR BARU",
+            "GUNUNG SAHARI", "KEMAYORAN", "KEBON KOSONG", "HARAPAN MULYA", "SERDANG", "UTAN PANJANG", "SUMUR BATU",
+            "PASAR BARU", "MANGGA DUA SELATAN", "KARANG ANYAR", "KARTINI",
+            "BINTARO", "PESANGGRAHAN", "PETUKANGAN UTARA", "PETUKANGAN SELATAN", "ULUJAMI",
+            "CIPETE UTARA", "CIPETE SELATAN", "GANDARIA UTARA", "GANDARIA SELATAN", "PONDOK PINANG", "LEBAK BULUS", "CILANDAK BARAT",
+            "PONDOK LABU", "JAGAKARSA", "SRENGSENG SAWAH", "CIGANJUR", "LENTENG AGUNG", "TANJUNG BARAT", "CILANDAK TIMUR",
+            "PEJATEN BARAT", "PEJATEN TIMUR", "PASAR MINGGU", "JATI PADANG", "RAGUNAN", "KALIBATA", "RAWAJATI", "DUREN TIGA",
+            "PANCORAN", "CIKOKO", "PENGADEGAN", "TEBET BARAT", "TEBET TIMUR", "KEBON BARU", "BUKIT DURI", "MANGGARAI", "MENTENG DALAM"
+        ]
+        for kel in kelList {
+            if combined.contains(kel) {
+                return kel.capitalized
+            }
+        }
+        return administrativeKecamatan
+    }
 }
