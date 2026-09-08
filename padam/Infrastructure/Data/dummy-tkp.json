@@ -1,0 +1,37 @@
+[
+  {
+    "latitude": -6.19473,
+    "longitude": 106.800881,
+    "title": "Memed Cupang Slipi",
+    "kategori": "kebakaran",
+    "alamat": "Jl. Ks. Tubun III Dalam No.21 1, RT.1/RW.4, Slipi, Kec. Palmerah, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11410"
+  },
+  {
+    "latitude": -6.177175,
+    "longitude": 106.850549,
+    "title": "Seblak Mewek",
+    "kategori": "kebakaran",
+    "alamat": "Jl. Baladewa No.30, RT.13/RW.11, Tanah Tinggi, Kec. Johar Baru, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10540"
+  },
+  {
+    "latitude": -6.141809,
+    "longitude": 106.821027,
+    "title": "Pecah Kulit 27",
+    "kategori": "kebakaran",
+    "alamat": "Jl. Pecah Kulit No.27, RT.3/RW.1, Pinangsia, Kec. Taman Sari, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11110"
+  },
+  {
+    "latitude": -6.209686,
+    "longitude": 106.840932,
+    "title": "Endang Foto",
+    "kategori": "kebakaran",
+    "alamat": "Jl. Menteng Wadas Utara No.21 4, RT.4/RW.3, Ps. Manggis, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12970"
+  },
+  {
+    "latitude": -6.216864,
+    "longitude": 106.827063,
+    "title": "Amanah Terapi",
+    "kategori": "kebakaran",
+    "alamat": "Jl. Pedurenan Masjid IV No.80, RT.2/RW.2, Kuningan, Karet Kuningan, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12940"
+  }
+]

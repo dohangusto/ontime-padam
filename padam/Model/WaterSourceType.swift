@@ -1,0 +1,64 @@
+//
+//  WaterSourceType.swift
+//  padam
+//
+//  The five categories of water sources the app models. Two of them
+//  (kali/sungai, got, kolam renang) have no bundled data yet and must
+//  render gracefully as empty groups — never hidden from the type system.
+//
+
+import Foundation
+
+enum WaterSourceType: String, CaseIterable, Identifiable, Codable, Sendable {
+    case kali          // rivers / sungai
+    case got           // drains
+    case kolamRenang   // swimming pools
+    case posDamkar     // fire stations
+    case hidran        // hydrants
+
+    var id: String { rawValue }
+
+    /// Reliability ranking (NOT a user preference). Lower value = higher reliability.
+    /// Rivers rank highest (effectively unlimited volume); hydrants rank lowest
+    /// (many in Jakarta are damaged or low-flow). Distance must never override this.
+    var reliabilityPriority: Int {
+        switch self {
+        case .kali: return 0
+        case .got: return 1
+        case .kolamRenang: return 2
+        case .posDamkar: return 3
+        case .hidran: return 4
+        }
+    }
+
+    /// All types ordered by reliability priority (highest reliability first):
+    /// kali → got → kolam renang → pos damkar → hidran.
+    static var reliabilityOrdered: [WaterSourceType] {
+        allCases.sorted { $0.reliabilityPriority < $1.reliabilityPriority }
+    }
+
+    /// Hydrants are always treated as low reliability.
+    var isLowReliability: Bool { self == .hidran }
+
+    var displayName: String {
+        switch self {
+        case .kali: return "Kali / Sungai"
+        case .got: return "Got"
+        case .kolamRenang: return "Kolam Renang"
+        case .posDamkar: return "Pos Damkar"
+        case .hidran: return "Hidran"
+        }
+    }
+
+    /// Centralized SF Symbol placeholder. Custom icons will replace these later;
+    /// keeping the reference in one place makes swapping trivial.
+    var symbolName: String {
+        switch self {
+        case .kali: return "water.waves"
+        case .got: return "drop.degreesign"
+        case .kolamRenang: return "figure.pool.swim"
+        case .posDamkar: return "flame"
+        case .hidran: return "fire.extinguisher"
+        }
+    }
+}

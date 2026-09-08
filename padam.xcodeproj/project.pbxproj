@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		34B8E327304F28CB005CFDD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34772123304F19DC00F84B7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3477212A304F19DC00F84B7A;
+			remoteInfo = padam;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3477212B304F19DC00F84B7A /* padam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = padam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		34B8E323304F28CB005CFDD3 /* padamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = padamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = padam;
 			sourceTree = "<group>";
 		};
+		34B8E324304F28CB005CFDD3 /* padamTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = padamTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		34772128304F19DC00F84B7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34B8E320304F28CB005CFDD3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				3477212D304F19DC00F84B7A /* padam */,
+				34B8E324304F28CB005CFDD3 /* padamTests */,
 				3477212C304F19DC00F84B7A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				3477212B304F19DC00F84B7A /* padam.app */,
+				34B8E323304F28CB005CFDD3 /* padamTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 3477212B304F19DC00F84B7A /* padam.app */;
 			productType = "com.apple.product-type.application";
 		};
+		34B8E322304F28CB005CFDD3 /* padamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34B8E329304F28CB005CFDD3 /* Build configuration list for PBXNativeTarget "padamTests" */;
+			buildPhases = (
+				34B8E31F304F28CB005CFDD3 /* Sources */,
+				34B8E320304F28CB005CFDD3 /* Frameworks */,
+				34B8E321304F28CB005CFDD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34B8E328304F28CB005CFDD3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				34B8E324304F28CB005CFDD3 /* padamTests */,
+			);
+			name = padamTests;
+			packageProductDependencies = (
+			);
+			productName = padamTests;
+			productReference = 34B8E323304F28CB005CFDD3 /* padamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					3477212A304F19DC00F84B7A = {
 						CreatedOnToolsVersion = 26.6;
+					};
+					34B8E322304F28CB005CFDD3 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = 3477212A304F19DC00F84B7A;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				3477212A304F19DC00F84B7A /* padam */,
+				34B8E322304F28CB005CFDD3 /* padamTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		34772129304F19DC00F84B7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34B8E321304F28CB005CFDD3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		34B8E31F304F28CB005CFDD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34B8E328304F28CB005CFDD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3477212A304F19DC00F84B7A /* padam */;
+			targetProxy = 34B8E327304F28CB005CFDD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		34772134304F19DD00F84B7A /* Debug */ = {
@@ -310,6 +385,48 @@
 			};
 			name = Release;
 		};
+		34B8E32A304F28CB005CFDD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9PP7722MM6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ontime.padamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/padam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/padam";
+			};
+			name = Debug;
+		};
+		34B8E32B304F28CB005CFDD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9PP7722MM6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ontime.padamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/padam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/padam";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +444,15 @@
 			buildConfigurations = (
 				34772137304F19DD00F84B7A /* Debug */,
 				34772138304F19DD00F84B7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34B8E329304F28CB005CFDD3 /* Build configuration list for PBXNativeTarget "padamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34B8E32A304F28CB005CFDD3 /* Debug */,
+				34B8E32B304F28CB005CFDD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
