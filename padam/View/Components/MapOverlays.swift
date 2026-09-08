@@ -37,9 +37,13 @@ struct WeatherPillView: View {
     }
 }
 
-/// Bottom-right stacked map action controls (Map Layer Style + User Location Tracking) matching IMG_4786 / IMG_4790
+/// Bottom-right stacked map action controls (Map Layer Style + Hydrant Layer
+/// Toggle + User Location Tracking) matching IMG_4786 / IMG_4790
 struct MapFloatingControlsView: View {
     @Binding var isSatellite: Bool
+    /// Whether the (noisy, least reliable) hydrant layer is currently hidden.
+    var hydrantsHidden: Bool = false
+    var onToggleHydrants: () -> Void = {}
     var onRecenter: () -> Void
 
     var body: some View {
@@ -52,6 +56,18 @@ struct MapFloatingControlsView: View {
                 Image(systemName: isSatellite ? "globe.americas.fill" : "map.fill")
                     .font(.system(size: 18, weight: .semibold))
                     .foregroundStyle(isSatellite ? .blue : .primary)
+                    .frame(width: 44, height: 44)
+            }
+            .buttonStyle(.plain)
+
+            Divider()
+                .frame(width: 32)
+
+            // Mute/show the hydrant layer so the reliable types read clearly.
+            Button(action: onToggleHydrants) {
+                Image(systemName: hydrantsHidden ? "fire.extinguisher" : "fire.extinguisher.fill")
+                    .font(.system(size: 18, weight: .semibold))
+                    .foregroundStyle(hydrantsHidden ? .secondary : WaterSourceType.hidran.tint)
                     .frame(width: 44, height: 44)
             }
             .buttonStyle(.plain)

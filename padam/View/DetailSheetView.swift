@@ -4,8 +4,10 @@
 //
 //  Single location detail bottom sheet matching IMG_4790:
 //  - Top header with ShareLink, Title & Subtitle, and Close (xmark) button.
-//  - Prominent Action buttons (Primary Route button with ETA + Secondary Call / Satellite button).
-//  - 3-column Summary Chips (Status/Hours, Keandalan/Rating, Distance).
+//  - Prominent driving Route button (with ETA). Call appears only when the
+//    source carries a phone number, so a call is never offered with nothing to dial.
+//  - 3-column Summary Chips (Status, Keandalan, Jarak lurus). Status color is
+//    bound to the point's condition, never hardcoded.
 //  - Info cards (Alamat, Wilayah, Kondisi).
 //  - Floating bottom capsule bar overlay with Plus, Star, and Ellipsis actions.
 //
@@ -16,7 +18,6 @@ import MapKit
 struct DetailSheetView: View {
     let ranked: RankedWaterSource
     let fireLocation: Coordinate?
-    @Binding var satellite: Bool
     var isSaved: Bool = false
     var isSmall: Bool = false
     var isFullyExpanded: Bool = true
@@ -26,6 +27,8 @@ struct DetailSheetView: View {
 
     @State private var estimate: RouteEstimate?
     @State private var isLoadingRoute = false
+
+    @Environment(\.openURL) private var openURL
 
     private var source: WaterSource { ranked.source }
 
@@ -88,10 +91,13 @@ struct DetailSheetView: View {
             .buttonStyle(.plain)
 
             VStack(spacing: 2) {
+                // The name is what the operator says over the radio — never
+                // truncate it. Allow up to two lines instead.
                 Text(source.name)
                     .font(.title3.weight(.bold))
                     .foregroundStyle(.primary)
-                    .lineLimit(1)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
                     .minimumScaleFactor(0.85)
 
                 Text(source.type.displayName)
@@ -116,6 +122,7 @@ struct DetailSheetView: View {
 
     private var actionRow: some View {
         HStack(spacing: 12) {
+            // Primary action for every type: driving route with ETA.
             Button(action: openInMaps) {
                 HStack(spacing: 8) {
                     Image(systemName: "car.fill")
@@ -130,27 +137,32 @@ struct DetailSheetView: View {
             }
             .buttonStyle(.plain)
 
-            Button {
-                satellite.toggle()
-            } label: {
-                HStack(spacing: 8) {
-                    Image(systemName: satellite ? "globe.americas.fill" : "phone.fill")
-                        .font(.system(size: 18, weight: .semibold))
-                    Text(satellite ? "Satelit On" : "Hubungi")
-                        .font(.headline.weight(.semibold))
+            // Call only appears when the source actually has a number (e.g. a Pos
+            // DAMKAR, once phone data is loaded). Hydrants and other types show
+            // route only — no dead call button.
+            if let phone = source.phone {
+                Button {
+                    call(phone)
+                } label: {
+                    HStack(spacing: 8) {
+                        Image(systemName: "phone.fill")
+                            .font(.system(size: 18, weight: .semibold))
+                        Text("Hubungi")
+                            .font(.headline.weight(.semibold))
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .foregroundStyle(.white)
+                    .background(Color.white.opacity(0.1), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).stroke(Color.white.opacity(0.14), lineWidth: 0.8))
                 }
-                .frame(maxWidth: .infinity)
-                .frame(height: 50)
-                .foregroundStyle(.white)
-                .background(Color.white.opacity(0.1), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-                .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).stroke(Color.white.opacity(0.14), lineWidth: 0.8))
+                .buttonStyle(.plain)
             }
-            .buttonStyle(.plain)
         }
     }
 
     private var routeButtonTitle: String {
-        if let estimate { return formatDuration(estimate.travelTime) }
+        if let estimate { return "Rute · \(formatDuration(estimate.travelTime))" }
         return "Rute"
     }
 
@@ -158,14 +170,22 @@ struct DetailSheetView: View {
 
     private var summaryChipsRow: some View {
         HStack(spacing: 0) {
-            // Status / Hours
+            // Status — color, icon and word all bound to the point's condition.
+            // Green can only ever mean usable; an unusable point reads red.
             VStack(spacing: 4) {
                 Text("Status")
                     .font(.caption.weight(.medium))
                     .foregroundStyle(.secondary)
-                Text(statusText)
-                    .font(.headline.weight(.bold))
-                    .foregroundStyle(.green)
+                HStack(spacing: 4) {
+                    Image(systemName: ranked.condition.symbolName)
+                        .font(.caption.weight(.bold))
+                    Text(statusText)
+                        .font(.subheadline.weight(.bold))
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.7)
+                        .multilineTextAlignment(.center)
+                }
+                .foregroundStyle(ranked.condition.tint)
             }
             .frame(maxWidth: .infinity)
 
@@ -190,13 +210,14 @@ struct DetailSheetView: View {
             Divider()
                 .frame(height: 32)
 
-            // Distance
+            // Straight-line distance — labeled so it's never confused with the
+            // driving ETA on the Rute button (which is the decision figure).
             VStack(spacing: 4) {
-                Text("Distance")
+                Text("Jarak lurus")
                     .font(.caption.weight(.medium))
                     .foregroundStyle(.secondary)
                 HStack(spacing: 4) {
-                    Image(systemName: "arrow.triangle.turn.up.right.diamond.fill")
+                    Image(systemName: "ruler")
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                     Text(DistanceFormat.string(ranked.distanceMeters))
@@ -212,10 +233,12 @@ struct DetailSheetView: View {
     }
 
     private var statusText: String {
-        if let kondisi = source.kondisi, !kondisi.isEmpty {
+        // Show the recorded condition verbatim (capitalized) when present. When
+        // there is none, say so honestly — never fabricate "ready".
+        if let kondisi = source.kondisi?.trimmingCharacters(in: .whitespacesAndNewlines), !kondisi.isEmpty {
             return kondisi.capitalized
         }
-        return "Siap Pakai"
+        return ranked.condition.label
     }
 
     // MARK: Address & Administrative Section
@@ -262,9 +285,14 @@ struct DetailSheetView: View {
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.secondary)
 
-                Text(kondisi)
-                    .font(.subheadline)
-                    .foregroundStyle(.primary)
+                HStack(spacing: 6) {
+                    Image(systemName: ranked.condition.symbolName)
+                        .font(.subheadline.weight(.bold))
+                        .foregroundStyle(ranked.condition.tint)
+                    Text(kondisi)
+                        .font(.subheadline)
+                        .foregroundStyle(.primary)
+                }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(14)
@@ -299,6 +327,12 @@ struct DetailSheetView: View {
         let minutes = Int((interval / 60).rounded())
         return "\(minutes) min"
     }
+
+    private func call(_ number: String) {
+        let dialable = number.filter { $0.isNumber || $0 == "+" }
+        guard !dialable.isEmpty, let url = URL(string: "tel://\(dialable)") else { return }
+        openURL(url)
+    }
 }
 
 #if DEBUG
@@ -306,7 +340,6 @@ struct DetailSheetView: View {
     DetailSheetView(
         ranked: PreviewSamples.sampleRanked,
         fireLocation: PreviewSamples.fire,
-        satellite: .constant(false),
         isSaved: false,
         onToggleSave: {},
         onBack: {},

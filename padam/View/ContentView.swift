@@ -43,6 +43,8 @@ struct ContentView: View {
                     Spacer()
                     MapFloatingControlsView(
                         isSatellite: $vm.mapStyleIsSatellite,
+                        hydrantsHidden: vm.hiddenTypes.contains(.hidran),
+                        onToggleHydrants: { vm.toggleLayer(.hidran) },
                         onRecenter: {
                             if let fire = vm.fireLocation {
                                 vm.zoomIn(on: fire)
@@ -84,8 +86,9 @@ struct ContentView: View {
                         .annotationTitles(.hidden)
                     }
                 } else {
-                    // Results: focus the map on the recommended sources only.
-                    ForEach(vm.allRankedSources) { ranked in
+                    // Results: focus the map on the recommended sources only,
+                    // honoring the hydrant layer toggle.
+                    ForEach(vm.allRankedSources.filter { !vm.hiddenTypes.contains($0.type) }) { ranked in
                         Annotation(ranked.source.name, coordinate: ranked.source.coordinate.clLocationCoordinate) {
                             SourcePinView(
                                 type: ranked.source.type,
@@ -145,7 +148,6 @@ struct ContentView: View {
             DetailSheetView(
                 ranked: ranked,
                 fireLocation: vm.fireLocation,
-                satellite: $vm.mapStyleIsSatellite,
                 isSaved: vm.isSaved(selected),
                 isSmall: detent == Self.smallDetent,
                 isFullyExpanded: detent == .large,
@@ -156,6 +158,7 @@ struct ContentView: View {
         } else if vm.phase == .results {
             ResultsSheetView(
                 groups: vm.rankedGroups,
+                availableTypes: vm.availableTypes,
                 locationTitle: vm.fireLocationTitle,
                 locationSubtitle: vm.fireLocationSubtitle,
                 isSmall: detent == Self.smallDetent,
@@ -241,10 +244,13 @@ struct ContentView: View {
 
     // MARK: Helpers
 
-    /// Finds the ranked wrapper for a source; falls back to computing distance
-    /// from the fire location or current map center for points outside the top-3.
+    /// Finds the ranked wrapper for a source. Reuses the exact object computed by
+    /// the ranking (including demoted unusable points) so the distance shown on
+    /// detail always matches the list. Only falls back — from the fire location,
+    /// or the map center when no fire is set — for points off the ranked lists.
     private func rankedFor(_ source: WaterSource) -> RankedWaterSource? {
-        if let existing = vm.allRankedSources.first(where: { $0.source.id == source.id }) {
+        let ranked = vm.rankedGroups.flatMap { $0.sources + $0.unusable }
+        if let existing = ranked.first(where: { $0.source.id == source.id }) {
             return existing
         }
         let refCoord = vm.fireLocation ?? Coordinate(vm.visibleRegion.center)

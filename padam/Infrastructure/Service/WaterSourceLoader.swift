@@ -23,30 +23,63 @@ struct WaterSourceDTO: Decodable {
     let kecamatan: String?
     let kelurahan: String?
     let kondisi: String?
+    let phone: String?
 
     private enum CodingKeys: String, CodingKey {
         case namaPos = "nama_pos"
         case namaHidran = "nama_hidran"
+        case namaSungai = "nama_sungai"
         case nama
+        case name
         case title
         case alamat
+        case address
         case wilayah, kecamatan, kelurahan, kondisi
         case latitude, longitude
+        case telepon, phone
+        case noTelepon = "no_telepon"
+        case nomorTelepon = "nomor_telepon"
     }
 
     init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
-        name = try c.decodeIfPresent(String.self, forKey: .namaPos)
-            ?? c.decodeIfPresent(String.self, forKey: .namaHidran)
-            ?? c.decodeIfPresent(String.self, forKey: .nama)
-            ?? c.decodeIfPresent(String.self, forKey: .title)
-        address = try c.decodeIfPresent(String.self, forKey: .alamat)
-        latitude = try c.decodeIfPresent(Double.self, forKey: .latitude)
-        longitude = try c.decodeIfPresent(Double.self, forKey: .longitude)
+        // Resolve the "name" and "address" fields across the differing per-file
+        // keys. Broken out of a single `??` chain so the type-checker stays fast.
+        let nameKeys: [CodingKeys] = [.namaPos, .namaHidran, .namaSungai, .nama, .name, .title]
+        name = try Self.firstString(in: c, keys: nameKeys)
+        address = try Self.firstString(in: c, keys: [.alamat, .address])
+        // The sungai dataset stores coordinates as strings ("−6.28"), the others
+        // as numbers. Accept either so no file needs bespoke handling.
+        latitude = Self.decodeFlexibleDouble(c, forKey: .latitude)
+        longitude = Self.decodeFlexibleDouble(c, forKey: .longitude)
         wilayah = try c.decodeIfPresent(String.self, forKey: .wilayah)
         kecamatan = try c.decodeIfPresent(String.self, forKey: .kecamatan)
         kelurahan = try c.decodeIfPresent(String.self, forKey: .kelurahan)
         kondisi = try c.decodeIfPresent(String.self, forKey: .kondisi)
+        phone = try Self.firstString(in: c, keys: [.telepon, .phone, .noTelepon, .nomorTelepon])
+    }
+
+    /// Returns the first non-nil string among the given keys, so callers avoid a
+    /// long `??` chain that stresses the type-checker.
+    private static func firstString(in c: KeyedDecodingContainer<CodingKeys>, keys: [CodingKeys]) throws -> String? {
+        for key in keys {
+            if let value = try c.decodeIfPresent(String.self, forKey: key) {
+                return value
+            }
+        }
+        return nil
+    }
+
+    /// Decodes a coordinate component that may arrive as a JSON number or a
+    /// numeric string. Returns nil when absent or unparseable.
+    private static func decodeFlexibleDouble(_ c: KeyedDecodingContainer<CodingKeys>, forKey key: CodingKeys) -> Double? {
+        if let value = try? c.decodeIfPresent(Double.self, forKey: key) {
+            return value
+        }
+        if let string = try? c.decodeIfPresent(String.self, forKey: key) {
+            return Double(string.trimmingCharacters(in: .whitespacesAndNewlines))
+        }
+        return nil
     }
 
     /// Maps to the uniform model for a given type. Returns nil when the
@@ -65,9 +98,16 @@ struct WaterSourceDTO: Decodable {
             wilayah: wilayah,
             kecamatan: kecamatan,
             kelurahan: kelurahan,
-            kondisi: kondisi
+            kondisi: kondisi,
+            phone: phone?.trimmingCharacters(in: .whitespacesAndNewlines).nilIfEmpty
         )
     }
+}
+
+private extension String {
+    /// nil for an empty/whitespace-only string, so a blank phone field never
+    /// produces a call action with nothing to dial.
+    var nilIfEmpty: String? { isEmpty ? nil : self }
 }
 
 struct WaterSourceLoader {
@@ -77,12 +117,18 @@ struct WaterSourceLoader {
         self.bundle = bundle
     }
 
-    /// JSON resource name per type. The three deferred categories intentionally
-    /// have no entry, so they load as empty.
+    /// JSON resource name per type. Any category without an entry (e.g. `got`)
+    /// intentionally loads as empty.
     private static let resourceNames: [WaterSourceType: String] = [
         .posDamkar: "pos-damkar",
-        .hidran: "hidran"
+        .hidran: "hidran",
+        .kolamRenang: "kolam-renang",
+        .kali: "sungai"
     ]
+
+    /// Types that actually have a bundled dataset. Lets the UI distinguish "no
+    /// dataset loaded" from "dataset loaded but nothing found nearby".
+    static var availableTypes: Set<WaterSourceType> { Set(resourceNames.keys) }
 
     /// Loads every available type into one flat, uniform array.
     func loadAll() -> [WaterSource] {
@@ -107,6 +153,34 @@ struct WaterSourceLoader {
         guard let dtos = try? JSONDecoder().decode([WaterSourceDTO].self, from: data) else {
             return []
         }
-        return dtos.compactMap { $0.toWaterSource(type: type) }
+        let sources = dtos.compactMap { $0.toWaterSource(type: type) }
+        return deduplicated(sources)
+    }
+
+    /// Collapses rows that describe the same physical point. The sungai dataset
+    /// carries ~80 water-quality rows per sampling point (one per parameter), so
+    /// without this a single river point would produce dozens of overlapping
+    /// pins. Keyed by name + rounded coordinate, so genuinely distinct points on
+    /// the same river (different coordinates) are preserved.
+    private func deduplicated(_ sources: [WaterSource]) -> [WaterSource] {
+        var seen = Set<String>()
+        var result: [WaterSource] = []
+        result.reserveCapacity(sources.count)
+        for source in sources {
+            let key = "\(source.name)|\(source.coordinate.latitude.rounded(toPlaces: 6))|\(source.coordinate.longitude.rounded(toPlaces: 6))"
+            if seen.insert(key).inserted {
+                result.append(source)
+            }
+        }
+        return result
+    }
+}
+
+private extension Double {
+    /// Rounds to a fixed number of decimals so tiny float differences don't
+    /// defeat coordinate-based de-duplication.
+    func rounded(toPlaces places: Int) -> Double {
+        let factor = pow(10.0, Double(places))
+        return (self * factor).rounded() / factor
     }
 }

@@ -32,6 +32,14 @@ final class MapViewModel {
 
     private(set) var allSources: [WaterSource]
 
+    /// Types that have a bundled dataset. Used by the UI to word empty states
+    /// correctly ("no dataset" vs "none nearby").
+    let availableTypes: Set<WaterSourceType>
+
+    /// Types the operator has hidden on the map. Lets them mute the noisy, least
+    /// reliable layer (hydrants) to see the reliable types clearly.
+    var hiddenTypes: Set<WaterSourceType> = []
+
     var cameraPosition: MapCameraPosition = .region(jakartaRegion)
     var mapStyleIsSatellite = false
 
@@ -64,6 +72,16 @@ final class MapViewModel {
 
     init(loader: WaterSourceLoader = WaterSourceLoader()) {
         self.allSources = loader.loadAll()
+        self.availableTypes = WaterSourceLoader.availableTypes
+    }
+
+    /// Toggles whether a type's pins are shown on the map.
+    func toggleLayer(_ type: WaterSourceType) {
+        if hiddenTypes.contains(type) {
+            hiddenTypes.remove(type)
+        } else {
+            hiddenTypes.insert(type)
+        }
     }
 
     // MARK: Derived
@@ -72,7 +90,9 @@ final class MapViewModel {
     /// within (a padded box around) the visible region are considered, so the
     /// annotation count stays bounded even when zoomed in on a dense dataset.
     var clusters: [MapCluster] {
-        let visible = allSources.filter { isInPaddedVisibleRegion($0.coordinate) }
+        let visible = allSources.filter {
+            !hiddenTypes.contains($0.type) && isInPaddedVisibleRegion($0.coordinate)
+        }
         let cellSize = MapClustering.cellSize(forLongitudeSpan: visibleRegion.span.longitudeDelta)
         return MapClustering.cluster(visible, cellSizeDegrees: cellSize)
     }

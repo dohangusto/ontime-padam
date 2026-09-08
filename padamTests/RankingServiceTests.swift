@@ -19,12 +19,13 @@ struct RankingServiceTests {
 
     /// Builds a source at an east offset (in degrees) from the origin so that a
     /// larger offset means a larger distance — handy for predictable ordering.
-    func source(_ type: WaterSourceType, eastOffset: Double, name: String = "S") -> WaterSource {
+    func source(_ type: WaterSourceType, eastOffset: Double, name: String = "S", kondisi: String? = nil) -> WaterSource {
         WaterSource(
             type: type,
             name: name,
             address: "addr",
-            coordinate: Coordinate(latitude: origin.latitude, longitude: origin.longitude + eastOffset)
+            coordinate: Coordinate(latitude: origin.latitude, longitude: origin.longitude + eastOffset),
+            kondisi: kondisi
         )
     }
 
@@ -136,5 +137,64 @@ struct RankingServiceTests {
             .first { $0.type == .got }!
         #expect(group.sources.count == 2)
         #expect(group.sources.allSatisfy { $0.distanceMeters == group.sources[0].distanceMeters })
+    }
+
+    // MARK: Condition-based ranking (item 2/3)
+
+    @Test("Unusable points are excluded from options and collected separately")
+    func unusableExcludedFromOptions() {
+        let sources = [
+            source(.hidran, eastOffset: 0.01, name: "Dead", kondisi: "TIDAK BISA DIGUNAKAN"),
+            source(.hidran, eastOffset: 0.02, name: "Live", kondisi: "BISA DIGUNAKAN")
+        ]
+        let group = RankingService.rank(sources: sources, from: origin)
+            .first { $0.type == .hidran }!
+
+        // The dead hydrant, though nearer, must not be offered.
+        #expect(group.sources.map(\.source.name) == ["Live"])
+        #expect(group.unusable.map(\.source.name) == ["Dead"])
+        #expect(group.hasUnusable)
+    }
+
+    @Test("A type whose every point is unusable yields no options but records them")
+    func allUnusable() {
+        let sources = [
+            source(.hidran, eastOffset: 0.01, name: "A", kondisi: "TIDAK BISA DIGUNAKAN"),
+            source(.hidran, eastOffset: 0.02, name: "B", kondisi: "RUSAK")
+        ]
+        let group = RankingService.rank(sources: sources, from: origin)
+            .first { $0.type == .hidran }!
+        #expect(group.isEmpty)          // no usable options
+        #expect(group.unusable.count == 2) // still on record for reference
+    }
+
+    @Test("Blank/missing condition defaults to unknown and stays a candidate")
+    func unknownStaysCandidate() {
+        let sources = [source(.posDamkar, eastOffset: 0.01, name: "NoData", kondisi: nil)]
+        let group = RankingService.rank(sources: sources, from: origin)
+            .first { $0.type == .posDamkar }!
+        #expect(group.sources.map(\.source.name) == ["NoData"])
+        #expect(group.sources.first?.condition == .unknown)
+    }
+
+    @Test("When distances are close, a usable point is preferred over unknown")
+    func usablePreferredWhenClose() {
+        // Both ~within the same 100 m tolerance bucket; unknown is marginally nearer.
+        let sources = [
+            source(.posDamkar, eastOffset: 0.00010, name: "Unknown", kondisi: nil),
+            source(.posDamkar, eastOffset: 0.00012, name: "Usable", kondisi: "BAIK")
+        ]
+        let group = RankingService.rank(sources: sources, from: origin)
+            .first { $0.type == .posDamkar }!
+        #expect(group.sources.first?.source.name == "Usable")
+    }
+
+    @Test("Unusable points never resolve to the usable condition state")
+    func unusableNeverUsable() {
+        let sources = [source(.hidran, eastOffset: 0.01, kondisi: "TIDAK BISA DIGUNAKAN")]
+        let group = RankingService.rank(sources: sources, from: origin)
+            .first { $0.type == .hidran }!
+        #expect(group.unusable.allSatisfy { $0.condition == .unusable })
+        #expect(group.unusable.allSatisfy { $0.condition != .usable })
     }
 }

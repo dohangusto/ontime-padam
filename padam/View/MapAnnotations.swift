@@ -25,18 +25,25 @@ struct ClusterBubbleView: View {
 }
 
 /// A single water-source pin, tinted and iconed by type.
+///
+/// Visual weight tracks reliability: hydrants (least reliable) render smaller and
+/// slightly muted so they never dominate the map, while a selected pin always
+/// pops regardless of type.
 struct SourcePinView: View {
     let type: WaterSourceType
     var isSelected: Bool = false
 
+    /// Hydrants are the least reliable type — demote them visually unless selected.
+    private var isDemoted: Bool { type.isLowReliability && !isSelected }
+
     var body: some View {
         Image(systemName: type.symbolName)
-            .font(.system(size: 13, weight: .bold))
+            .font(.system(size: isDemoted ? 11 : 13, weight: .bold))
             .foregroundStyle(.white)
-            .padding(7)
-            .background(type.tint, in: Circle())
+            .padding(isDemoted ? 5 : 7)
+            .background(type.tint.opacity(isDemoted ? 0.85 : 1), in: Circle())
             .overlay(Circle().stroke(.white, lineWidth: isSelected ? 3 : 1.5))
-            .scaleEffect(isSelected ? 1.25 : 1)
+            .scaleEffect(isSelected ? 1.25 : (isDemoted ? 0.85 : 1))
             .shadow(radius: isSelected ? 4 : 1)
     }
 }

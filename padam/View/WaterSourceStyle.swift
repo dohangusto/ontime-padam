@@ -23,6 +23,29 @@ extension WaterSourceType {
     }
 }
 
+extension ConditionState {
+    /// Semantic tint. Bound to *meaning*: green only ever means usable, red means
+    /// unusable, amber means unverified. Never wire a status color at a call site.
+    var tint: Color {
+        switch self {
+        case .usable: return .green
+        case .unknown: return .orange
+        case .unusable: return .red
+        }
+    }
+
+    /// Paired icon so the state is never conveyed by color alone (colorblind /
+    /// glanceability). A checkmark for safe, a question for unknown, a warning
+    /// triangle for unusable.
+    var symbolName: String {
+        switch self {
+        case .usable: return "checkmark.circle.fill"
+        case .unknown: return "questionmark.circle.fill"
+        case .unusable: return "exclamationmark.triangle.fill"
+        }
+    }
+}
+
 /// Formats a straight-line distance for the radio-facing UI.
 enum DistanceFormat {
     static func string(_ meters: Double) -> String {

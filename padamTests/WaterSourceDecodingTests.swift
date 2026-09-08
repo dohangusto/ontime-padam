@@ -82,6 +82,67 @@ struct WaterSourceDecodingTests {
         #expect(loader.decode(json, type: .hidran).isEmpty)
     }
 
+    @Test("Decodes the kolam-renang shape (name + address key) into the uniform model")
+    func decodeKolamRenang() {
+        let json = """
+        [{
+          "name": "Club House Puri Grisenda",
+          "address": "RT.7/RW.3, Kapuk Muara, Jakarta Utara",
+          "latitude": -6.1345625,
+          "longitude": 106.7541875,
+          "phone": "0851-7999-9320"
+        }]
+        """.data(using: .utf8)!
+
+        let sources = loader.decode(json, type: .kolamRenang)
+        #expect(sources.count == 1)
+        let s = sources[0]
+        #expect(s.type == .kolamRenang)
+        #expect(s.name == "Club House Puri Grisenda")
+        #expect(s.address == "RT.7/RW.3, Kapuk Muara, Jakarta Utara")
+        #expect(s.phone == "0851-7999-9320")
+        #expect(s.coordinate.latitude == -6.1345625)
+    }
+
+    @Test("Decodes the sungai shape with string coordinates and nama_sungai")
+    func decodeSungaiStringCoordinates() {
+        let json = """
+        [{
+          "nama_sungai": "KALIBARU TIMUR",
+          "alamat": "JL. RAYA BOGOR KOMSEKO",
+          "latitude": "-6.286182",
+          "longitude": "106.870626",
+          "parameter": "PH"
+        }]
+        """.data(using: .utf8)!
+
+        let sources = loader.decode(json, type: .kali)
+        #expect(sources.count == 1)
+        let s = sources[0]
+        #expect(s.type == .kali)
+        #expect(s.name == "KALIBARU TIMUR")
+        #expect(s.address == "JL. RAYA BOGOR KOMSEKO")
+        #expect(s.coordinate.latitude == -6.286182)
+        #expect(s.coordinate.longitude == 106.870626)
+    }
+
+    @Test("Collapses repeated sungai rows (one per parameter) into a single point")
+    func deduplicatesSungaiSamplingPoint() {
+        // Same sampling point appears once per measured parameter.
+        let json = """
+        [
+          { "nama_sungai": "KALIBARU TIMUR", "latitude": "-6.286182", "longitude": "106.870626", "parameter": "PH" },
+          { "nama_sungai": "KALIBARU TIMUR", "latitude": "-6.286182", "longitude": "106.870626", "parameter": "BOD" },
+          { "nama_sungai": "KALIBARU TIMUR", "latitude": "-6.286182", "longitude": "106.870626", "parameter": "COD" },
+          { "nama_sungai": "KALIBARU TIMUR", "latitude": "-6.300000", "longitude": "106.900000", "parameter": "PH" }
+        ]
+        """.data(using: .utf8)!
+
+        let sources = loader.decode(json, type: .kali)
+        // Two distinct coordinates → two points, not four.
+        #expect(sources.count == 2)
+    }
+
     @Test("Missing name falls back to the type label, not a fabricated value")
     func missingNameFallsBack() {
         let json = """

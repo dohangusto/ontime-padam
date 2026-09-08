@@ -26,6 +26,11 @@ struct WaterSource: Identifiable, Hashable, Sendable {
     /// "BISA DIGUNAKAN"). We surface it verbatim and never infer it.
     let kondisi: String?
 
+    /// Contact number, when the dataset provides one. No current dataset does,
+    /// so this is nil everywhere today; the call action only appears when it is
+    /// present, so we never offer a call with nothing to dial.
+    let phone: String?
+
     init(
         id: UUID = UUID(),
         type: WaterSourceType,
@@ -35,7 +40,8 @@ struct WaterSource: Identifiable, Hashable, Sendable {
         wilayah: String? = nil,
         kecamatan: String? = nil,
         kelurahan: String? = nil,
-        kondisi: String? = nil
+        kondisi: String? = nil,
+        phone: String? = nil
     ) {
         self.id = id
         self.type = type
@@ -46,5 +52,6 @@ struct WaterSource: Identifiable, Hashable, Sendable {
         self.kecamatan = kecamatan
         self.kelurahan = kelurahan
         self.kondisi = kondisi
+        self.phone = phone
     }
 }

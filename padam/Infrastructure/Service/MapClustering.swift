@@ -26,7 +26,9 @@ struct MapCluster: Identifiable, Hashable {
 
 enum MapClustering {
     /// Target number of grid cells across the visible span. Higher = finer clusters.
-    static let cellsAcrossSpan = 10.0
+    /// Kept deliberately low so dense datasets (e.g. hundreds of hydrants) resolve
+    /// into count bubbles at mid-zoom instead of a wall of overlapping pins.
+    static let cellsAcrossSpan = 6.0
 
     /// Cell size (in degrees) for a given visible longitude span. Larger span
     /// (zoomed out) → larger cells → more aggregation.

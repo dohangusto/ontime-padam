@@ -1,0 +1,3255 @@
+[
+  {
+    "id": "serpapi-ChIJvZdG76Mdai4RzVu0jL_G3BY",
+    "name": "Club House Puri Grisenda",
+    "kind": "pool",
+    "latitude": -6.1345624999999995,
+    "longitude": 106.7541875,
+    "address": "RT.7/RW.3, Kapuk Muara, Kecamatan Penjaringan, Jkt Utara, Daerah Khusus Ibukota Jakarta 14460",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang",
+      "Tempat Fitness",
+      "Pusat Rekreasi"
+    ],
+    "phone": "0851-7999-9320",
+    "website": "https://bio.site/GrisendaClubHouse",
+    "place_id": "ChIJvZdG76Mdai4RzVu0jL_G3BY",
+    "data_id": "0x2e6a1da3ef4697bd:0x16dcc6bf8cb45bcd",
+    "data_cid": "1647410089712442317",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1345624999999995%2C106.7541875&query_place_id=ChIJvZdG76Mdai4RzVu0jL_G3BY",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJRW0Vk0r3aS4RQc9TxE504Js",
+    "name": "Copylas Indonesia Sport Club",
+    "kind": "pool",
+    "latitude": -6.217056299999999,
+    "longitude": 106.7472384,
+    "address": "Jl. Joglo Raya No.48, RT.6/RW.9, Joglo, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 15157",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum"
+    ],
+    "phone": "(021) 5856977",
+    "website": null,
+    "place_id": "ChIJRW0Vk0r3aS4RQc9TxE504Js",
+    "data_id": "0x2e69f74a93156d45:0x9be0744ec453cf41",
+    "data_cid": "11232105352312115009",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.217056299999999%2C106.7472384&query_place_id=ChIJRW0Vk0r3aS4RQc9TxE504Js",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJa4JH6qeNaS4R0592q3KIorc",
+    "name": "D'Nurs Wellness Center",
+    "kind": "pool",
+    "latitude": -6.2461303,
+    "longitude": 106.9201034,
+    "address": "Jl. Radin Inten II No.86, RT.2/RW.7, Duren Sawit, Durensawit, East Jakarta City, Jakarta 13440",
+    "category": "Kolam Renang Dalam Ruangan",
+    "categories": [
+      "Kolam Renang Dalam Ruangan",
+      "Kafe",
+      "Program Kebugaran Fisik",
+      "Studio Pilates",
+      "Spa",
+      "Studio Yoga"
+    ],
+    "phone": "(021) 28534184",
+    "website": null,
+    "place_id": "ChIJa4JH6qeNaS4R0592q3KIorc",
+    "data_id": "0x2e698da7ea47826b:0xb7a28872ab769fd3",
+    "data_cid": "13232288681252265939",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2461303%2C106.9201034&query_place_id=ChIJa4JH6qeNaS4R0592q3KIorc",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur",
+      "kolam renang Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ7RQ9ZW_taS4RajoizR86Sls",
+    "name": "De Entrance Pool Arkadia",
+    "kind": "pool",
+    "latitude": -6.3005571,
+    "longitude": 106.83363829999999,
+    "address": "RT.1/RW.1, Kebagusan, Pasar Minggu, South Jakarta City, Jakarta 12520",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 78838717",
+    "website": null,
+    "place_id": "ChIJ7RQ9ZW_taS4RajoizR86Sls",
+    "data_id": "0x2e69ed6f653d14ed:0x5b4a3a1fcd223a6a",
+    "data_cid": "6578134113988000362",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3005571%2C106.83363829999999&query_place_id=ChIJ7RQ9ZW_taS4RajoizR86Sls",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJE396LfrzaS4Rjl3_YRZuOAc",
+    "name": "Elite Club",
+    "kind": "pool",
+    "latitude": -6.2200944,
+    "longitude": 106.8344989,
+    "address": "Jl. Epicentrum Utama Raya No.kavling c22, RT.2/RW.5, Karet Kuningan, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12940",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang",
+      "Tempat acara",
+      "Bar lounge",
+      "Lapangan Golf Mini",
+      "Studio latihan",
+      "Instruktur Renang",
+      "Tempat Fitness",
+      "Lapangan Tenis",
+      "Studio Yoga"
+    ],
+    "phone": "0822-9944-2230",
+    "website": "https://eliteclub.co.id/",
+    "place_id": "ChIJE396LfrzaS4Rjl3_YRZuOAc",
+    "data_id": "0x2e69f3fa2d7a7f13:0x7386e1661ff5d8e",
+    "data_cid": "520286799373753742",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2200944%2C106.8344989&query_place_id=ChIJE396LfrzaS4Rjl3_YRZuOAc",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJrwvYpAH2aS4R8W8aHsXK_OA",
+    "name": "Gelanggang Jakarta Pusat",
+    "kind": "pool",
+    "latitude": -6.175505299999999,
+    "longitude": 106.8436795,
+    "address": "Jl. Pasar Senen No.1, RW.3, Senen, Kec. Senen, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10410",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang",
+      "Lapangan Bulutangkis",
+      "Kantor Pemerintah",
+      "Kompleks Olahraga",
+      "Lapangan Voli"
+    ],
+    "phone": null,
+    "website": "http://dispora.jakarta.go.id/",
+    "place_id": "ChIJrwvYpAH2aS4R8W8aHsXK_OA",
+    "data_id": "0x2e69f601a4d80baf:0xe0fccac51e1a6ff1",
+    "data_cid": "16212055706589360113",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.175505299999999%2C106.8436795&query_place_id=ChIJrwvYpAH2aS4R8W8aHsXK_OA",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJDb18HnXzaS4RZs_w_OLebmk",
+    "name": "Gelanggang Jakarta Timur",
+    "kind": "pool",
+    "latitude": -6.2351645,
+    "longitude": 106.8683933,
+    "address": "QV89+44M, Jl. Otto Iskandardinata No.121, RT.13/RW.8, Bidara Cina, Kecamatan Jatinegara, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13330",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang",
+      "Auditorium",
+      "Lapangan Bulutangkis",
+      "Lapangan bola basket",
+      "Kompleks Olahraga",
+      "Lapangan Voli"
+    ],
+    "phone": "(021) 85905364",
+    "website": null,
+    "place_id": "ChIJDb18HnXzaS4RZs_w_OLebmk",
+    "data_id": "0x2e69f3751e7cbd0d:0x696edee2fcf0cf66",
+    "data_cid": "7597254687908220774",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2351645%2C106.8683933&query_place_id=ChIJDb18HnXzaS4RZs_w_OLebmk",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJnVIg48mKaS4RRx8RK4XuF5w",
+    "name": "Grand Orchard Clover Club House",
+    "kind": "pool",
+    "latitude": -6.1532417,
+    "longitude": 106.91912049999999,
+    "address": "RWW9+PJ5, Raya Club House, Jl. Grand Orchard Jl. Clover, RT.9/RW.1, Sukapura, Kec. Cilincing, Jkt Utara, Daerah Khusus Ibukota Jakarta 14140",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 29068889",
+    "website": "http://www.summarecon.com/",
+    "place_id": "ChIJnVIg48mKaS4RRx8RK4XuF5w",
+    "data_id": "0x2e698ac9e320529d:0x9c17ee852b111f47",
+    "data_cid": "11247720850101706567",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1532417%2C106.91912049999999&query_place_id=ChIJnVIg48mKaS4RRx8RK4XuF5w",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJN_DVX7aKaS4Rk0a2RPEKfBk",
+    "name": "Grand Orchard Ebony Club House",
+    "kind": "pool",
+    "latitude": -6.1505225999999995,
+    "longitude": 106.91963129999999,
+    "address": "RWX9+QVR, Grand Orchard Summarecon Kelapa Gading, RT.9/RW.1, Sukapura, Kec. Cilincing, Jkt Utara, Daerah Khusus Ibukota Jakarta 14140",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": "http://www.summarecon.com/",
+    "place_id": "ChIJN_DVX7aKaS4Rk0a2RPEKfBk",
+    "data_id": "0x2e698ab65fd5f037:0x197c0af144b64693",
+    "data_cid": "1836354779416512147",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1505225999999995%2C106.91963129999999&query_place_id=ChIJN_DVX7aKaS4Rk0a2RPEKfBk",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJV-cI1bLzaS4RrT2CdBJ6AZE",
+    "name": "Green Palace Swimming Pool",
+    "kind": "pool",
+    "latitude": -6.257166,
+    "longitude": 106.8504162,
+    "address": "Jl. Raya Kalibata No.1, RT.9/RW.4, Rawajati, Kec. Pancoran, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12750",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJV-cI1bLzaS4RrT2CdBJ6AZE",
+    "data_id": "0x2e69f3b2d508e757:0x91017a1274823dad",
+    "data_cid": "10448766830158953901",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.257166%2C106.8504162&query_place_id=ChIJV-cI1bLzaS4RrT2CdBJ6AZE",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJU8rGGpnzaS4RBG8jtuHvw0k",
+    "name": "House Of Shafa",
+    "kind": "pool",
+    "latitude": -6.232876699999999,
+    "longitude": 106.85648529999999,
+    "address": "Jl. Tebet Timur Dalam Raya No.46 4, RT.4/RW.5, Tebet Tim., Kec. Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12820",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum",
+      "Salon Kecantikan",
+      "Spa"
+    ],
+    "phone": "(021) 8297570",
+    "website": "https://m.facebook.com/houseofshafa/",
+    "place_id": "ChIJU8rGGpnzaS4RBG8jtuHvw0k",
+    "data_id": "0x2e69f3991ac6ca53:0x49c3efe1b6236f04",
+    "data_cid": "5315355737929772804",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.232876699999999%2C106.85648529999999&query_place_id=ChIJU8rGGpnzaS4RBG8jtuHvw0k",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan",
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur",
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJB9Y8liH0aS4RcxJZoKaDJUQ",
+    "name": "Kempinski Fitness Centre & Pool",
+    "kind": "pool",
+    "latitude": -6.195183699999999,
+    "longitude": 106.82173859999999,
+    "address": "Hotel Indonesia Kempinski Jakarta, Jl. M.H. Thamrin No.1, RT.1/RW.5, Menteng, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10310",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang",
+      "Pusat kebugaran"
+    ],
+    "phone": "(021) 23583882",
+    "website": "https://www.kempinski.com/en/hotel-indonesia/kempinski-the-spa/fitness-centre-pool?utm_medium=organic&utm_source=google&utm_campaign=KIJKT1&utm_content=gmb&source=S308962248",
+    "place_id": "ChIJB9Y8liH0aS4RcxJZoKaDJUQ",
+    "data_id": "0x2e69f421963cd607:0x442583a6a0591273",
+    "data_cid": "4910475720395395699",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.195183699999999%2C106.82173859999999&query_place_id=ChIJB9Y8liH0aS4RcxJZoKaDJUQ",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJpa8UPT71aS4RRaxJ-2cyB8I",
+    "name": "Kolam Berenang Hotel Borobudur",
+    "kind": "pool",
+    "latitude": -6.1732083,
+    "longitude": 106.83559299999999,
+    "address": "Ps. Baru, Kecamatan Sawah Besar, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10710",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": "https://www.hotelborobudur.com/id/topic/fasilitas/fasilitas-olahraga/",
+    "place_id": "ChIJpa8UPT71aS4RRaxJ-2cyB8I",
+    "data_id": "0x2e69f53e3d14afa5:0xc2073267fb49ac45",
+    "data_cid": "13981198990373923909",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1732083%2C106.83559299999999&query_place_id=ChIJpa8UPT71aS4RRaxJ-2cyB8I",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "swimming pool Jakarta Utara",
+      "kolam renang Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJJ3SBK53zaS4RYWuTM4GPZig",
+    "name": "Kolam Renang Al Jannah Khusus Wanita",
+    "kind": "pool",
+    "latitude": -6.2262379999999995,
+    "longitude": 106.86216499999999,
+    "address": "Komplek, Jl. Gudang Peluru Raya No.4 Blk B1, RT.1/RW.1, Kb. Baru, Kec. Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12830",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 8311157",
+    "website": "http://aljannah.net/",
+    "place_id": "ChIJJ3SBK53zaS4RYWuTM4GPZig",
+    "data_id": "0x2e69f39d2b817427:0x28668f8133936b61",
+    "data_cid": "2911171994220456801",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2262379999999995%2C106.86216499999999&query_place_id=ChIJJ3SBK53zaS4RYWuTM4GPZig",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJNyNhi2f1aS4R5BzHNiGBCRE",
+    "name": "Kolam Renang Anak Grand Palace",
+    "kind": "pool",
+    "latitude": -6.161351499999999,
+    "longitude": 106.85323,
+    "address": "RVQ3+F75, Jl. Benyamin Suaeb, RT.9/RW.5, Kebon Kosong, Kemayoran, Central Jakarta City, Jakarta 10630",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJNyNhi2f1aS4R5BzHNiGBCRE",
+    "data_id": "0x2e69f5678b612337:0x1109812136c71ce4",
+    "data_cid": "1227654353088093412",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.161351499999999%2C106.85323&query_place_id=ChIJNyNhi2f1aS4R5BzHNiGBCRE",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJU0XNEgAdai4R2PHZtJlBzYY",
+    "name": "Kolam Renang Apartemen Laguna Pluit",
+    "kind": "pool",
+    "latitude": -6.123340799999999,
+    "longitude": 106.7990335,
+    "address": "Apartemen Laguna, Jl. Pluit Sel., RT.4/RW.9, Pluit, Penjaringan, North Jakarta City, Jakarta 14450",
+    "category": "Kolam renang luar ruangan",
+    "categories": [
+      "Kolam renang luar ruangan"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJU0XNEgAdai4R2PHZtJlBzYY",
+    "data_id": "0x2e6a1d0012cd4553:0x86cd4199b4d9f1d8",
+    "data_cid": "9713492099728011736",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.123340799999999%2C106.7990335&query_place_id=ChIJU0XNEgAdai4R2PHZtJlBzYY",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJpyn4Lfj0aS4R616HI1XOMSI",
+    "name": "Kolam Renang Arcici",
+    "kind": "pool",
+    "latitude": -6.1845805,
+    "longitude": 106.8677336,
+    "address": "Jl. Cempaka Putih Barat 26 No.3, RT.3/RW.7, Cemp. Putih Bar., Kec. Cemp. Putih, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10520",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum",
+      "Taman Rekreasi Air"
+    ],
+    "phone": "(021) 4213475",
+    "website": null,
+    "place_id": "ChIJpyn4Lfj0aS4R616HI1XOMSI",
+    "data_id": "0x2e69f4f82df829a7:0x2231ce5523875eeb",
+    "data_cid": "2463977336211988203",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1845805%2C106.8677336&query_place_id=ChIJpyn4Lfj0aS4R616HI1XOMSI",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Timur",
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara",
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJn4XCL4PuaS4RxOmvUf4pUks",
+    "name": "Kolam Renang Batoe 54",
+    "kind": "pool",
+    "latitude": -6.3496228,
+    "longitude": 106.8144846,
+    "address": "Jl. H.M. Nalim No.54 1, RT.1/RW.8, Srengseng Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12640",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJn4XCL4PuaS4RxOmvUf4pUks",
+    "data_id": "0x2e69ee832fc2859f:0x4b5229fe51afe9c4",
+    "data_cid": "5427446673203784132",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3496228%2C106.8144846&query_place_id=ChIJn4XCL4PuaS4RxOmvUf4pUks",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJdU3cklvwaS4RnJ9c1PryJdc",
+    "name": "Kolam Renang Bintaro Permai",
+    "kind": "pool",
+    "latitude": -6.2670832,
+    "longitude": 106.7538393,
+    "address": "Jl. Bintaro Melati II No.1 - 2 4, RT.4/RW.8, Pesanggrahan, Kec. Pesanggrahan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12320",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum"
+    ],
+    "phone": "(021) 7364885",
+    "website": null,
+    "place_id": "ChIJdU3cklvwaS4RnJ9c1PryJdc",
+    "data_id": "0x2e69f05b92dc4d75:0xd725f2fad45c9f9c",
+    "data_cid": "15503064451411386268",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2670832%2C106.7538393&query_place_id=ChIJdU3cklvwaS4RnJ9c1PryJdc",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJQ0xo0IL0aS4R7G4QHegLL3Y",
+    "name": "Kolam Renang Bojana Tirta",
+    "kind": "pool",
+    "latitude": -6.2039833,
+    "longitude": 106.87950839999999,
+    "address": "QVWH+CR2, Jl. Bujana Tirta 4, RT.4/RW.15, Pisangan Tim., Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13230",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 47867268",
+    "website": null,
+    "place_id": "ChIJQ0xo0IL0aS4R7G4QHegLL3Y",
+    "data_id": "0x2e69f482d0684c43:0x762f0be81d106eec",
+    "data_cid": "8516038511928831724",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2039833%2C106.87950839999999&query_place_id=ChIJQ0xo0IL0aS4R7G4QHegLL3Y",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur",
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJyfOiOKvtaS4RAo8Ikybt5XU",
+    "name": "kolam renang brigif kalisari",
+    "kind": "pool",
+    "latitude": -6.337835699999999,
+    "longitude": 106.8605894,
+    "address": "5, RT.5/RW.8, Pekayon, Kec. Ps. Rebo, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13710",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJyfOiOKvtaS4RAo8Ikybt5XU",
+    "data_id": "0x2e69edab38a2f3c9:0x75e5ed2693088f02",
+    "data_cid": "8495457022035660546",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.337835699999999%2C106.8605894&query_place_id=ChIJyfOiOKvtaS4RAo8Ikybt5XU",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ7QvWimrxaS4RHfL3JHgfQBY",
+    "name": "Kolam Renang Bulungan",
+    "kind": "pool",
+    "latitude": -6.2392898,
+    "longitude": 106.79692949999999,
+    "address": "Jl. Kyai Maja Blok F, RT.2/RW.8, Gunung, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12120",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ7QvWimrxaS4RHfL3JHgfQBY",
+    "data_id": "0x2e69f16a8ad60bed:0x16401f7824f7f21d",
+    "data_cid": "1603316068220662301",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2392898%2C106.79692949999999&query_place_id=ChIJ7QvWimrxaS4RHfL3JHgfQBY",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan",
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ_f_PrLvsaS4R5KeI2FejUUo",
+    "name": "Kolam Renang Buperta",
+    "kind": "pool",
+    "latitude": -6.365302499999999,
+    "longitude": 106.8974597,
+    "address": "JVMW+VXG, RW.5, Pd. Ranggon, Kec. Cipayung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13860",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ_f_PrLvsaS4R5KeI2FejUUo",
+    "data_id": "0x2e69ecbbaccffffd:0x4a51a357d888a7e4",
+    "data_cid": "5355241029610547172",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.365302499999999%2C106.8974597&query_place_id=ChIJ_f_PrLvsaS4R5KeI2FejUUo",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJu_5oZZXsaS4RmsYEjbu4dFs",
+    "name": "Kolam Renang Cibubur Indah",
+    "kind": "pool",
+    "latitude": -6.3602536999999995,
+    "longitude": 106.8878742,
+    "address": "Jl. Villa Cibubur Blok U1 No.13, RT.6/RW.11, Cibubur, Ciracas, East Jakarta City, Jakarta 13720",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJu_5oZZXsaS4RmsYEjbu4dFs",
+    "data_id": "0x2e69ec956568febb:0x5b74b8bb8d04c69a",
+    "data_cid": "6590095270414173850",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3602536999999995%2C106.8878742&query_place_id=ChIJu_5oZZXsaS4RmsYEjbu4dFs",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Timur",
+      "kolam renang Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJDVzdKj_0aS4R1EA24BP6RwI",
+    "name": "Kolam Renang Cikini",
+    "kind": "pool",
+    "latitude": -6.1916284,
+    "longitude": 106.83874809999999,
+    "address": "Jl. Cikini Raya No.75 1, RT.1/RW.2, Cikini, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10330",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 31900588",
+    "website": null,
+    "place_id": "ChIJDVzdKj_0aS4R1EA24BP6RwI",
+    "data_id": "0x2e69f43f2add5c0d:0x247fa13e03640d4",
+    "data_cid": "164374874695286996",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1916284%2C106.83874809999999&query_place_id=ChIJDVzdKj_0aS4R1EA24BP6RwI",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara",
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan",
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJB-pe5OXxaS4RSL3kVz787yI",
+    "name": "Kolam Renang Cilandak Sport Center",
+    "kind": "pool",
+    "latitude": -6.2915532999999995,
+    "longitude": 106.80005709999999,
+    "address": "Jl. TB Simatupang No.Kav. 17, RT.2/RW.1, Cilandak Bar., Kec. Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12430",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum"
+    ],
+    "phone": "(021) 7504963",
+    "website": "http://www.mitrasraya.com/",
+    "place_id": "ChIJB-pe5OXxaS4RSL3kVz787yI",
+    "data_id": "0x2e69f1e5e45eea07:0x22effc3e57e4bd48",
+    "data_cid": "2517508061416176968",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2915532999999995%2C106.80005709999999&query_place_id=ChIJB-pe5OXxaS4RSL3kVz787yI",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ515U1HP4aS4RQ8tBAF6PNO8",
+    "name": "Kolam Renang Citra 1",
+    "kind": "pool",
+    "latitude": -6.1473711,
+    "longitude": 106.6937092,
+    "address": "Jl. Bukit Permai 11 No.E1 16 6, RT.6/RW.9, Kalideres, West Jakarta City, Jakarta 11840",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ515U1HP4aS4RQ8tBAF6PNO8",
+    "data_id": "0x2e69f873d4545ee7:0xef348f5e0041cb43",
+    "data_cid": "17236559307747740483",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1473711%2C106.6937092&query_place_id=ChIJ515U1HP4aS4RQ8tBAF6PNO8",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJs8OKedP5aS4RYPcC0rHBAYo",
+    "name": "Kolam Renang Citra 2",
+    "kind": "pool",
+    "latitude": -6.1419901999999995,
+    "longitude": 106.7081254,
+    "address": "VP55+672, Jl. Citra II, RT.10/RW.12, Pegadungan, Kalideres, West Jakarta City, Jakarta 11830",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJs8OKedP5aS4RYPcC0rHBAYo",
+    "data_id": "0x2e69f9d3798ac3b3:0x8a01c1b1d202f760",
+    "data_cid": "9944442421687547744",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1419901999999995%2C106.7081254&query_place_id=ChIJs8OKedP5aS4RYPcC0rHBAYo",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ_Ysa8Fodai4RWqqYKIFdht4",
+    "name": "Kolam Renang City Garden",
+    "kind": "pool",
+    "latitude": -6.1302864999999995,
+    "longitude": 106.73741749999999,
+    "address": "VP9P+VXM, RT.7/RW.14, Cengkareng Tim., Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11720",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ_Ysa8Fodai4RWqqYKIFdht4",
+    "data_id": "0x2e6a1d5af01a8bfd:0xde865d812898aa5a",
+    "data_cid": "16034606332612487770",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1302864999999995%2C106.73741749999999&query_place_id=ChIJ_Ysa8Fodai4RWqqYKIFdht4",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJmWPCi43zaS4RtDU_bTzF1nk",
+    "name": "Kolam Renang dan Mini Waterboom Persada",
+    "kind": "pool",
+    "latitude": -6.258337999999999,
+    "longitude": 106.88668849999999,
+    "address": "Jl. Raya Protokol Halim Perdanakusuma, RT.4/RW.10, Halim Perdanakusuma, Kec. Makasar, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13610",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "0897-7248-400",
+    "website": "http://www.klubeksekutifpersada.com/",
+    "place_id": "ChIJmWPCi43zaS4RtDU_bTzF1nk",
+    "data_id": "0x2e69f38d8bc26399:0x79d6c53c6d3f35b4",
+    "data_cid": "8779421386926929332",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.258337999999999%2C106.88668849999999&query_place_id=ChIJmWPCi43zaS4RtDU_bTzF1nk",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJM3NUMz0gai4RL6Dp3GKINNo",
+    "name": "Kolam Renang Dewa Kembar",
+    "kind": "pool",
+    "latitude": -6.1103990999999995,
+    "longitude": 106.92408089999999,
+    "address": "Jl. Ardodedali No.01, RT.10/RW.1, Semper Tim., Kec. Cilincing, Jkt Utara, Daerah Khusus Ibukota Jakarta 14130",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJM3NUMz0gai4RL6Dp3GKINNo",
+    "data_id": "0x2e6a203d33547333:0xda348862dce9a02f",
+    "data_cid": "15723342157251715119",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1103990999999995%2C106.92408089999999&query_place_id=ChIJM3NUMz0gai4RL6Dp3GKINNo",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJDVE3SPqLaS4RCP1X_zt5Kf0",
+    "name": "Kolam Renang Eramas",
+    "kind": "pool",
+    "latitude": -6.2062374,
+    "longitude": 106.94650039999999,
+    "address": "Jl. Eramas 2000, RT.5/RW.13, Pulo Gebang, Cakung, Jakarta, 13950",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "0857-8262-0224",
+    "website": "https://smartbio.link/wargaeramas",
+    "place_id": "ChIJDVE3SPqLaS4RCP1X_zt5Kf0",
+    "data_id": "0x2e698bfa4837510d:0xfd29793bff57fd08",
+    "data_cid": "18242245064234892552",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2062374%2C106.94650039999999&query_place_id=ChIJDVE3SPqLaS4RCP1X_zt5Kf0",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJJ8SAFISLaS4RVh_BYVlniOY",
+    "name": "Kolam renang gading arcadia",
+    "kind": "pool",
+    "latitude": -6.1623003,
+    "longitude": 106.9208987,
+    "address": "Jl. Gading Arcadia, RW.3, Pegangsaan Dua, Kec. Klp. Gading, Jkt Utara, Daerah Khusus Ibukota Jakarta 14250",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "0812-1904-0086",
+    "website": "http://gadingaquatic.blogspot.com/",
+    "place_id": "ChIJJ8SAFISLaS4RVh_BYVlniOY",
+    "data_id": "0x2e698b841480c427:0xe688675961c11f56",
+    "data_cid": "16611640859145871190",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1623003%2C106.9208987&query_place_id=ChIJJ8SAFISLaS4RVh_BYVlniOY",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJm7CfTjfxaS4RqkOrLAbnVjU",
+    "name": "Kolam Renang Gelanggang Olahraga Pertamina",
+    "kind": "pool",
+    "latitude": -6.228052099999999,
+    "longitude": 106.78878239999999,
+    "address": "Jl. Sinabung II, RT.7/RW.8, Grogol Sel., Kec. Kebayoran Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12220",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 7208159",
+    "website": null,
+    "place_id": "ChIJm7CfTjfxaS4RqkOrLAbnVjU",
+    "data_id": "0x2e69f1374e9fb09b:0x3556e7062cab43aa",
+    "data_cid": "3843513345712538538",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.228052099999999%2C106.78878239999999&query_place_id=ChIJm7CfTjfxaS4RqkOrLAbnVjU",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan",
+      "kolam renang Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJaU1YB8DzaS4RuOHjY2YF9ME",
+    "name": "Kolam Renang Gelanggang Remaja Jakarta Timur",
+    "kind": "pool",
+    "latitude": -6.2355732,
+    "longitude": 106.86832249999999,
+    "address": "Jl. Otista Raya No.121 13, RT.13/RW.8, Bidara Cina, Kecamatan Jatinegara, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13330",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "0823-1199-3775",
+    "website": null,
+    "place_id": "ChIJaU1YB8DzaS4RuOHjY2YF9ME",
+    "data_id": "0x2e69f3c007584d69:0xc1f4056663e3e1b8",
+    "data_cid": "13975801480958173624",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2355732%2C106.86832249999999&query_place_id=ChIJaU1YB8DzaS4RuOHjY2YF9ME",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Timur",
+      "kolam renang Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJw3DjgsftaS4RMr-ntBowaRw",
+    "name": "Kolam Renang GOR Ciracas",
+    "kind": "pool",
+    "latitude": -6.3249360999999995,
+    "longitude": 106.8666255,
+    "address": "MVG8+2MC, RT.10/RW.8, Susukan, Ciracas, East Jakarta City, Jakarta 13750",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJw3DjgsftaS4RMr-ntBowaRw",
+    "data_id": "0x2e69edc782e370c3:0x1c69301ab4a7bf32",
+    "data_cid": "2047220396874776370",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3249360999999995%2C106.8666255&query_place_id=ChIJw3DjgsftaS4RMr-ntBowaRw",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJUywWy2v2aS4RZ21hFcjIDrQ",
+    "name": "Kolam Renang GOR GROGOL",
+    "kind": "pool",
+    "latitude": -6.1610477999999995,
+    "longitude": 106.79715929999999,
+    "address": "Kolam Renang Gor Grogol, Jl. Semeru Raya No.31 Kolam Renang Gor Grogol, RT.9/RW.7, Grogol, Kec. Grogol petamburan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11450",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 5673616",
+    "website": null,
+    "place_id": "ChIJUywWy2v2aS4RZ21hFcjIDrQ",
+    "data_id": "0x2e69f66bcb162c53:0xb40ec8c815616d67",
+    "data_cid": "12974528338178698599",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1610477999999995%2C106.79715929999999&query_place_id=ChIJUywWy2v2aS4RZ21hFcjIDrQ",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJYRhR2nTzaS4R3oUdsHCQHTQ",
+    "name": "Kolam Renang GOR Jakarta Timur",
+    "kind": "pool",
+    "latitude": -6.2353204,
+    "longitude": 106.86850799999999,
+    "address": "Jl. Otista Raya No.121 13, RT.13/RW.8, Bidara Cina, Kecamatan Jatinegara, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13330",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJYRhR2nTzaS4R3oUdsHCQHTQ",
+    "data_id": "0x2e69f374da511861:0x341d9070b01d85de",
+    "data_cid": "3755316477962323422",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2353204%2C106.86850799999999&query_place_id=ChIJYRhR2nTzaS4R3oUdsHCQHTQ",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur",
+      "kolam renang Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJUeTBF7X1aS4RIfz_RIx5dOg",
+    "name": "Kolam Renang GOR Senen",
+    "kind": "pool",
+    "latitude": -6.1745261,
+    "longitude": 106.8434527,
+    "address": "Jl. Pasar Senen No.1, RW.3, Senen, Kec. Senen, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10410",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJUeTBF7X1aS4RIfz_RIx5dOg",
+    "data_id": "0x2e69f5b517c1e451:0xe874798c44fffc21",
+    "data_cid": "16750146557457726497",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1745261%2C106.8434527&query_place_id=ChIJUeTBF7X1aS4RIfz_RIx5dOg",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ58k423H1aS4RGCeOkkI4jqU",
+    "name": "Kolam Renang Gor Sunter",
+    "kind": "pool",
+    "latitude": -6.1473534999999995,
+    "longitude": 106.87715279999999,
+    "address": "Jl. Danau Sunter Selatan No.1, RT.8/RW.14, Sunter Jaya, Kec. Tj. Priok, Jkt Utara, Daerah Khusus Ibukota Jakarta 14360",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "0896-2494-0788",
+    "website": null,
+    "place_id": "ChIJ58k423H1aS4RGCeOkkI4jqU",
+    "data_id": "0x2e69f571db38c9e7:0xa58e3842928e2718",
+    "data_cid": "11929534321528809240",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1473534999999995%2C106.87715279999999&query_place_id=ChIJ58k423H1aS4RGCeOkkI4jqU",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ78OAAVsdai4RewfasPzwiDs",
+    "name": "Kolam Renang Green Court Club House 1",
+    "kind": "pool",
+    "latitude": -6.1303890999999995,
+    "longitude": 106.738373,
+    "address": "Jl. Boulevard 2 No.8 7, RT.7/RW.14, Kapuk, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11720",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ78OAAVsdai4RewfasPzwiDs",
+    "data_id": "0x2e6a1d5b0180c3ef:0x3b88f0fcb0da077b",
+    "data_cid": "4289943613159901051",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1303890999999995%2C106.738373&query_place_id=ChIJ78OAAVsdai4RewfasPzwiDs",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJPdFBdo_1aS4R8gP4sWNFkac",
+    "name": "Kolam Renang Green Pramuka",
+    "kind": "pool",
+    "latitude": -6.189528999999999,
+    "longitude": 106.8738521,
+    "address": "Jl. Nasional 13 No.9, RT.13/RW.9, Rawasari, Cempaka Putih, Central Jakarta City, Jakarta 10570",
+    "category": "Kolam renang luar ruangan",
+    "categories": [
+      "Kolam renang luar ruangan"
+    ],
+    "phone": null,
+    "website": "https://www.greenpramukacity.com/",
+    "place_id": "ChIJPdFBdo_1aS4R8gP4sWNFkac",
+    "data_id": "0x2e69f58f7641d13d:0xa7914563b1f803f2",
+    "data_cid": "12074508370446910450",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.189528999999999%2C106.8738521&query_place_id=ChIJPdFBdo_1aS4R8gP4sWNFkac",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJP0frE-nyaS4RufGNpfsBA6o",
+    "name": "Kolam Renang Halim Perdanakusumah",
+    "kind": "pool",
+    "latitude": -6.2581055,
+    "longitude": 106.88408729999999,
+    "address": "Komplek Angkasa, Jl. Pelangi Jl. Raya Halim Perdanakusuma, RT.7/RW.9, Halim Perdanakusuma, Kec. Makasar, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13650",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 8008326",
+    "website": null,
+    "place_id": "ChIJP0frE-nyaS4RufGNpfsBA6o",
+    "data_id": "0x2e69f2e913eb473f:0xaa0301fba58df1b9",
+    "data_cid": "12250637591703843257",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2581055%2C106.88408729999999&query_place_id=ChIJP0frE-nyaS4RufGNpfsBA6o",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJVWV1DgD3aS4R5qRE2IhLvL4",
+    "name": "Kolam Renang Hotel Millennium",
+    "kind": "pool",
+    "latitude": -6.1827992,
+    "longitude": 106.816963,
+    "address": "RR88+VQP, RT.1/RW.7, Kp. Bali, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10250",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJVWV1DgD3aS4R5qRE2IhLvL4",
+    "data_id": "0x2e69f7000e756555:0xbebc4b88d844a4e6",
+    "data_cid": "13743943213943923942",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1827992%2C106.816963&query_place_id=ChIJVWV1DgD3aS4R5qRE2IhLvL4",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJm5ljbJCMaS4ROLONA6OmTvE",
+    "name": "Kolam Renang HS Agung",
+    "kind": "pool",
+    "latitude": -6.2243414,
+    "longitude": 106.9458906,
+    "address": "Jl. Robusta Raya No.1 1, RT.2/RW.7, Pd. Kopi, Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13460",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum",
+      "Taman Rekreasi Air"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJm5ljbJCMaS4ROLONA6OmTvE",
+    "data_id": "0x2e698c906c63999b:0xf14ea6a3038db338",
+    "data_cid": "17388018430393561912",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2243414%2C106.9458906&query_place_id=ChIJm5ljbJCMaS4ROLONA6OmTvE",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJpRsPWZn1aS4RT6qekd0OfUA",
+    "name": "Kolam Renang Jubile School",
+    "kind": "pool",
+    "latitude": -6.1500242,
+    "longitude": 106.8581859,
+    "address": "Jubilee School, Jl. Sunter Jaya 1 No.13 No.1, RT.13/RW.6, Sunter Agung, Kec. Tj. Priok, Jkt Utara, Daerah Khusus Ibukota Jakarta 14350",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJpRsPWZn1aS4RT6qekd0OfUA",
+    "data_id": "0x2e69f599590f1ba5:0x407d0edd919eaa4f",
+    "data_cid": "4646886735309875791",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1500242%2C106.8581859&query_place_id=ChIJpRsPWZn1aS4RT6qekd0OfUA",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJnWkS0vrzaS4RLrf8WZLJi7Q",
+    "name": "Kolam Renang JW Marriott Hotel",
+    "kind": "pool",
+    "latitude": -6.227149,
+    "longitude": 106.8273736,
+    "address": "QRFG+4WX, JW. Marriott, Jalan Dr. Ide Anak Agung Gede Agung, Kuningan Timur, Setiabudi, RT.5/RW.2, Kuningan, Kuningan Tim., Jakarta Selatan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 57988888",
+    "website": "http://www.marriott.com/",
+    "place_id": "ChIJnWkS0vrzaS4RLrf8WZLJi7Q",
+    "data_id": "0x2e69f3fad212699d:0xb48bc99259fcb72e",
+    "data_cid": "13009713579001952046",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.227149%2C106.8273736&query_place_id=ChIJnWkS0vrzaS4RLrf8WZLJi7Q",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJr1TqCtb1aS4R82Q_1IZpw3I",
+    "name": "Kolam Renang Kebon Jahe Tanah Abang",
+    "kind": "pool",
+    "latitude": -6.1713764,
+    "longitude": 106.81891789999999,
+    "address": "No Jl. Tanah Abang I No.2, RT.11/RW.8, South Petojo, Gambir, Central Jakarta City, Jakarta 10160",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJr1TqCtb1aS4R82Q_1IZpw3I",
+    "data_id": "0x2e69f5d60aea54af:0x72c36986d43f64f3",
+    "data_cid": "8269569368589821171",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1713764%2C106.81891789999999&query_place_id=ChIJr1TqCtb1aS4R82Q_1IZpw3I",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ90xQGTL4aS4R9tQbUxYsETI",
+    "name": "Kolam Renang Kosambi Baru",
+    "kind": "pool",
+    "latitude": -6.175063799999999,
+    "longitude": 106.7107439,
+    "address": "Jl. Palem Raja Barat, RT.8/RW.13, Duri Kosambi, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11750",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ90xQGTL4aS4R9tQbUxYsETI",
+    "data_id": "0x2e69f83219504cf7:0x32112c16531bd4f6",
+    "data_cid": "3607713250895713526",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.175063799999999%2C106.7107439&query_place_id=ChIJ90xQGTL4aS4R9tQbUxYsETI",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJhxo-89KSaS4Rt9RIZRdAS68",
+    "name": "Kolam Renang Mabes TNI Cilangkap, Laksamana Malahayati",
+    "kind": "pool",
+    "latitude": -6.3201598,
+    "longitude": 106.9169019,
+    "address": "Chandra Naya Laksana Pt., RT.7/RW.4, Cilangkap, Kec. Cipayung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13870",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJhxo-89KSaS4Rt9RIZRdAS68",
+    "data_id": "0x2e6992d2f33e1a87:0xaf4b40176548d4b7",
+    "data_cid": "12631260049118385335",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3201598%2C106.9169019&query_place_id=ChIJhxo-89KSaS4Rt9RIZRdAS68",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ16TvYgAfai4RMNPY2ivW-s4",
+    "name": "Kolam Renang Mediterania",
+    "kind": "pool",
+    "latitude": -6.129459,
+    "longitude": 106.872782,
+    "address": "Sunter Mediterania III No.4, RT.4/RW.6, Papanggo, Kec. Tj. Priok, Jkt Utara, Daerah Khusus Ibukota Jakarta 14340",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ16TvYgAfai4RMNPY2ivW-s4",
+    "data_id": "0x2e6a1f0062efa4d7:0xcefad62bdad8d330",
+    "data_cid": "14914468599834399536",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.129459%2C106.872782&query_place_id=ChIJ16TvYgAfai4RMNPY2ivW-s4",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ2YnXklgbai4RCFA4xqGrIkk",
+    "name": "Kolam Renang Mimika",
+    "kind": "pool",
+    "latitude": -6.005115099999999,
+    "longitude": 106.7818113,
+    "address": "XQVJ+XP3, Pulau Anyer, Pulau Untung Jawa, Kec. Kepulauan Seribu Sel., Kab. Administrasi Kepulauan Seribu, Daerah Khusus Ibukota Jakarta",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ2YnXklgbai4RCFA4xqGrIkk",
+    "data_id": "0x2e6a1b5892d789d9:0x4922aba1c6385008",
+    "data_cid": "5269963225280565256",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.005115099999999%2C106.7818113&query_place_id=ChIJ2YnXklgbai4RCFA4xqGrIkk",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Kepulauan Seribu Jakarta",
+      "swimming pool Kepulauan Seribu Jakarta"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJn7yPZ47yaS4R54Ixfn3w274",
+    "name": "Kolam Renang Nilam Kramat Jati",
+    "kind": "pool",
+    "latitude": -6.2832051,
+    "longitude": 106.87435149999999,
+    "address": "Jl. Dato Tonggara II No.60, RT.4/RW.11, Kramat Jati, Kec. Kramat jati, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13510",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum",
+      "Taman Rekreasi Air"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJn7yPZ47yaS4R54Ixfn3w274",
+    "data_id": "0x2e69f28e678fbc9f:0xbedbf07d7e3182e7",
+    "data_cid": "13752850308884693735",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2832051%2C106.87435149999999&query_place_id=ChIJn7yPZ47yaS4R54Ixfn3w274",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur",
+      "kolam renang Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJo3-CIZgtQC4RaUEPpzD1rdo",
+    "name": "Kolam Renang Pabelokan",
+    "kind": "pool",
+    "latitude": -5.478667499999999,
+    "longitude": 106.3947786,
+    "address": "G9CV+HM7, Kolam Naga Pabelokan, Taman, Pulau Harapan, Kepulauan Seribu Utara, Kab. Administrasi Kepulauan Seribu, Daerah Khusus Ibukota Jakarta",
+    "category": "Klub Olahraga",
+    "categories": [
+      "Klub Olahraga"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJo3-CIZgtQC4RaUEPpzD1rdo",
+    "data_id": "0x2e402d9821827fa3:0xdaadf530a70f4169",
+    "data_cid": "15757520260549263721",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-5.478667499999999%2C106.3947786&query_place_id=ChIJo3-CIZgtQC4RaUEPpzD1rdo",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Kepulauan Seribu Jakarta"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJCRXkxbkdai4RHAFmgoygaqc",
+    "name": "Kolam Renang Pantai Mutiara Sportsclub Pluit, Penjaringan",
+    "kind": "pool",
+    "latitude": -6.1074487,
+    "longitude": 106.7909766,
+    "address": "7, Jl. Pantai Mutiara No.p/34, RT.7/RW.16, Pluit, Penjaringan, North Jakarta City, Jakarta 14450",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 6696731",
+    "website": null,
+    "place_id": "ChIJCRXkxbkdai4RHAFmgoygaqc",
+    "data_id": "0x2e6a1db9c5e41509:0xa76aa08c8266011c",
+    "data_cid": "12063631077208883484",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1074487%2C106.7909766&query_place_id=ChIJCRXkxbkdai4RHAFmgoygaqc",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat",
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJHSqPiOrxaS4R3tnmUjqgnbE",
+    "name": "Kolam Renang Pertamina Millennium Aquatic Center",
+    "kind": "pool",
+    "latitude": -6.2283292,
+    "longitude": 106.788826,
+    "address": "Jl. Teuku Nyak Arif, RT.7/RW.8, South Grogol, Kebayoran Lama, South Jakarta City, Jakarta 12220",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "0815-8503-9999",
+    "website": "https://www.instagram.com/millenniumaquatic/?hl=en",
+    "place_id": "ChIJHSqPiOrxaS4R3tnmUjqgnbE",
+    "data_id": "0x2e69f1ea888f2a1d:0xb19da03a52e6d9de",
+    "data_cid": "12798561888416225758",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2283292%2C106.788826&query_place_id=ChIJHSqPiOrxaS4R3tnmUjqgnbE",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJw2yq7_bzaS4RSd_knqjHxAI",
+    "name": "Kolam Renang Plaza Festival",
+    "kind": "pool",
+    "latitude": -6.220603,
+    "longitude": 106.8336061,
+    "address": "Plaza Festival Kav. C No. 22, Jl. H. R. Rasuna Said No.RT.2, RT.2/RW.5, Karet Kuningan, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12920",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum"
+    ],
+    "phone": "(021) 5263212",
+    "website": "https://instagram.com/plaza_festival?igshid=1s6gd8jnuunte",
+    "place_id": "ChIJw2yq7_bzaS4RSd_knqjHxAI",
+    "data_id": "0x2e69f3f6efaa6cc3:0x2c4c7a89ee4df49",
+    "data_cid": "199503810545377097",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.220603%2C106.8336061&query_place_id=ChIJw2yq7_bzaS4RSd_knqjHxAI",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ1eWbk-HyaS4R8L2-0rNpk3s",
+    "name": "Kolam Renang Prajurit Angkasa",
+    "kind": "pool",
+    "latitude": -6.2580656,
+    "longitude": 106.8838859,
+    "address": "Jl. Pelangi Komplek Angkasa, RT.7/RW.9, Halim Perdanakusuma, Makasar, East Jakarta City, Jakarta 13610",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ1eWbk-HyaS4R8L2-0rNpk3s",
+    "data_id": "0x2e69f2e1939be5d5:0x7b9369b3d2bebdf0",
+    "data_cid": "8904577109297380848",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2580656%2C106.8838859&query_place_id=ChIJ1eWbk-HyaS4R8L2-0rNpk3s",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ12UlB-Ufai4RMxSbeT3wi7g",
+    "name": "KOLAM RENANG RAWA BADAK",
+    "kind": "pool",
+    "latitude": -6.1261801,
+    "longitude": 106.8977532,
+    "address": "Jl. Alur Laut, RT.9/RW.5, Rawabadak Sel., Kec. Koja, Jkt Utara, Daerah Khusus Ibukota Jakarta 14230",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ12UlB-Ufai4RMxSbeT3wi7g",
+    "data_id": "0x2e6a1fe5072565d7:0xb88bf03d799b1433",
+    "data_cid": "13297986471565399091",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1261801%2C106.8977532&query_place_id=ChIJ12UlB-Ufai4RMxSbeT3wi7g",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJryhpa_HsaS4RPgU4O6lA1kk",
+    "name": "Kolam Renang Rumah Ibu",
+    "kind": "pool",
+    "latitude": -6.3531822,
+    "longitude": 106.87300979999999,
+    "address": "Jl. H. Nirin Kasan No.67, RT.7/RW.3, Cibubur, Kec. Ciracas, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13720",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 29627200",
+    "website": null,
+    "place_id": "ChIJryhpa_HsaS4RPgU4O6lA1kk",
+    "data_id": "0x2e69ecf16b6928af:0x49d640a93b38053e",
+    "data_cid": "5320511105371997502",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3531822%2C106.87300979999999&query_place_id=ChIJryhpa_HsaS4RPgU4O6lA1kk",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ_7dfSunxaS4RiHRfIlYQ-HM",
+    "name": "Kolam Renang Rumah Sang Katak",
+    "kind": "pool",
+    "latitude": -6.2389116,
+    "longitude": 106.7743514,
+    "address": "Rumah Sang Katak, Jl. Samudra No.28, RT.05/RW.6, Cipulir, Kebayoran Lama, South Jakarta City, Jakarta 12230",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang",
+      "Sekolah renang bayi",
+      "Kolam renang luar ruangan",
+      "Kolam Renang Umum",
+      "Instruktur Renang",
+      "Klub Renang",
+      "Sekolah Renang"
+    ],
+    "phone": "0812-6332-2500",
+    "website": "https://instagram.com/rumahsangkatak?igshid=NzAzN2Q1NTE=",
+    "place_id": "ChIJ_7dfSunxaS4RiHRfIlYQ-HM",
+    "data_id": "0x2e69f1e94a5fb7ff:0x73f81056225f7488",
+    "data_cid": "8356447070715868296",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2389116%2C106.7743514&query_place_id=ChIJ_7dfSunxaS4RiHRfIlYQ-HM",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJHXSbu0vxaS4Rwsvbr_DmS8c",
+    "name": "Kolam Renang Senayan",
+    "kind": "pool",
+    "latitude": -6.2170061,
+    "longitude": 106.8057025,
+    "address": "Komp. Gelora Bung Karno, Senayan, Jalan Konferensi Tingkat Tinggi Unit VI, RT.1/RW.3, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 5734070",
+    "website": null,
+    "place_id": "ChIJHXSbu0vxaS4Rwsvbr_DmS8c",
+    "data_id": "0x2e69f14bbb9b741d:0xc74be6f0afdbcbc2",
+    "data_cid": "14360825758217915330",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2170061%2C106.8057025&query_place_id=ChIJHXSbu0vxaS4Rwsvbr_DmS8c",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan",
+      "swimming pool Jakarta Utara",
+      "kolam renang Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJjwZ3uMKMaS4RWDVtikHs__o",
+    "name": "Kolam Renang Taman Air Tirtamas Pondok Kelapa",
+    "kind": "pool",
+    "latitude": -6.241243,
+    "longitude": 106.936472,
+    "address": "Jl. Pd. Klp. Tim. II, RT.11/RW.11, Pd. Klp., Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13450",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum"
+    ],
+    "phone": "(021) 8657370",
+    "website": null,
+    "place_id": "ChIJjwZ3uMKMaS4RWDVtikHs__o",
+    "data_id": "0x2e698cc2b877068f:0xfaffec418a6d3558",
+    "data_cid": "18086434394782643544",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.241243%2C106.936472&query_place_id=ChIJjwZ3uMKMaS4RWDVtikHs__o",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur",
+      "kolam renang Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ455smcvwaS4RFTjpYmoHqO0",
+    "name": "Kolam Renang Taman Alfa Indah",
+    "kind": "pool",
+    "latitude": -6.220267499999999,
+    "longitude": 106.7518376,
+    "address": "Jl. Taman Alfa Indah No.7 Blok A10, RT.3/RW.7, Joglo, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11640",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum"
+    ],
+    "phone": "(021) 5841600",
+    "website": null,
+    "place_id": "ChIJ455smcvwaS4RFTjpYmoHqO0",
+    "data_id": "0x2e69f0cb996c9ee3:0xeda8076a62e93815",
+    "data_cid": "17124945736583690261",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.220267499999999%2C106.7518376&query_place_id=ChIJ455smcvwaS4RFTjpYmoHqO0",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat",
+      "kolam renang Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJfeFVz3KLaS4RhsrinXhGP6M",
+    "name": "Kolam Renang Taman Modern",
+    "kind": "pool",
+    "latitude": -6.1934242,
+    "longitude": 106.9495372,
+    "address": "RW4X+JRM, RT.7/RW.6, Ujung Menteng, Cakung, East Jakarta City, Jakarta 13960",
+    "category": "Kolam renang luar ruangan",
+    "categories": [
+      "Kolam renang luar ruangan"
+    ],
+    "phone": "0812-1257-4663",
+    "website": null,
+    "place_id": "ChIJfeFVz3KLaS4RhsrinXhGP6M",
+    "data_id": "0x2e698b72cf55e17d:0xa33f46789de2ca86",
+    "data_cid": "11763198235573930630",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1934242%2C106.9495372&query_place_id=ChIJfeFVz3KLaS4RhsrinXhGP6M",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ52fTZwD1aS4ReO6h9KxjTNU",
+    "name": "Kolam Renang Tavia Heritage Hotel",
+    "kind": "pool",
+    "latitude": -6.17348,
+    "longitude": 106.8609757,
+    "address": "Jl. Letjen Suprapto No.60 1, RT.1/RW.3, West Cempaka Putih, Cempaka Putih, Central Jakarta City, Jakarta 10520",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ52fTZwD1aS4ReO6h9KxjTNU",
+    "data_id": "0x2e69f50067d367e7:0xd54c63acf4a1ee78",
+    "data_cid": "15369769222798438008",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.17348%2C106.8609757&query_place_id=ChIJ52fTZwD1aS4ReO6h9KxjTNU",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJEU4dCQD1aS4RJxoe-nFFwnk",
+    "name": "Kolam Renang The Club Gading Mas",
+    "kind": "pool",
+    "latitude": -6.1547383,
+    "longitude": 106.8893987,
+    "address": "Jl. Boulevard Bar. Raya No.1, RT.15/RW.3, Klp. Gading Bar., Kec. Klp. Gading, Jkt Utara, Daerah Khusus Ibukota Jakarta 14240",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "0812-8889-2923",
+    "website": "https://www.instagram.com/clubgadingmasjkt/",
+    "place_id": "ChIJEU4dCQD1aS4RJxoe-nFFwnk",
+    "data_id": "0x2e69f500091d4e11:0x79c24571fa1e1a27",
+    "data_cid": "8773651379901045287",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1547383%2C106.8893987&query_place_id=ChIJEU4dCQD1aS4RJxoe-nFFwnk",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Utara",
+      "kolam renang Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJow9Xt4HuaS4RgYzTO4U8nb4",
+    "name": "Kolam Renang Tiga Dara",
+    "kind": "pool",
+    "latitude": -6.344017099999999,
+    "longitude": 106.8164458,
+    "address": "Yayasan Nurul Amanah, Jl. Moch. Kahfi II No.14, RT.5/RW.4, Ciganjur, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12630",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum",
+      "Taman Rekreasi Air"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJow9Xt4HuaS4RgYzTO4U8nb4",
+    "data_id": "0x2e69ee81b7570fa3:0xbe9d3c853bd38c81",
+    "data_cid": "13735200981481917569",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.344017099999999%2C106.8164458&query_place_id=ChIJow9Xt4HuaS4RgYzTO4U8nb4",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJIbQ9i5PzaS4RYrRiH1nxm_Y",
+    "name": "Kolam Renang Tirta Abinaya Rindam jaya",
+    "kind": "pool",
+    "latitude": -6.296085799999999,
+    "longitude": 106.8549237,
+    "address": "PV33+7J, RT.1/RW.5, Gedong, Kec. Ps. Rebo, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13760",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "0877-7281-2992",
+    "website": "https://www.kompasiana.com/yulipuspitasari/63ce7cab4addee25b5091ff2/review-kolam-renang-tirta-abinaya-rindam-jaya",
+    "place_id": "ChIJIbQ9i5PzaS4RYrRiH1nxm_Y",
+    "data_id": "0x2e69f3938b3db421:0xf69bf1591f62b462",
+    "data_cid": "17770062119801369698",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.296085799999999%2C106.8549237&query_place_id=ChIJIbQ9i5PzaS4RYrRiH1nxm_Y",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur",
+      "kolam renang Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJBWn5jz_taS4RYXDwPE2nhwM",
+    "name": "Kolam Renang Tirta Cakti",
+    "kind": "pool",
+    "latitude": -6.3438485,
+    "longitude": 106.8307499,
+    "address": "RT.12/RW.3, Srengseng Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12630",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum",
+      "Tempat Fitness"
+    ],
+    "phone": "(021) 72732524",
+    "website": null,
+    "place_id": "ChIJBWn5jz_taS4RYXDwPE2nhwM",
+    "data_id": "0x2e69ed3f8ff96905:0x387a74d3cf07061",
+    "data_cid": "254355854146433121",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3438485%2C106.8307499&query_place_id=ChIJBWn5jz_taS4RYXDwPE2nhwM",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJqdAYKfbwaS4RX3yMrgOuEOU",
+    "name": "Kolam Renang Tirta Faletehan",
+    "kind": "pool",
+    "latitude": -6.2599522,
+    "longitude": 106.7557336,
+    "address": "PQR4+279, RT.11/RW.5, Pesanggrahan, Kec. Pesanggrahan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12320",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJqdAYKfbwaS4RX3yMrgOuEOU",
+    "data_id": "0x2e69f0f62918d0a9:0xe510ae03ae8c7c5f",
+    "data_cid": "16505883965149445215",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2599522%2C106.7557336&query_place_id=ChIJqdAYKfbwaS4RX3yMrgOuEOU",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan",
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJXTK2OavtaS4RsHbq1DDISxQ",
+    "name": "Kolam Renang Tirta Jaya",
+    "kind": "pool",
+    "latitude": -6.3381476,
+    "longitude": 106.8607643,
+    "address": "Jaya Sakti I No.5, RT.5/RW.8, Pekayon, Kec. Ps. Rebo, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13710",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJXTK2OavtaS4RsHbq1DDISxQ",
+    "data_id": "0x2e69edab39b6325d:0x144bc830d4ea76b0",
+    "data_cid": "1462482616067978928",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3381476%2C106.8607643&query_place_id=ChIJXTK2OavtaS4RsHbq1DDISxQ",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJY3G-SqztaS4RHrCiYPIbxuQ",
+    "name": "Kolam Renang Tirta Jaya Yudha Depok",
+    "kind": "pool",
+    "latitude": -6.3530191,
+    "longitude": 106.86152419999999,
+    "address": "Jl. Jaya Yudha 3 No.32, RT.2/RW.5, Pekayon, Kec. Ps. Rebo, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13710",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJY3G-SqztaS4RHrCiYPIbxuQ",
+    "data_id": "0x2e69edac4abe7163:0xe4c61bf260a2b01e",
+    "data_cid": "16484894213853589534",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3530191%2C106.86152419999999&query_place_id=ChIJY3G-SqztaS4RHrCiYPIbxuQ",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ3UBXgDL1aS4ROD9eWHUJvoM",
+    "name": "Kolam Renang Tirta Kirana",
+    "kind": "pool",
+    "latitude": -6.163395899999999,
+    "longitude": 106.90937269999999,
+    "address": "Jl. Boulevard Timur No.1, RT.1/RW.12, Pegangsaan Dua, Kec. Klp. Gading, Jkt Utara, Daerah Khusus Ibukota Jakarta 14250",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 4532440",
+    "website": null,
+    "place_id": "ChIJ3UBXgDL1aS4ROD9eWHUJvoM",
+    "data_id": "0x2e69f532805740dd:0x83be0975585e3f38",
+    "data_cid": "9493035464141979448",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.163395899999999%2C106.90937269999999&query_place_id=ChIJ3UBXgDL1aS4ROD9eWHUJvoM",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara",
+      "kolam renang Jakarta Pusat",
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJT4OC92XzaS4RfDZCSjEgcKU",
+    "name": "Kolam Renang Tirta Permata",
+    "kind": "pool",
+    "latitude": -6.2587497999999995,
+    "longitude": 106.86468459999999,
+    "address": "Jl. Jambul Lama No.4 4, RT.4/RW.13, Cililitan, Kec. Kramat jati, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13640",
+    "category": "Penginapan",
+    "categories": [
+      "Penginapan"
+    ],
+    "phone": "0858-8292-7011",
+    "website": null,
+    "place_id": "ChIJT4OC92XzaS4RfDZCSjEgcKU",
+    "data_id": "0x2e69f365f782834f:0xa57020314a42367c",
+    "data_cid": "11921063609721042556",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2587497999999995%2C106.86468459999999&query_place_id=ChIJT4OC92XzaS4RfDZCSjEgcKU",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ1ZEOt9HzaS4RIef5F1biYK0",
+    "name": "Kolam renang Tirta Permata Kodam /Jayakarta",
+    "kind": "pool",
+    "latitude": -6.2581706,
+    "longitude": 106.86657939999999,
+    "address": "PVR8+PJP, Jakarta Timur, RT.4/RW.10, Cililitan, Kec. Kramat jati, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13640",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ1ZEOt9HzaS4RIef5F1biYK0",
+    "data_id": "0x2e69f3d1b70e91d5:0xad60e25617f9e721",
+    "data_cid": "12493234225723074337",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2581706%2C106.86657939999999&query_place_id=ChIJ1ZEOt9HzaS4RIef5F1biYK0",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJjV-CIJntaS4RJAWy5_l4Y7w",
+    "name": "Kolam Renang Tirta Yudha",
+    "kind": "pool",
+    "latitude": -6.315569699999999,
+    "longitude": 106.8579628,
+    "address": "MVM5+Q6Q, Jl. RA. Fadillah No.1 1, RT.2/RW.5, Cijantung, Kec. Ps. Rebo, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13770",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang",
+      "Taman Rekreasi Air"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJjV-CIJntaS4RJAWy5_l4Y7w",
+    "data_id": "0x2e69ed9920825f8d:0xbc6378f9e7b20524",
+    "data_cid": "13574826716554200356",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.315569699999999%2C106.8579628&query_place_id=ChIJjV-CIJntaS4RJAWy5_l4Y7w",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJbZp9qd30aS4RZ9sRNaoNlT4",
+    "name": "Kolam Renang Tirtamas",
+    "kind": "pool",
+    "latitude": -6.1857641999999995,
+    "longitude": 106.8919141,
+    "address": "Jl. Kayu Putih Empat No.37A, RT.5/RW.6, Pulo Gadung, Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13260",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang",
+      "Kolam Renang Umum"
+    ],
+    "phone": "(021) 4750419",
+    "website": null,
+    "place_id": "ChIJbZp9qd30aS4RZ9sRNaoNlT4",
+    "data_id": "0x2e69f4dda97d9a6d:0x3e950daa3511db67",
+    "data_cid": "4509525626567383911",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1857641999999995%2C106.8919141&query_place_id=ChIJbZp9qd30aS4RZ9sRNaoNlT4",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJxVqB_DH1aS4R0DVnZwheUUk",
+    "name": "Kolam Renang Tirto Sagoro 01 Kolat Koarmada I",
+    "kind": "pool",
+    "latitude": -6.1658598,
+    "longitude": 106.885408,
+    "address": "Jl. Gading Raya No.5 7, RT.7/RW.2, Klp. Gading Bar., Kec. Klp. Gading, Jkt Utara, Daerah Khusus Ibukota Jakarta 14240",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "0813-1544-1127",
+    "website": null,
+    "place_id": "ChIJxVqB_DH1aS4R0DVnZwheUUk",
+    "data_id": "0x2e69f531fc815ac5:0x49515e08676735d0",
+    "data_cid": "5283107228069869008",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1658598%2C106.885408&query_place_id=ChIJxVqB_DH1aS4R0DVnZwheUUk",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJmzUCkKPxaS4RyyWAW3HOARI",
+    "name": "Kolam Renang Tirto Sagoro 08",
+    "kind": "pool",
+    "latitude": -6.239914199999999,
+    "longitude": 106.7712988,
+    "address": "Komp. Seskoal, Laut Jawa No.1, RT.1/RW.11, Cipulir, Kec. Kebayoran Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12230",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJmzUCkKPxaS4RyyWAW3HOARI",
+    "data_id": "0x2e69f1a39002359b:0x1201ce715b8025cb",
+    "data_cid": "1297545153921164747",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.239914199999999%2C106.7712988&query_place_id=ChIJmzUCkKPxaS4RyyWAW3HOARI",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ1b6ESeftaS4R5atcgpRlmBY",
+    "name": "Kolam Renang UI",
+    "kind": "pool",
+    "latitude": -6.3520461,
+    "longitude": 106.8299466,
+    "address": "Lingkar Utara, RW.3, Srengseng Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta, RW.3, Srengseng Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 10550",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ1b6ESeftaS4R5atcgpRlmBY",
+    "data_id": "0x2e69ede74984bed5:0x16986594825cabe5",
+    "data_cid": "1628162953811110885",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3520461%2C106.8299466&query_place_id=ChIJ1b6ESeftaS4R5atcgpRlmBY",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJvSWvMQHuaS4Rrdm2PMhE6aI",
+    "name": "Kolam Renang Usman Harun (Marinir Ragunan)",
+    "kind": "pool",
+    "latitude": -6.304204899999999,
+    "longitude": 106.8135233,
+    "address": "Jl. Raya Cilandak KKO No.3 3, RT.3/RW.5, Cilandak, Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12560",
+    "category": "Kompleks Olahraga",
+    "categories": [
+      "Kompleks Olahraga"
+    ],
+    "phone": "(021) 78846848",
+    "website": null,
+    "place_id": "ChIJvSWvMQHuaS4Rrdm2PMhE6aI",
+    "data_id": "0x2e69ee0131af25bd:0xa2e944c83cb6d9ad",
+    "data_cid": "11738989530520672685",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.304204899999999%2C106.8135233&query_place_id=ChIJvSWvMQHuaS4Rrdm2PMhE6aI",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJN7b-CAD3aS4RQCB6Z-KdZs0",
+    "name": "Kolam renang villa meruya",
+    "kind": "pool",
+    "latitude": -6.2096811999999995,
+    "longitude": 106.7256623,
+    "address": "QPRG+47F, Kolam renang villa, RT.1/RW.10, Meruya Sel., Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11650",
+    "category": "Klub Olahraga",
+    "categories": [
+      "Klub Olahraga"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJN7b-CAD3aS4RQCB6Z-KdZs0",
+    "data_id": "0x2e69f70008feb637:0xcd669de2677a2040",
+    "data_cid": "14800690821123940416",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2096811999999995%2C106.7256623&query_place_id=ChIJN7b-CAD3aS4RQCB6Z-KdZs0",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJCY1Ce7aSaS4ROM1VR5Naf7E",
+    "name": "Kolam Renang Warna-warni",
+    "kind": "pool",
+    "latitude": -6.3142562,
+    "longitude": 106.91892449999999,
+    "address": "1, Jl. Tileng No.36, RT.1/RW.4, Setu, Kec. Cipayung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13880",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJCY1Ce7aSaS4ROM1VR5Naf7E",
+    "data_id": "0x2e6992b67b428d09:0xb17f5a934755cd38",
+    "data_cid": "12790041055358995768",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3142562%2C106.91892449999999&query_place_id=ChIJCY1Ce7aSaS4ROM1VR5Naf7E",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ5XxEYObxaS4RxSkR-LBEGHE",
+    "name": "Nika Training Pool Bintaro",
+    "kind": "pool",
+    "latitude": -6.2735818,
+    "longitude": 106.7567528,
+    "address": "Jl. Taman Bintaro Barat No.Kav 10, RT.11/RW.11, Bintaro, Pesanggrahan, South Jakarta City, Jakarta 12330",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "0852-1810-2061",
+    "website": null,
+    "place_id": "ChIJ5XxEYObxaS4RxSkR-LBEGHE",
+    "data_id": "0x2e69f1e660447ce5:0x711844b0f81129c5",
+    "data_cid": "8149339052593719749",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2735818%2C106.7567528&query_place_id=ChIJ5XxEYObxaS4RxSkR-LBEGHE",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ-61Wt7T1aS4RV9FZa4rlJDc",
+    "name": "Oasis Swimming Pool",
+    "kind": "pool",
+    "latitude": -6.174254599999999,
+    "longitude": 106.83963209999999,
+    "address": "Proyek Senen Blok Lantai 119, Jl. Senen Raya Jl. Prapatan III No.1, RW.2, Senen, Central Jakarta City, Jakarta 10410",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJ-61Wt7T1aS4RV9FZa4rlJDc",
+    "data_id": "0x2e69f5b4b756adfb:0x3724e58a6b59d157",
+    "data_cid": "3973553153916916055",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.174254599999999%2C106.83963209999999&query_place_id=ChIJ-61Wt7T1aS4RV9FZa4rlJDc",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJHVf1k6cCai4RoBveE4ERmNs",
+    "name": "Palm Bay Water Park",
+    "kind": "pool",
+    "latitude": -6.1384725,
+    "longitude": 106.70998309999999,
+    "address": "Jl. Taman Surya 5 Blok PP 1, RT.8/RW.2, Pegadungan, Kec. Kalideres, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11830",
+    "category": "Taman Rekreasi Air",
+    "categories": [
+      "Taman Rekreasi Air",
+      "Kolam Renang Umum",
+      "Tujuan Wisata"
+    ],
+    "phone": "(021) 29671005",
+    "website": "https://www.instagram.com/palmbay_waterpark?utm_source=qr&igsh=MTFhbWR1aDQ5d2U2MQ==",
+    "place_id": "ChIJHVf1k6cCai4RoBveE4ERmNs",
+    "data_id": "0x2e6a02a793f5571d:0xdb98118113de1ba0",
+    "data_cid": "15823416536848014240",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1384725%2C106.70998309999999&query_place_id=ChIJHVf1k6cCai4RoBveE4ERmNs",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat",
+      "kolam renang Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJBzBPjycdai4Rjm7ad4uRqq8",
+    "name": "Pool Coast View Greenbay Pluit Apartment",
+    "kind": "pool",
+    "latitude": -6.1086804,
+    "longitude": 106.7795409,
+    "address": "20, RT.20/RW.2, Pluit, Kecamatan Penjaringan, Jkt Utara, Daerah Khusus Ibukota Jakarta 14450",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "0895-0117-3099",
+    "website": null,
+    "place_id": "ChIJBzBPjycdai4Rjm7ad4uRqq8",
+    "data_id": "0x2e6a1d278f4f3007:0xafaa918b77da6e8e",
+    "data_cid": "12658089730875485838",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1086804%2C106.7795409&query_place_id=ChIJBzBPjycdai4Rjm7ad4uRqq8",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJkTe5qc_xaS4R1-SaSKqFQaQ",
+    "name": "Pools Swisbell Pondok Indah",
+    "kind": "pool",
+    "latitude": -6.2878416999999995,
+    "longitude": 106.77998009999999,
+    "address": "Jl. Duta Niaga Raya No.6, RT.6/RW.14, Pd. Pinang, Kec. Kebayoran Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12310",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": "https://www.swiss-belhotel.com/en-gb/swiss-belhotel-pondok-indah",
+    "place_id": "ChIJkTe5qc_xaS4R1-SaSKqFQaQ",
+    "data_id": "0x2e69f1cfa9b93791:0xa44185aa489ae4d7",
+    "data_cid": "11835888262115419351",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2878416999999995%2C106.77998009999999&query_place_id=ChIJkTe5qc_xaS4R1-SaSKqFQaQ",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJryHQHRr3aS4R5bCYLXaMAs0",
+    "name": "Prisma Sport Club",
+    "kind": "pool",
+    "latitude": -6.1937533,
+    "longitude": 106.7598306,
+    "address": "Jl. Prisma Raya, RT.1/RW.7, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum"
+    ],
+    "phone": "(021) 5310373",
+    "website": "http://prismaballroom.weebly.com/contact.html",
+    "place_id": "ChIJryHQHRr3aS4R5bCYLXaMAs0",
+    "data_id": "0x2e69f71a1dd021af:0xcd028c762d98b0e5",
+    "data_cid": "14772524166927659237",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1937533%2C106.7598306&query_place_id=ChIJryHQHRr3aS4R5bCYLXaMAs0",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat",
+      "kolam renang Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJRbEPRJbtaS4Rh1FhxZOYGAU",
+    "name": "PRIVATE POOL FOR MUSLIM MUSLIMAH",
+    "kind": "pool",
+    "latitude": -6.3322506,
+    "longitude": 106.9010996,
+    "address": "Jl. Alamanda No.4, RT.4/RW.3, Cilangkap, Kec. Cipayung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13870",
+    "category": "Kolam Renang Dalam Ruangan",
+    "categories": [
+      "Kolam Renang Dalam Ruangan"
+    ],
+    "phone": "0857-1616-0424",
+    "website": null,
+    "place_id": "ChIJRbEPRJbtaS4Rh1FhxZOYGAU",
+    "data_id": "0x2e69ed96440fb145:0x5189893c5615187",
+    "data_cid": "367211130069799303",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3322506%2C106.9010996&query_place_id=ChIJRbEPRJbtaS4Rh1FhxZOYGAU",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Timur",
+      "swimming pool Jakarta Timur"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJUVVNe0D3aS4RbZiXAxPaaD4",
+    "name": "Season City Apt Swimming Pool",
+    "kind": "pool",
+    "latitude": -6.1539104,
+    "longitude": 106.7963047,
+    "address": "Season City, Jl. Prof. Dr. Latumeten No.33, RT.13/RW.1, Jembatan Besi, Tambora, West Jakarta City, Jakarta 11320",
+    "category": "Kolam renang luar ruangan",
+    "categories": [
+      "Kolam renang luar ruangan"
+    ],
+    "phone": "0857-8232-2138",
+    "website": null,
+    "place_id": "ChIJUVVNe0D3aS4RbZiXAxPaaD4",
+    "data_id": "0x2e69f7407b4d5551:0x3e68da130397986d",
+    "data_cid": "4497084003128940653",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1539104%2C106.7963047&query_place_id=ChIJUVVNe0D3aS4RbZiXAxPaaD4",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Barat",
+      "kolam renang Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJMerwoDPwaS4RfAfeK4TEcNI",
+    "name": "Sepolwan",
+    "kind": "pool",
+    "latitude": -6.2871112,
+    "longitude": 106.7677056,
+    "address": "Jl. Cemp. No.33 10, RT.10/RW.9, Pd. Pinang, Kec. Kebayoran Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12310",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJMerwoDPwaS4RfAfeK4TEcNI",
+    "data_id": "0x2e69f033a0f0ea31:0xd270c4842bde077c",
+    "data_cid": "15163836017307158396",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2871112%2C106.7677056&query_place_id=ChIJMerwoDPwaS4RfAfeK4TEcNI",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ7yiwIgghai4RO3q-qwCGn0E",
+    "name": "Sewa Kolam Renang Keluarga theberlianonepool",
+    "kind": "pool",
+    "latitude": -6.1272459999999995,
+    "longitude": 106.9143381,
+    "address": "Jl. Berlian I Blok M-14, RT.5/RW.16, Tugu Utara, Kec. Koja, Jkt Utara, Daerah Khusus Ibukota Jakarta 14260",
+    "category": "Kolam renang luar ruangan",
+    "categories": [
+      "Kolam renang luar ruangan",
+      "Kolam Renang"
+    ],
+    "phone": "0878-4186-8899",
+    "website": null,
+    "place_id": "ChIJ7yiwIgghai4RO3q-qwCGn0E",
+    "data_id": "0x2e6a210822b028ef:0x419f8600abbe7a3b",
+    "data_cid": "4728645471201819195",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1272459999999995%2C106.9143381&query_place_id=ChIJ7yiwIgghai4RO3q-qwCGn0E",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJr6_naiT4aS4Rc2ds3puRgPk",
+    "name": "Splash Swimming Pool & Gym",
+    "kind": "pool",
+    "latitude": -6.165382,
+    "longitude": 106.71592299999999,
+    "address": "Blok NF No.1, Jl. Perumahan Taman Semanan Indah Jl. Dharma Pratama No.1 Blok. NF No.1, RT.1/RW.12, Semanan, Kec. Kalideres, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11850",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang",
+      "Tempat Fitness"
+    ],
+    "phone": "(021) 5441156",
+    "website": null,
+    "place_id": "ChIJr6_naiT4aS4Rc2ds3puRgPk",
+    "data_id": "0x2e69f8246ae7afaf:0xf980919bde6c6773",
+    "data_cid": "17978529811100624755",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.165382%2C106.71592299999999&query_place_id=ChIJr6_naiT4aS4Rc2ds3puRgPk",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJB7BugSn4aS4RKNK19SXOJhc",
+    "name": "Sport Club Semanan",
+    "kind": "pool",
+    "latitude": -6.165574599999999,
+    "longitude": 106.71592319999999,
+    "address": "Jl. Perumahan Taman Semanan Indah Jl. Dharma Pratama No.1 Blok. NF No.1, RT.1/RW.12, Semanan, Kec. Kalideres, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11850",
+    "category": "Kolam Renang Umum",
+    "categories": [
+      "Kolam Renang Umum",
+      "Klub Olahraga",
+      "Kompleks Olahraga"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJB7BugSn4aS4RKNK19SXOJhc",
+    "data_id": "0x2e69f829816eb007:0x1726ce25f5b5d228",
+    "data_cid": "1668247374418793000",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.165574599999999%2C106.71592319999999&query_place_id=ChIJB7BugSn4aS4RKNK19SXOJhc",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJE-_DDEDtaS4RGoG-3ZgVVh4",
+    "name": "Sport Sunnah Center",
+    "kind": "pool",
+    "latitude": -6.3198931,
+    "longitude": 106.82916159999999,
+    "address": "Jalan kebagusan dalam 1 no. 44 Rt 07/04 Rumah Bagus Residence Kavling D3-D5, RT.7/RW.4, Kebagusan, Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12510",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang",
+      "Klub Renang",
+      "Sekolah Renang"
+    ],
+    "phone": "0859-2325-3193",
+    "website": null,
+    "place_id": "ChIJE-_DDEDtaS4RGoG-3ZgVVh4",
+    "data_id": "0x2e69ed400cc3ef13:0x1e561598ddbe811a",
+    "data_cid": "2185958415434416410",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3198931%2C106.82916159999999&query_place_id=ChIJE-_DDEDtaS4RGoG-3ZgVVh4",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJe_HeDpjvaS4RQ38mSnhZ-ZI",
+    "name": "Sports Club Serenia Mansion",
+    "kind": "pool",
+    "latitude": -6.310952299999999,
+    "longitude": 106.7757882,
+    "address": "Jl. Karang Tengah Raya No.9, RT.1/RW.3, Kelurahaan, Lb. Bulus, Kec. Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12440",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang",
+      "Sekolah renang bayi",
+      "Ruang Serbaguna",
+      "Tempat Fitness",
+      "Klub senam",
+      "Lapangan Sepak Bola",
+      "Kompleks Olahraga",
+      "Stadion",
+      "Klub Olahraga",
+      "Pelatih pribadi untuk wanita"
+    ],
+    "phone": "0812-3000-6006",
+    "website": "http://www.clubsereniamansion.com/",
+    "place_id": "ChIJe_HeDpjvaS4RQ38mSnhZ-ZI",
+    "data_id": "0x2e69ef980edef17b:0x92f959784a267f43",
+    "data_cid": "10590594371913416515",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.310952299999999%2C106.7757882&query_place_id=ChIJe_HeDpjvaS4RQ38mSnhZ-ZI",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJuQIGo7L2aS4RANJLIx4z9tM",
+    "name": "Stadion Akuatik - Gelora Bung Karno",
+    "kind": "pool",
+    "latitude": -6.2169563,
+    "longitude": 106.80577819999999,
+    "address": "QRM4+686, RT.1/RW.3, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270",
+    "category": "Kompleks Olahraga",
+    "categories": [
+      "Kompleks Olahraga",
+      "Kompleks Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJuQIGo7L2aS4RANJLIx4z9tM",
+    "data_id": "0x2e69f6b2a30602b9:0xd3f6331e234bd200",
+    "data_cid": "15273451390807822848",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2169563%2C106.80577819999999&query_place_id=ChIJuQIGo7L2aS4RANJLIx4z9tM",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat",
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJdwlsshnxaS4RdBykYWXSWrg",
+    "name": "Sultan Residence Swimming Pool",
+    "kind": "pool",
+    "latitude": -6.2196364,
+    "longitude": 106.809134,
+    "address": "Jl. Jenderal Sudirman No.52, RT.1/RW.3, Senayan, Kebayoran Baru, Central Jakarta City, Jakarta 12190",
+    "category": "Fasilitas Renang",
+    "categories": [
+      "Fasilitas Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJdwlsshnxaS4RdBykYWXSWrg",
+    "data_id": "0x2e69f119b26c0977:0xb85ad26561a41c74",
+    "data_cid": "13284161383754374260",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.2196364%2C106.809134&query_place_id=ChIJdwlsshnxaS4RdBykYWXSWrg",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJLUBID_f1aS4RbRMX42SlEdU",
+    "name": "Swimming Pool - Novotel Jakarta Mangga Dua Square",
+    "kind": "pool",
+    "latitude": -6.138267,
+    "longitude": 106.83176399999999,
+    "address": "VR6J+MPR, Jl. Layang, RT.11/RW.6, Ancol, Kec. Pademangan, Jkt Utara, Daerah Khusus Ibukota Jakarta 14430",
+    "category": "Olahraga",
+    "categories": [
+      "Olahraga"
+    ],
+    "phone": "(021) 62312800",
+    "website": "http://www.novoteljakartamanggaduasquare.com/",
+    "place_id": "ChIJLUBID_f1aS4RbRMX42SlEdU",
+    "data_id": "0x2e69f5f70f48402d:0xd511a564e317136d",
+    "data_cid": "15353234457407984493",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.138267%2C106.83176399999999&query_place_id=ChIJLUBID_f1aS4RbRMX42SlEdU",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJO733L_3waS4RT_o7HG_YUho",
+    "name": "Swimming Pool Sporty",
+    "kind": "pool",
+    "latitude": -6.249504099999999,
+    "longitude": 106.77000729999999,
+    "address": "Jalan Delman Utama A29 No. 416, Kebayoran Lama Selatan, Kebayoran Lama, RT.3/RW.11, Kby. Lama Utara, Kec. Kebayoran Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12240",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "(021) 7239367",
+    "website": null,
+    "place_id": "ChIJO733L_3waS4RT_o7HG_YUho",
+    "data_id": "0x2e69f0fd2ff7bd3b:0x1a52d86f1c3bfa4f",
+    "data_cid": "1896816364803062351",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.249504099999999%2C106.77000729999999&query_place_id=ChIJO733L_3waS4RT_o7HG_YUho",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "swimming pool Jakarta Selatan",
+      "kolam renang Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJlc5yEVH2aS4RWgXGfSZQk3w",
+    "name": "Tangkas Sports Centre",
+    "kind": "pool",
+    "latitude": -6.1684244999999995,
+    "longitude": 106.7770855,
+    "address": "Komplek Greenville, Jl. Tj. Duren Barat, RT.11/RW.9, Duri Kepa, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11510",
+    "category": "Kompleks Olahraga",
+    "categories": [
+      "Kompleks Olahraga",
+      "Lapangan Bulutangkis",
+      "Tempat Fitness",
+      "Gym Tinju Muay Thai",
+      "Kolam Renang Umum",
+      "Sekolah Olahraga",
+      "Gedung Olahraga Tenis Meja",
+      "Lapangan Tenis",
+      "Taman Rekreasi Air"
+    ],
+    "phone": "0811-1575-587",
+    "website": "http://www.tangkassc.com/",
+    "place_id": "ChIJlc5yEVH2aS4RWgXGfSZQk3w",
+    "data_id": "0x2e69f6511172ce95:0x7c9350267dc6055a",
+    "data_cid": "8976606608528639322",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1684244999999995%2C106.7770855&query_place_id=ChIJlc5yEVH2aS4RWgXGfSZQk3w",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "kolam renang Jakarta Barat",
+      "swimming pool Jakarta Barat",
+      "swimming pool Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJHyH9RN_1aS4RSqQ_Tu9PEM0",
+    "name": "The 5ky Swimming Pool",
+    "kind": "pool",
+    "latitude": -6.1604892,
+    "longitude": 106.81871819999999,
+    "address": "RRQ9+RF4, RT.2/RW.1, North Petojo, Gambir, Central Jakarta City, Jakarta 10130",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJHyH9RN_1aS4RSqQ_Tu9PEM0",
+    "data_id": "0x2e69f5df44fd211f:0xcd104fef4e3fa44a",
+    "data_cid": "14776398266631169098",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1604892%2C106.81871819999999&query_place_id=ChIJHyH9RN_1aS4RSqQ_Tu9PEM0",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Pusat",
+      "swimming pool Jakarta Pusat"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ0aj06D_1aS4R7OIAgWgonDM",
+    "name": "The Club Gading Mas",
+    "kind": "pool",
+    "latitude": -6.1549327,
+    "longitude": 106.89070509999999,
+    "address": "Jl. Boulevard Bar. Raya No.1, RT.2/RW.9, West Kelapa Gading, Kelapa Gading, North Jakarta City, Jakarta 14240",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang",
+      "Klub",
+      "Tempat acara",
+      "Klub Golf"
+    ],
+    "phone": "(021) 45859388",
+    "website": "https://theclubgadingmas.com/",
+    "place_id": "ChIJ0aj06D_1aS4R7OIAgWgonDM",
+    "data_id": "0x2e69f53fe8f4a8d1:0x339c28688100e2ec",
+    "data_cid": "3718891821607215852",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.1549327%2C106.89070509999999&query_place_id=ChIJ0aj06D_1aS4R7OIAgWgonDM",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJOfnO554fai4REgWvR-4GE3Q",
+    "name": "Tirto Sagoro 02",
+    "kind": "pool",
+    "latitude": -6.0978046,
+    "longitude": 106.8770747,
+    "address": "WV2G+VRG, Pondok Dayung, Tanjung Priok, North Jakarta City, Jakarta",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJOfnO554fai4REgWvR-4GE3Q",
+    "data_id": "0x2e6a1f9ee7cef939:0x741306ee47af0512",
+    "data_cid": "8364036553431778578",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.0978046%2C106.8770747&query_place_id=ChIJOfnO554fai4REgWvR-4GE3Q",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Utara"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJ3dnTWuLvaS4RYccM_bh_nfk",
+    "name": "Wavva Private Pool Jagakarsa",
+    "kind": "pool",
+    "latitude": -6.3210869,
+    "longitude": 106.8133519,
+    "address": "Jl. Durian Gg. Sabar No.74D, RT.2/RW.4, Jagakarsa, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12620",
+    "category": "Kolam Renang",
+    "categories": [
+      "Kolam Renang"
+    ],
+    "phone": "0858-0130-6079",
+    "website": "https://wavva.id/",
+    "place_id": "ChIJ3dnTWuLvaS4RYccM_bh_nfk",
+    "data_id": "0x2e69efe25ad3d9dd:0xf99d7fb8fd0cc761",
+    "data_cid": "17986672919283812193",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3210869%2C106.8133519&query_place_id=ChIJ3dnTWuLvaS4RYccM_bh_nfk",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  },
+  {
+    "id": "serpapi-ChIJhco8yS_saS4RK1113wWZ4xY",
+    "name": "Wisma Makara Pool",
+    "kind": "pool",
+    "latitude": -6.3478223,
+    "longitude": 106.8288807,
+    "address": "MR2H+VHC, RW.3, Srengseng Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12630",
+    "category": "Kolam renang luar ruangan",
+    "categories": [
+      "Kolam renang luar ruangan"
+    ],
+    "phone": null,
+    "website": null,
+    "place_id": "ChIJhco8yS_saS4RK1113wWZ4xY",
+    "data_id": "0x2e69ec2fc93cca85:0x16e39905df755d2b",
+    "data_cid": "1649330139050630443",
+    "source": "Google Maps via SerpAPI",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=-6.3478223%2C106.8288807&query_place_id=ChIJhco8yS_saS4RK1113wWZ4xY",
+    "permanently_closed": null,
+    "temporarily_closed": null,
+    "access": "unknown",
+    "water_availability": "unknown",
+    "verification_status": "unverified",
+    "last_verified_at": null,
+    "matched_queries": [
+      "kolam renang Jakarta Selatan",
+      "swimming pool Jakarta Selatan"
+    ]
+  }
+]
