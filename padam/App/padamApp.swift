@@ -13,6 +13,7 @@ struct padamApp: App {
         WindowGroup {
             ContentView()
                 .preferredColorScheme(.dark)
+                .environment(\.locale, Locale(identifier: AppInfo.accessibilityLocaleIdentifier))
         }
     }
 }

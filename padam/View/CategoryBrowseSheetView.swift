@@ -92,6 +92,8 @@ struct CategoryBrowseSheetView: View {
                 .overlay(Circle().stroke(Color.white.opacity(0.12), lineWidth: 0.8))
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Kembali")
+            .accessibilityHint("Kembali ke pencarian sumber air")
 
             ZStack {
                 Circle()
@@ -102,6 +104,7 @@ struct CategoryBrowseSheetView: View {
                     .font(.system(size: 16, weight: .bold))
                     .foregroundStyle(type.tint)
             }
+            .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 2) {
                 HStack(spacing: 6) {
@@ -123,6 +126,8 @@ struct CategoryBrowseSheetView: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
+            .accessibilityElement(children: .combine)
+            .accessibilityAddTraits(.isHeader)
 
             Spacer()
         }
@@ -135,6 +140,7 @@ struct CategoryBrowseSheetView: View {
             Image(systemName: "magnifyingglass")
                 .font(.system(size: 14, weight: .medium))
                 .foregroundStyle(.secondary)
+                .accessibilityHidden(true)
 
             TextField("Cari di \(type.displayName)...", text: $filterQuery)
                 .font(.subheadline)
@@ -149,6 +155,7 @@ struct CategoryBrowseSheetView: View {
                         .foregroundStyle(.secondary)
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel("Hapus filter pencarian")
             }
         }
         .padding(.horizontal, 12)
@@ -201,6 +208,7 @@ struct CategoryBrowseSheetView: View {
         .padding(.horizontal, 20)
         .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
+        .accessibilityElement(children: .combine)
     }
 
     private var emptySearchCard: some View {
@@ -217,6 +225,7 @@ struct CategoryBrowseSheetView: View {
         .padding(.vertical, 28)
         .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: Helpers & Grouping
@@ -318,6 +327,8 @@ private struct RegionAccordionCard: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
+            .accessibilityLabel(regionAccessibilityLabel)
+            .accessibilityHint(isExpanded ? "Ketuk dua kali untuk menyembunyikan daftar \(region)" : "Ketuk dua kali untuk menampilkan daftar \(region)")
 
             // Dropdown List of Water Sources
             if isExpanded {
@@ -339,6 +350,10 @@ private struct RegionAccordionCard: View {
         }
         .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
+    }
+
+    private var regionAccessibilityLabel: String {
+        "\(region), \(items.count) titik \(type.displayName)"
     }
 }
 
@@ -407,6 +422,8 @@ private struct CategorySourceItemRow: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+        .accessibilityLabel(sourceAccessibilityLabel)
+        .accessibilityHint("Ketuk dua kali untuk membuka detail sumber air")
     }
 
     private var locationSubtitle: String? {
@@ -415,5 +432,18 @@ private struct CategorySourceItemRow: View {
             return parts.joined(separator: ", ")
         }
         return source.address.isEmpty ? nil : source.address
+    }
+
+    private var sourceAccessibilityLabel: String {
+        var parts = [
+            AccessibilityText.waterSource(source, distanceMeters: distance),
+            "Status \(status.label)"
+        ]
+
+        if let locationSubtitle, !locationSubtitle.isEmpty {
+            parts.append(locationSubtitle)
+        }
+
+        return parts.joined(separator: ", ")
     }
 }

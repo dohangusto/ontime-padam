@@ -76,6 +76,7 @@ struct ResultsSheetView: View {
                     .overlay(Circle().stroke(Color.white.opacity(0.12), lineWidth: 0.8))
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Bagikan rekomendasi sumber air")
 
             VStack(spacing: 2) {
                 Text(locationTitle)
@@ -100,6 +101,7 @@ struct ResultsSheetView: View {
                     .overlay(Circle().stroke(Color.white.opacity(0.12), lineWidth: 0.8))
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Ganti lokasi kebakaran")
         }
     }
 
@@ -114,6 +116,7 @@ struct ResultsSheetView: View {
                 Text("Rekomendasi Terdekat")
                     .font(.title3.weight(.bold))
                     .foregroundStyle(.primary)
+                    .accessibilityAddTraits(.isHeader)
 
                 Spacer()
             }
@@ -136,6 +139,8 @@ struct ResultsSheetView: View {
             }
             .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
+            .accessibilityElement(children: .contain)
+            .accessibilityLabel("Rekomendasi terdekat")
         }
     }
 
@@ -146,6 +151,7 @@ struct ResultsSheetView: View {
             Text("Semua Sumber Air Terdekat")
                 .font(.title3.weight(.bold))
                 .foregroundStyle(.primary)
+                .accessibilityAddTraits(.isHeader)
 
             ForEach(groups) { group in
                 ExpandedGroupCard(
@@ -209,6 +215,8 @@ private struct ExpandedGroupCard: View {
             Spacer()
         }
         .padding(.horizontal, 4)
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isHeader)
     }
 
     // Two genuinely different empty states, worded differently (item 4).
@@ -236,6 +244,7 @@ private struct ExpandedGroupCard: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, 14)
         .padding(.vertical, 12)
+        .accessibilityElement(children: .combine)
     }
 }
 
@@ -298,6 +307,8 @@ private struct SourceButtonRow: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+        .accessibilityLabel(AccessibilityText.rankedSource(ranked))
+        .accessibilityHint("Ketuk dua kali untuk membuka detail sumber air")
     }
 }
 
@@ -331,6 +342,7 @@ private struct UnusableDisclosure: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
+            .accessibilityLabel(expanded ? "Sembunyikan titik tidak bisa digunakan" : "Tampilkan \(sources.count) titik tidak bisa digunakan")
 
             if expanded {
                 ForEach(sources) { ranked in
@@ -368,6 +380,8 @@ private struct UnusableDisclosure: View {
                     }
                     .buttonStyle(.plain)
                     .opacity(0.85) // visually demoted — never reads as a suggestion
+                    .accessibilityLabel(AccessibilityText.rankedSource(ranked))
+                    .accessibilityHint("Titik ini tercatat tidak bisa digunakan. Ketuk dua kali untuk melihat detail")
                 }
             }
         }
@@ -409,6 +423,8 @@ private struct CollapsedEmptyCategoriesRow: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
+            .accessibilityLabel(expanded ? "Sembunyikan kategori belum tersedia" : "Tampilkan kategori belum tersedia")
+            .accessibilityValue(types.map(\.displayName).joined(separator: ", "))
 
             if expanded {
                 ForEach(types) { type in
@@ -433,6 +449,7 @@ private struct CollapsedEmptyCategoriesRow: View {
                     }
                     .padding(.vertical, 6)
                     .padding(.horizontal, 12)
+                    .accessibilityElement(children: .combine)
                 }
             }
         }
@@ -525,6 +542,8 @@ private struct CompactGroupRow: View {
             }
             .buttonStyle(.plain)
             .disabled(group.isEmpty)
+            .accessibilityLabel(compactAccessibilityLabel)
+            .accessibilityHint(compactAccessibilityHint)
 
             // Dropdown items (Candidate water sources within this category)
             if isExpanded && !group.isEmpty {
@@ -574,11 +593,41 @@ private struct CompactGroupRow: View {
                             .contentShape(Rectangle())
                         }
                         .buttonStyle(.plain)
+                        .accessibilityLabel("Peringkat \(index + 1), \(AccessibilityText.rankedSource(ranked))")
+                        .accessibilityHint("Ketuk dua kali untuk membuka detail sumber air")
                     }
                 }
                 .background(Color.white.opacity(0.03))
             }
         }
+    }
+
+    private var compactAccessibilityLabel: String {
+        guard let top = group.sources.first else {
+            return "\(group.type.displayName), belum ada data"
+        }
+
+        var parts = [
+            group.type.displayName,
+            "\(group.sources.count) pilihan",
+            "Terdekat \(top.source.name)",
+            "Jarak \(DistanceFormat.string(top.distanceMeters))"
+        ]
+
+        if group.type.isLowReliability {
+            parts.append("Keandalan rendah")
+        }
+
+        if top.isFar {
+            parts.append("Jauh")
+        }
+
+        return parts.joined(separator: ", ")
+    }
+
+    private var compactAccessibilityHint: String {
+        guard !group.isEmpty else { return "" }
+        return isExpanded ? "Ketuk dua kali untuk menyembunyikan daftar" : "Ketuk dua kali untuk menampilkan daftar"
     }
 }
 

@@ -60,12 +60,15 @@ struct RecentSearchRow: View {
                         .contentShape(Circle())
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel("Pilihan lainnya untuk \(recent.title)")
             }
             .padding(.vertical, 8)
             .padding(.horizontal, 12)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+        .accessibilityLabel(AccessibilityText.recentSearch(recent))
+        .accessibilityHint("Ketuk dua kali untuk menggunakan lokasi ini")
     }
 }
 

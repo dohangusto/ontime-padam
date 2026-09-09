@@ -34,6 +34,8 @@ struct FindNearbyRow: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("Cari \(type.displayName) terdekat")
+        .accessibilityHint("Menampilkan sumber air terdekat untuk kategori ini")
     }
 }
 

@@ -24,6 +24,7 @@ struct FloatingBottomBar: View {
                     .contentShape(Circle())
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Tambah panduan untuk \(source.name)")
 
             Button(action: onToggleSave) {
                 Image(systemName: isSaved ? "star.fill" : "star")
@@ -33,6 +34,7 @@ struct FloatingBottomBar: View {
                     .contentShape(Circle())
             }
             .buttonStyle(.plain)
+            .accessibilityLabel(isSaved ? "Hapus \(source.name) dari tersimpan" : "Simpan \(source.name)")
 
             Menu {
                 Button(action: onOpenInMaps) {
@@ -62,6 +64,7 @@ struct FloatingBottomBar: View {
                     .contentShape(Circle())
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Pilihan lainnya untuk \(source.name)")
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 4)

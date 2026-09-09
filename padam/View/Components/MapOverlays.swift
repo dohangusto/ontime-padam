@@ -34,6 +34,9 @@ struct WeatherPillView: View {
                 .foregroundStyle(.secondary)
         }
         .shadow(color: .black.opacity(0.3), radius: 6, y: 2)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Cuaca \(temperature), area \(areaName)")
+        .accessibilityAddTraits(.updatesFrequently)
     }
 }
 
@@ -59,6 +62,8 @@ struct MapFloatingControlsView: View {
                     .frame(width: 44, height: 44)
             }
             .buttonStyle(.plain)
+            .accessibilityLabel(isSatellite ? "Gunakan tampilan peta standar" : "Gunakan tampilan satelit")
+            .accessibilityHint("Mengubah gaya tampilan peta")
 
             Divider()
                 .frame(width: 32)
@@ -71,6 +76,8 @@ struct MapFloatingControlsView: View {
                     .frame(width: 44, height: 44)
             }
             .buttonStyle(.plain)
+            .accessibilityLabel(hydrantsHidden ? "Tampilkan hidran" : "Sembunyikan hidran")
+            .accessibilityHint("Mengatur visibilitas layer hidran di peta")
 
             Divider()
                 .frame(width: 32)
@@ -82,7 +89,11 @@ struct MapFloatingControlsView: View {
                     .frame(width: 44, height: 44)
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Pusatkan peta")
+            .accessibilityHint("Memusatkan peta ke lokasi kebakaran atau kembali ke pencarian")
         }
+        .accessibilityElement(children: .contain)
+        .accessibilityLabel("Kontrol peta")
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(.white.opacity(0.12), lineWidth: 0.8))
         .shadow(color: .black.opacity(0.35), radius: 8, y: 4)

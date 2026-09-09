@@ -32,6 +32,8 @@ struct WaterSourceCategoryButton: View {
             .frame(width: 80)
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("Cari \(type.displayName) terdekat")
+        .accessibilityHint("Membuka sumber air terdekat untuk kategori ini")
     }
 }
 

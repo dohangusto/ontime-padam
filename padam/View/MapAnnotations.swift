@@ -46,6 +46,10 @@ struct AdminClusterPillView: View {
                 .stroke(dominantType.tint.opacity(0.85), lineWidth: 1.5)
         )
         .shadow(color: Color.black.opacity(0.35), radius: 4, x: 0, y: 2)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(clusterAccessibilityLabel)
+        .accessibilityHint("Ketuk dua kali untuk memperbesar area ini")
+        .accessibilityAddTraits(.isButton)
     }
 
     private var label: String {
@@ -53,6 +57,14 @@ struct AdminClusterPillView: View {
             return "\(count)"
         }
         return "\(title) · \(count)"
+    }
+
+    private var clusterAccessibilityLabel: String {
+        if title.isEmpty {
+            return "\(count) sumber air, kategori dominan \(dominantType.displayName)"
+        }
+
+        return "\(count) sumber air di \(title), kategori dominan \(dominantType.displayName)"
     }
 }
 
@@ -70,6 +82,9 @@ struct ClusterBubbleView: View {
             .background(dominantType.tint, in: Circle())
             .overlay(Circle().stroke(.white, lineWidth: 2))
             .shadow(radius: 2)
+            .accessibilityLabel("\(count) sumber air")
+            .accessibilityHint("Ketuk dua kali untuk memperbesar area ini")
+            .accessibilityAddTraits(.isButton)
     }
 }
 
@@ -87,11 +102,18 @@ struct SourcePinView: View {
     private var isDemoted: Bool { type.isLowReliability && !isSelected }
 
     var body: some View {
-        if isSelected {
-            selectedPin
-        } else {
-            standardPin
+        Group {
+            if isSelected {
+                selectedPin
+            } else {
+                standardPin
+            }
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(accessibilityLabel)
+        .accessibilityValue(isSelected ? "Dipilih" : "")
+        .accessibilityHint("Ketuk dua kali untuk membuka detail sumber air")
+        .accessibilityAddTraits(.isButton)
     }
 
     // MARK: - Selected / Active Pin (Apple Maps Large Squircle Style)
@@ -165,6 +187,14 @@ struct SourcePinView: View {
                 .shadow(radius: 1)
         }
     }
+
+    private var accessibilityLabel: String {
+        if let label, !label.isEmpty {
+            return "\(type.displayName), \(label)"
+        }
+
+        return type.displayName
+    }
 }
 
 /// The fire location the operator is refilling for.
@@ -220,5 +250,7 @@ struct FireMarkerView: View {
             }
         }
         .zIndex(150)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(title.map { "Lokasi kebakaran, \($0)" } ?? "Lokasi kebakaran")
     }
 }

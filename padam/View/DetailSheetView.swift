@@ -89,6 +89,7 @@ struct DetailSheetView: View {
                     .overlay(Circle().stroke(Color.white.opacity(0.12), lineWidth: 0.8))
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Bagikan \(source.name)")
 
             VStack(spacing: 2) {
                 // The name is what the operator says over the radio — never
@@ -127,6 +128,7 @@ struct DetailSheetView: View {
                     .overlay(Circle().stroke(Color.white.opacity(0.12), lineWidth: 0.8))
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Tutup detail")
         }
     }
 
@@ -148,6 +150,8 @@ struct DetailSheetView: View {
                 .background(Color.indigo, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
             }
             .buttonStyle(.plain)
+            .accessibilityLabel(routeAccessibilityLabel)
+            .accessibilityHint("Membuka rute berkendara ke \(source.name) di Apple Maps")
 
             // Call only appears when the source actually has a number (e.g. a Pos
             // DAMKAR, once phone data is loaded). Hydrants and other types show
@@ -169,12 +173,22 @@ struct DetailSheetView: View {
                     .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).stroke(Color.white.opacity(0.14), lineWidth: 0.8))
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel("Hubungi \(source.name)")
+                .accessibilityHint("Menelepon \(phone)")
             }
         }
     }
 
     private var routeButtonTitle: String {
         if let estimate { return "Rute · \(formatDuration(estimate.travelTime))" }
+        return "Rute"
+    }
+
+    private var routeAccessibilityLabel: String {
+        if let estimate {
+            return "Rute, \(formatDurationForSpeech(estimate.travelTime))"
+        }
+
         return "Rute"
     }
 
@@ -222,6 +236,9 @@ struct DetailSheetView: View {
         .padding(.vertical, 12)
         .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Ringkasan")
+        .accessibilityValue("Status \(ranked.condition.label), jarak lurus \(DistanceFormat.string(ranked.distanceMeters))")
     }
 
     // MARK: Address & Administrative Section
@@ -256,6 +273,7 @@ struct DetailSheetView: View {
         .padding(14)
         .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: Condition / Raw Data Section
@@ -281,6 +299,7 @@ struct DetailSheetView: View {
             .padding(14)
             .background(Color.white.opacity(0.06), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.12), lineWidth: 0.8))
+            .accessibilityElement(children: .combine)
         }
     }
 
@@ -309,6 +328,11 @@ struct DetailSheetView: View {
     private func formatDuration(_ interval: TimeInterval) -> String {
         let minutes = Int((interval / 60).rounded())
         return "\(minutes) min"
+    }
+
+    private func formatDurationForSpeech(_ interval: TimeInterval) -> String {
+        let minutes = Int((interval / 60).rounded())
+        return "\(minutes) menit"
     }
 
     private func call(_ number: String) {

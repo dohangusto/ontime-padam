@@ -90,12 +90,14 @@ struct SearchSheetView: View {
                             .foregroundStyle(.secondary)
                     }
                     .buttonStyle(.plain)
+                    .accessibilityLabel("Hapus teks pencarian")
                 }
 
                 Image(systemName: "mic.fill")
                     .font(.system(size: 16))
                     .foregroundStyle(.secondary)
                     .padding(.trailing, 2)
+                    .accessibilityHidden(true)
             }
             .padding(.horizontal, 14)
             .padding(.vertical, 11)
@@ -114,6 +116,7 @@ struct SearchSheetView: View {
                         .overlay(Circle().stroke(Color.white.opacity(0.14), lineWidth: 0.8))
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel("Batalkan pencarian")
                 .transition(.scale.combined(with: .opacity))
             }
         }
@@ -218,6 +221,8 @@ struct SearchSheetView: View {
                         .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
+                    .accessibilityLabel(searchSuggestionLabel(completion))
+                    .accessibilityHint("Ketuk dua kali untuk menggunakan lokasi ini sebagai titik kebakaran")
 
                     Divider()
                         .padding(.leading, 38)
@@ -280,10 +285,30 @@ struct SearchSheetView: View {
             Text(title)
                 .font(.title3.weight(.bold))
                 .foregroundStyle(.primary)
+                .accessibilityLabel(accessibleSectionTitle(title))
+                .accessibilityAddTraits(.isHeader)
 
             Image(systemName: "chevron.right")
                 .font(.footnote.weight(.bold))
                 .foregroundStyle(.secondary)
+                .accessibilityHidden(true)
+        }
+    }
+
+    private func searchSuggestionLabel(_ completion: MKLocalSearchCompletion) -> String {
+        if completion.subtitle.isEmpty {
+            return completion.title
+        }
+
+        return "\(completion.title), \(completion.subtitle)"
+    }
+
+    private func accessibleSectionTitle(_ title: String) -> String {
+        switch title {
+        case "Recents":
+            return "Pencarian terbaru"
+        default:
+            return title
         }
     }
 
@@ -321,6 +346,7 @@ struct DataAttributionFooter: View {
             .font(.caption2)
             .foregroundStyle(.secondary)
             .frame(maxWidth: .infinity, alignment: .center)
+            .accessibilityLabel(AppInfo.dataAttribution.replacingOccurrences(of: "PemKot", with: "Pemerintah Kota"))
     }
 }
 

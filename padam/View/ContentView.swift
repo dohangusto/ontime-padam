@@ -135,6 +135,8 @@ struct ContentView: View {
             }
             .mapStyle(vm.mapStyleIsSatellite ? .hybrid : .standard)
             .mapControlVisibility(.hidden)
+            .accessibilityLabel("Peta sumber air")
+            .accessibilityHint("Ketuk dua kali pada peta untuk memilih titik kebakaran")
             .onMapCameraChange(frequency: .onEnd) { context in
                 vm.onCameraChanged(region: context.region)
             }
